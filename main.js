@@ -32214,6 +32214,13 @@
     }
     return import_react3.default.memo(l2);
   }
+  function ht(t) {
+    for (var n = [], o2 = 1; o2 < arguments.length; o2++)
+      n[o2 - 1] = arguments[o2];
+    "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");
+    var r2 = ae(at.apply(void 0, __spreadArray([t], n, false))), s2 = z(r2);
+    return new Ge(s2, r2);
+  }
   var mt = function() {
     function e() {
       var e2 = this;
@@ -32247,16 +32254,39 @@
   "undefined" != typeof window && (window[vt] || (window[vt] = 0), 1 === window[vt] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window[vt] += 1);
 
   // src/components/styles/style.ts
+  var gradientAnimation = ht`
+    0% {
+        opacity: 0;
+        background-position: 0% 50%;
+    }
+    100% {
+        opacity: 1;
+        background-position: 0;
+    }
+`;
   var GlobalStyle = dt`
 	html {
 		font-family: 'Inter', sans-serif;
         user-select: none;
+
+        max-width: 100vw;
+        overflow-x: hidden;
 	}
 
 	body {
-		width: 100%;
+        position: relative;
+		width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
 		overflow-x: hidden;
+
+        background: linear-gradient(-45deg, #08887d, #581d88);
+        background-repeat: no-repeat;
 	}
+
+    body {
+
+    }
 
     a {
         color: white;
@@ -32283,6 +32313,23 @@
     ::-webkit-scrollbar-thumb:hover {
         background: rgb(161, 161, 161);
     }
+`;
+  var Gradient = ut.div`
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    animation: ${gradientAnimation} 15s ease-in-out forwards;
+    animation-iteration-count: infinite;
+    animation-delay: ${(props) => props.delay || "0s"};
 `;
   var colors = {
     primary: "#b7b7b7",
@@ -40179,6 +40226,7 @@
     }
 `;
   var P2 = ut(motion.p)`
+    position: relative;
     color: ${colors.textWhite};
     letter-spacing: 1px;
     padding: 1.25em 0;
@@ -40191,6 +40239,24 @@
     color: ${colors.textWhite};
     letter-spacing: 2px;
     font-weight: 600;
+`;
+  var IT = ut(motion.p)`
+    color: ${colors.textWhite};
+    font-style: italic;
+`;
+  var SeparatorLine = ut(motion.div)`
+    width: 100%;
+
+    &::before {
+        content: " ";
+
+        display: inline-block;
+        width: 50%;
+        height: 1px;
+
+        margin: 2rem 0;
+        background: ${colors.textWhite};
+    }
 `;
   var Dropper = ut.div`
     position: absolute;
@@ -40492,7 +40558,7 @@ color: white;`;
   // src/pages/Home/Home.tsx
   var import_jsx_runtime6 = __toESM(require_jsx_runtime());
   var HomeStyle = ut.div`
-	background: linear-gradient(45deg, #00196d, #8b0080);
+	transition: background 2s ease-in-out;
 `;
   function Home() {
     return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(HomeStyle, { children: [
@@ -40511,7 +40577,8 @@ color: white;`;
     display: flex;
     flex-direction: row;
 
-    min-width: 100%;
+    min-width: 100vw;
+    max-width: 100vw;
     width: 100%;
     height: 85px;
     justify-content: center;
@@ -40546,7 +40613,7 @@ color: white;`;
 
     color: ${colors.textWhite};
     font-weight: lighter;
-    font-size: 1.35rem;
+    font-size: 1.2em;
     text-decoration: none;
 
     transition: padding 500ms,
@@ -40606,14 +40673,6 @@ color: white;`;
           to: "/",
           onClick: scrollToTop,
           children: "HOME"
-        }
-      ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(UlLi, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
-        StyledLink,
-        {
-          to: "/media",
-          onClick: scrollToTop,
-          children: "MEDIA"
         }
       ) })
     ] }) });
@@ -40925,9 +40984,12 @@ color: white;`;
   var import_jsx_runtime9 = __toESM(require_jsx_runtime());
   var About = () => {
     const { scrollYProgress } = useScroll();
-    const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
-    const scale2 = useTransform(scrollYProgress, [0, 1], [1.05, 1]);
-    const translate = useTransform(scrollYProgress, [0, 1], [350, 0]);
+    const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
+    const rotate = useTransform(scrollYProgress, [0, 0.4], [-20, 0]);
+    const translate = useTransform(scrollYProgress, [0, 0.4], [-200, 0]);
+    const opacity2 = useTransform(scrollYProgress, [0.4, 0.9], [0, 1]);
+    const rotate2 = useTransform(scrollYProgress, [0.4, 0.9], [20, 0]);
+    const translate2 = useTransform(scrollYProgress, [0.4, 0.9], [200, 0]);
     return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(HomeStyle, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
         TitleDiv,
@@ -40966,8 +41028,7 @@ color: white;`;
                 children: "I started this journey as a young teenager, wanting to make all sorts of interactable and fun things with my own code and design."
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(P2, { children: "Having studied in this field for around 4 years now, I have touched on many different technologies and frameworks." }),
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(P2, { children: "I like to" })
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(P2, { children: "Having studied in this field for around 4 years now, I have touched on many different technologies and frameworks, but I always keep coming back to the Web :)" })
           ]
         }
       ),
@@ -41015,7 +41076,7 @@ color: white;`;
         {
           style: {
             textAlign: "right",
-            opacity: scrollYProgress,
+            opacity,
             translateX: translate
           },
           children: [
@@ -41029,18 +41090,60 @@ color: white;`;
               }
             ),
             /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(P2, { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("a", { children: "2020 - 2022" }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(B2, { children: "2020 - 2022" }),
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
               "CFGM - SMiX (IT Systems and Networks)",
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
-              "- Salesians Terrassa"
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "Salesians Terrassa" })
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(P2, { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("a", { children: "2022 - Now" }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(B2, { children: "2022 - Present" }),
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
               "Currently studying a CFGS in DAW, (Web Development)",
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
-              "- La Salle Gr\xE0cia"
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "La Salle Gr\xE0cia" })
+            ] })
+          ]
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
+        TitleDiv,
+        {
+          style: {
+            textAlign: "left",
+            opacity: opacity2,
+            translateX: translate2
+          },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+              TitleH1,
+              {
+                style: {
+                  rotate: rotate2
+                },
+                children: "Experience"
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(P2, { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(B2, { children: "2020 - 2022" }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
+              "IT Technician / Shop Assistant",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "- Hardware repair, software installations and configuration." }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
+              "Casarramona S.A.",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
+              "Placeta de la Font Trobada, 1, 08221 Terrassa, Barcelona"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(SeparatorLine, {}),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(P2, { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(B2, { children: "2023 - Present" }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
+              "IT Technician",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "- IT Support, Custom solutions and Website rework." }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
+              "SkyNet Worldwide Express Spain (BCN)",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
+              "Carrer Prat de la Manta, 14, 08902 L'Hospitalet de Llobregat, Barcelona"
             ] })
           ]
         }
@@ -41076,8 +41179,8 @@ color: white;`;
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(NavBar, {}),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Routes, { children: [
           /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedHome, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/media", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedKxnzenMedia, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/about", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedAbout, {}) })
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/about", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedAbout, {}) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/media", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedKxnzenMedia, {}) })
         ] })
       ] })
     ] });
