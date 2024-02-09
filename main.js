@@ -41352,12 +41352,12 @@ color: white;`;
   var App = () => {
     console.log("Loaded app");
     const [theme, setTheme] = (0, import_react28.useState)(lightTheme);
-    const [togglePosition, setTogglePosition] = (0, import_react28.useState)("translate(200vw, 200vh)");
+    const [togglePosition, setTogglePosition] = (0, import_react28.useState)("translate(200vw, 300vh)");
     const toggleTheme = () => {
       console.log("Toggling theme");
       setTheme(theme === lightTheme ? darkTheme : lightTheme);
       setTogglePosition(
-        togglePosition === "translate(200vw, 200vh)" ? "translate(0, 0)" : "translate(200vw, 200vh)"
+        togglePosition === "translate(200vw, 300vh)" ? "translate(0, 0)" : "translate(200vw, 300vh)"
       );
     };
     return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
