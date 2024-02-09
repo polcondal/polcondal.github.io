@@ -1070,7 +1070,7 @@
             }
             return dispatcher;
           }
-          function useContext10(Context) {
+          function useContext11(Context) {
             var dispatcher = resolveDispatcher();
             {
               if (Context._context !== void 0) {
@@ -1084,7 +1084,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState4(initialState) {
+          function useState5(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1875,7 +1875,7 @@
           exports.startTransition = startTransition;
           exports.unstable_act = act;
           exports.useCallback = useCallback4;
-          exports.useContext = useContext10;
+          exports.useContext = useContext11;
           exports.useDebugValue = useDebugValue;
           exports.useDeferredValue = useDeferredValue;
           exports.useEffect = useEffect11;
@@ -1886,7 +1886,7 @@
           exports.useMemo = useMemo7;
           exports.useReducer = useReducer;
           exports.useRef = useRef6;
-          exports.useState = useState4;
+          exports.useState = useState5;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -2382,9 +2382,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React9 = require_react();
+          var React10 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -2433,7 +2433,7 @@
           var HostPortal = 4;
           var HostComponent = 5;
           var HostText = 6;
-          var Fragment5 = 7;
+          var Fragment6 = 7;
           var Mode = 8;
           var ContextConsumer = 9;
           var ContextProvider = 10;
@@ -3589,7 +3589,7 @@
                 return "DehydratedFragment";
               case ForwardRef:
                 return getWrappedName$1(type, type.render, "ForwardRef");
-              case Fragment5:
+              case Fragment6:
                 return "Fragment";
               case HostComponent:
                 return type;
@@ -3989,7 +3989,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React9.Children.forEach(props.children, function(child) {
+                  React10.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -12436,7 +12436,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React9.Component().refs;
+          var emptyRefsObject = new React10.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -13260,7 +13260,7 @@
               }
             }
             function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-              if (current2 === null || current2.tag !== Fragment5) {
+              if (current2 === null || current2.tag !== Fragment6) {
                 var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
                 created.return = returnFiber;
                 return created;
@@ -13663,7 +13663,7 @@
                 if (child.key === key) {
                   var elementType = element.type;
                   if (elementType === REACT_FRAGMENT_TYPE) {
-                    if (child.tag === Fragment5) {
+                    if (child.tag === Fragment6) {
                       deleteRemainingChildren(returnFiber, child.sibling);
                       var existing = useFiber(child, element.props.children);
                       existing.return = returnFiber;
@@ -17838,7 +17838,7 @@
                 var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
                 return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
               }
-              case Fragment5:
+              case Fragment6:
                 return updateFragment(current2, workInProgress2, renderLanes2);
               case Mode:
                 return updateMode(current2, workInProgress2, renderLanes2);
@@ -18111,7 +18111,7 @@
               case SimpleMemoComponent:
               case FunctionComponent:
               case ForwardRef:
-              case Fragment5:
+              case Fragment6:
               case Mode:
               case Profiler:
               case ContextConsumer:
@@ -22370,7 +22370,7 @@
             return fiber;
           }
           function createFiberFromFragment(elements, mode, lanes, key) {
-            var fiber = createFiber(Fragment5, elements, key, mode);
+            var fiber = createFiber(Fragment6, elements, key, mode);
             fiber.lanes = lanes;
             return fiber;
           }
@@ -23576,7 +23576,7 @@
           var ContextProvider = REACT_PROVIDER_TYPE;
           var Element2 = REACT_ELEMENT_TYPE;
           var ForwardRef = REACT_FORWARD_REF_TYPE;
-          var Fragment5 = REACT_FRAGMENT_TYPE;
+          var Fragment6 = REACT_FRAGMENT_TYPE;
           var Lazy = REACT_LAZY_TYPE;
           var Memo = REACT_MEMO_TYPE;
           var Portal = REACT_PORTAL_TYPE;
@@ -23635,7 +23635,7 @@
           exports.ContextProvider = ContextProvider;
           exports.Element = Element2;
           exports.ForwardRef = ForwardRef;
-          exports.Fragment = Fragment5;
+          exports.Fragment = Fragment6;
           exports.Lazy = Lazy;
           exports.Memo = Memo;
           exports.Portal = Portal;
@@ -24291,8 +24291,8 @@
       function _interopDefault(ex) {
         return ex && typeof ex === "object" && "default" in ex ? ex["default"] : ex;
       }
-      var React9 = require_react();
-      var React__default2 = _interopDefault(React9);
+      var React10 = require_react();
+      var React__default2 = _interopDefault(React10);
       function _defineProperty3(obj, key, value) {
         if (key in obj) {
           Object.defineProperty(obj, key, {
@@ -24375,7 +24375,7 @@
               return React__default2.createElement(WrappedComponent, this.props);
             };
             return SideEffect2;
-          }(React9.PureComponent);
+          }(React10.PureComponent);
           _defineProperty3(SideEffect, "displayName", "SideEffect(" + getDisplayName(WrappedComponent) + ")");
           _defineProperty3(SideEffect, "canUseDOM", canUseDOM);
           return SideEffect;
@@ -24561,7 +24561,7 @@
       if (true) {
         (function() {
           "use strict";
-          var React9 = require_react();
+          var React10 = require_react();
           var REACT_ELEMENT_TYPE = Symbol.for("react.element");
           var REACT_PORTAL_TYPE = Symbol.for("react.portal");
           var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
@@ -24587,7 +24587,7 @@
             }
             return null;
           }
-          var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -25422,11 +25422,11 @@
               return jsxWithValidation(type, props, key, false);
             }
           }
-          var jsx11 = jsxWithValidationDynamic;
-          var jsxs10 = jsxWithValidationStatic;
+          var jsx12 = jsxWithValidationDynamic;
+          var jsxs11 = jsxWithValidationStatic;
           exports.Fragment = REACT_FRAGMENT_TYPE;
-          exports.jsx = jsx11;
-          exports.jsxs = jsxs10;
+          exports.jsx = jsx12;
+          exports.jsxs = jsxs11;
         })();
       }
     }
@@ -25445,7 +25445,7 @@
   });
 
   // src/App.tsx
-  var import_react27 = __toESM(require_react());
+  var import_react28 = __toESM(require_react());
   var import_client = __toESM(require_client());
 
   // node_modules/react-router-dom/dist/index.js
@@ -28095,6 +28095,1358 @@
   var HelmetExport = Helmet(HelmetSideEffects);
   HelmetExport.renderStatic = HelmetExport.rewind;
 
+  // node_modules/styled-components/node_modules/tslib/tslib.es6.js
+  var __assign = function() {
+    __assign = Object.assign || function __assign2(t) {
+      for (var s2, i2 = 1, n = arguments.length; i2 < n; i2++) {
+        s2 = arguments[i2];
+        for (var p3 in s2)
+          if (Object.prototype.hasOwnProperty.call(s2, p3))
+            t[p3] = s2[p3];
+      }
+      return t;
+    };
+    return __assign.apply(this, arguments);
+  };
+  function __spreadArray(to, from2, pack) {
+    if (pack || arguments.length === 2)
+      for (var i2 = 0, l2 = from2.length, ar; i2 < l2; i2++) {
+        if (ar || !(i2 in from2)) {
+          if (!ar)
+            ar = Array.prototype.slice.call(from2, 0, i2);
+          ar[i2] = from2[i2];
+        }
+      }
+    return to.concat(ar || Array.prototype.slice.call(from2));
+  }
+
+  // node_modules/styled-components/node_modules/@emotion/memoize/dist/emotion-memoize.esm.js
+  function memoize(fn) {
+    var cache = /* @__PURE__ */ Object.create(null);
+    return function(arg) {
+      if (cache[arg] === void 0)
+        cache[arg] = fn(arg);
+      return cache[arg];
+    };
+  }
+
+  // node_modules/styled-components/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.esm.js
+  var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|abbr|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|enterKeyHint|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|translate|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|incremental|fallback|inert|itemProp|itemScope|itemType|itemID|itemRef|on|option|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/;
+  var isPropValid = /* @__PURE__ */ memoize(
+    function(prop) {
+      return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111 && prop.charCodeAt(1) === 110 && prop.charCodeAt(2) < 91;
+    }
+    /* Z+1 */
+  );
+
+  // node_modules/styled-components/dist/styled-components.browser.esm.js
+  var import_react2 = __toESM(require_react());
+  var import_shallowequal = __toESM(require_shallowequal());
+
+  // node_modules/stylis/src/Enum.js
+  var MS = "-ms-";
+  var MOZ = "-moz-";
+  var WEBKIT = "-webkit-";
+  var COMMENT = "comm";
+  var RULESET = "rule";
+  var DECLARATION = "decl";
+  var IMPORT = "@import";
+  var KEYFRAMES = "@keyframes";
+  var LAYER = "@layer";
+
+  // node_modules/stylis/src/Utility.js
+  var abs = Math.abs;
+  var from = String.fromCharCode;
+  var assign = Object.assign;
+  function hash(value, length2) {
+    return charat(value, 0) ^ 45 ? (((length2 << 2 ^ charat(value, 0)) << 2 ^ charat(value, 1)) << 2 ^ charat(value, 2)) << 2 ^ charat(value, 3) : 0;
+  }
+  function trim(value) {
+    return value.trim();
+  }
+  function match(value, pattern) {
+    return (value = pattern.exec(value)) ? value[0] : value;
+  }
+  function replace(value, pattern, replacement) {
+    return value.replace(pattern, replacement);
+  }
+  function indexof(value, search, position2) {
+    return value.indexOf(search, position2);
+  }
+  function charat(value, index) {
+    return value.charCodeAt(index) | 0;
+  }
+  function substr(value, begin3, end3) {
+    return value.slice(begin3, end3);
+  }
+  function strlen(value) {
+    return value.length;
+  }
+  function sizeof(value) {
+    return value.length;
+  }
+  function append(value, array) {
+    return array.push(value), value;
+  }
+  function combine(array, callback) {
+    return array.map(callback).join("");
+  }
+  function filter(array, pattern) {
+    return array.filter(function(value) {
+      return !match(value, pattern);
+    });
+  }
+
+  // node_modules/stylis/src/Tokenizer.js
+  var line = 1;
+  var column = 1;
+  var length = 0;
+  var position = 0;
+  var character = 0;
+  var characters = "";
+  function node(value, root2, parent, type, props, children, length2, siblings) {
+    return { value, root: root2, parent, type, props, children, line, column, length: length2, return: "", siblings };
+  }
+  function copy(root2, props) {
+    return assign(node("", null, null, "", null, null, 0, root2.siblings), root2, { length: -root2.length }, props);
+  }
+  function lift(root2) {
+    while (root2.root)
+      root2 = copy(root2.root, { children: [root2] });
+    append(root2, root2.siblings);
+  }
+  function char() {
+    return character;
+  }
+  function prev() {
+    character = position > 0 ? charat(characters, --position) : 0;
+    if (column--, character === 10)
+      column = 1, line--;
+    return character;
+  }
+  function next() {
+    character = position < length ? charat(characters, position++) : 0;
+    if (column++, character === 10)
+      column = 1, line++;
+    return character;
+  }
+  function peek() {
+    return charat(characters, position);
+  }
+  function caret() {
+    return position;
+  }
+  function slice(begin3, end3) {
+    return substr(characters, begin3, end3);
+  }
+  function token(type) {
+    switch (type) {
+      case 0:
+      case 9:
+      case 10:
+      case 13:
+      case 32:
+        return 5;
+      case 33:
+      case 43:
+      case 44:
+      case 47:
+      case 62:
+      case 64:
+      case 126:
+      case 59:
+      case 123:
+      case 125:
+        return 4;
+      case 58:
+        return 3;
+      case 34:
+      case 39:
+      case 40:
+      case 91:
+        return 2;
+      case 41:
+      case 93:
+        return 1;
+    }
+    return 0;
+  }
+  function alloc(value) {
+    return line = column = 1, length = strlen(characters = value), position = 0, [];
+  }
+  function dealloc(value) {
+    return characters = "", value;
+  }
+  function delimit(type) {
+    return trim(slice(position - 1, delimiter(type === 91 ? type + 2 : type === 40 ? type + 1 : type)));
+  }
+  function whitespace(type) {
+    while (character = peek())
+      if (character < 33)
+        next();
+      else
+        break;
+    return token(type) > 2 || token(character) > 3 ? "" : " ";
+  }
+  function escaping(index, count) {
+    while (--count && next())
+      if (character < 48 || character > 102 || character > 57 && character < 65 || character > 70 && character < 97)
+        break;
+    return slice(index, caret() + (count < 6 && peek() == 32 && next() == 32));
+  }
+  function delimiter(type) {
+    while (next())
+      switch (character) {
+        case type:
+          return position;
+        case 34:
+        case 39:
+          if (type !== 34 && type !== 39)
+            delimiter(character);
+          break;
+        case 40:
+          if (type === 41)
+            delimiter(type);
+          break;
+        case 92:
+          next();
+          break;
+      }
+    return position;
+  }
+  function commenter(type, index) {
+    while (next())
+      if (type + character === 47 + 10)
+        break;
+      else if (type + character === 42 + 42 && peek() === 47)
+        break;
+    return "/*" + slice(index, position - 1) + "*" + from(type === 47 ? type : next());
+  }
+  function identifier(index) {
+    while (!token(peek()))
+      next();
+    return slice(index, position);
+  }
+
+  // node_modules/stylis/src/Parser.js
+  function compile(value) {
+    return dealloc(parse("", null, null, null, [""], value = alloc(value), 0, [0], value));
+  }
+  function parse(value, root2, parent, rule, rules, rulesets, pseudo, points, declarations) {
+    var index = 0;
+    var offset = 0;
+    var length2 = pseudo;
+    var atrule = 0;
+    var property = 0;
+    var previous = 0;
+    var variable = 1;
+    var scanning = 1;
+    var ampersand = 1;
+    var character2 = 0;
+    var type = "";
+    var props = rules;
+    var children = rulesets;
+    var reference = rule;
+    var characters2 = type;
+    while (scanning)
+      switch (previous = character2, character2 = next()) {
+        case 40:
+          if (previous != 108 && charat(characters2, length2 - 1) == 58) {
+            if (indexof(characters2 += replace(delimit(character2), "&", "&\f"), "&\f", abs(index ? points[index - 1] : 0)) != -1)
+              ampersand = -1;
+            break;
+          }
+        case 34:
+        case 39:
+        case 91:
+          characters2 += delimit(character2);
+          break;
+        case 9:
+        case 10:
+        case 13:
+        case 32:
+          characters2 += whitespace(previous);
+          break;
+        case 92:
+          characters2 += escaping(caret() - 1, 7);
+          continue;
+        case 47:
+          switch (peek()) {
+            case 42:
+            case 47:
+              append(comment(commenter(next(), caret()), root2, parent, declarations), declarations);
+              break;
+            default:
+              characters2 += "/";
+          }
+          break;
+        case 123 * variable:
+          points[index++] = strlen(characters2) * ampersand;
+        case 125 * variable:
+        case 59:
+        case 0:
+          switch (character2) {
+            case 0:
+            case 125:
+              scanning = 0;
+            case 59 + offset:
+              if (ampersand == -1)
+                characters2 = replace(characters2, /\f/g, "");
+              if (property > 0 && strlen(characters2) - length2)
+                append(property > 32 ? declaration(characters2 + ";", rule, parent, length2 - 1, declarations) : declaration(replace(characters2, " ", "") + ";", rule, parent, length2 - 2, declarations), declarations);
+              break;
+            case 59:
+              characters2 += ";";
+            default:
+              append(reference = ruleset(characters2, root2, parent, index, offset, rules, points, type, props = [], children = [], length2, rulesets), rulesets);
+              if (character2 === 123)
+                if (offset === 0)
+                  parse(characters2, root2, reference, reference, props, rulesets, length2, points, children);
+                else
+                  switch (atrule === 99 && charat(characters2, 3) === 110 ? 100 : atrule) {
+                    case 100:
+                    case 108:
+                    case 109:
+                    case 115:
+                      parse(value, reference, reference, rule && append(ruleset(value, reference, reference, 0, 0, rules, points, type, rules, props = [], length2, children), children), rules, children, length2, points, rule ? props : children);
+                      break;
+                    default:
+                      parse(characters2, reference, reference, reference, [""], children, 0, points, children);
+                  }
+          }
+          index = offset = property = 0, variable = ampersand = 1, type = characters2 = "", length2 = pseudo;
+          break;
+        case 58:
+          length2 = 1 + strlen(characters2), property = previous;
+        default:
+          if (variable < 1) {
+            if (character2 == 123)
+              --variable;
+            else if (character2 == 125 && variable++ == 0 && prev() == 125)
+              continue;
+          }
+          switch (characters2 += from(character2), character2 * variable) {
+            case 38:
+              ampersand = offset > 0 ? 1 : (characters2 += "\f", -1);
+              break;
+            case 44:
+              points[index++] = (strlen(characters2) - 1) * ampersand, ampersand = 1;
+              break;
+            case 64:
+              if (peek() === 45)
+                characters2 += delimit(next());
+              atrule = peek(), offset = length2 = strlen(type = characters2 += identifier(caret())), character2++;
+              break;
+            case 45:
+              if (previous === 45 && strlen(characters2) == 2)
+                variable = 0;
+          }
+      }
+    return rulesets;
+  }
+  function ruleset(value, root2, parent, index, offset, rules, points, type, props, children, length2, siblings) {
+    var post = offset - 1;
+    var rule = offset === 0 ? rules : [""];
+    var size = sizeof(rule);
+    for (var i2 = 0, j2 = 0, k2 = 0; i2 < index; ++i2)
+      for (var x2 = 0, y2 = substr(value, post + 1, post = abs(j2 = points[i2])), z2 = value; x2 < size; ++x2)
+        if (z2 = trim(j2 > 0 ? rule[x2] + " " + y2 : replace(y2, /&\f/g, rule[x2])))
+          props[k2++] = z2;
+    return node(value, root2, parent, offset === 0 ? RULESET : type, props, children, length2, siblings);
+  }
+  function comment(value, root2, parent, siblings) {
+    return node(value, root2, parent, COMMENT, from(char()), substr(value, 2, -2), 0, siblings);
+  }
+  function declaration(value, root2, parent, length2, siblings) {
+    return node(value, root2, parent, DECLARATION, substr(value, 0, length2), substr(value, length2 + 1, -1), length2, siblings);
+  }
+
+  // node_modules/stylis/src/Prefixer.js
+  function prefix(value, length2, children) {
+    switch (hash(value, length2)) {
+      case 5103:
+        return WEBKIT + "print-" + value + value;
+      case 5737:
+      case 4201:
+      case 3177:
+      case 3433:
+      case 1641:
+      case 4457:
+      case 2921:
+      case 5572:
+      case 6356:
+      case 5844:
+      case 3191:
+      case 6645:
+      case 3005:
+      case 6391:
+      case 5879:
+      case 5623:
+      case 6135:
+      case 4599:
+      case 4855:
+      case 4215:
+      case 6389:
+      case 5109:
+      case 5365:
+      case 5621:
+      case 3829:
+        return WEBKIT + value + value;
+      case 4789:
+        return MOZ + value + value;
+      case 5349:
+      case 4246:
+      case 4810:
+      case 6968:
+      case 2756:
+        return WEBKIT + value + MOZ + value + MS + value + value;
+      case 5936:
+        switch (charat(value, length2 + 11)) {
+          case 114:
+            return WEBKIT + value + MS + replace(value, /[svh]\w+-[tblr]{2}/, "tb") + value;
+          case 108:
+            return WEBKIT + value + MS + replace(value, /[svh]\w+-[tblr]{2}/, "tb-rl") + value;
+          case 45:
+            return WEBKIT + value + MS + replace(value, /[svh]\w+-[tblr]{2}/, "lr") + value;
+        }
+      case 6828:
+      case 4268:
+      case 2903:
+        return WEBKIT + value + MS + value + value;
+      case 6165:
+        return WEBKIT + value + MS + "flex-" + value + value;
+      case 5187:
+        return WEBKIT + value + replace(value, /(\w+).+(:[^]+)/, WEBKIT + "box-$1$2" + MS + "flex-$1$2") + value;
+      case 5443:
+        return WEBKIT + value + MS + "flex-item-" + replace(value, /flex-|-self/g, "") + (!match(value, /flex-|baseline/) ? MS + "grid-row-" + replace(value, /flex-|-self/g, "") : "") + value;
+      case 4675:
+        return WEBKIT + value + MS + "flex-line-pack" + replace(value, /align-content|flex-|-self/g, "") + value;
+      case 5548:
+        return WEBKIT + value + MS + replace(value, "shrink", "negative") + value;
+      case 5292:
+        return WEBKIT + value + MS + replace(value, "basis", "preferred-size") + value;
+      case 6060:
+        return WEBKIT + "box-" + replace(value, "-grow", "") + WEBKIT + value + MS + replace(value, "grow", "positive") + value;
+      case 4554:
+        return WEBKIT + replace(value, /([^-])(transform)/g, "$1" + WEBKIT + "$2") + value;
+      case 6187:
+        return replace(replace(replace(value, /(zoom-|grab)/, WEBKIT + "$1"), /(image-set)/, WEBKIT + "$1"), value, "") + value;
+      case 5495:
+      case 3959:
+        return replace(value, /(image-set\([^]*)/, WEBKIT + "$1$`$1");
+      case 4968:
+        return replace(replace(value, /(.+:)(flex-)?(.*)/, WEBKIT + "box-pack:$3" + MS + "flex-pack:$3"), /s.+-b[^;]+/, "justify") + WEBKIT + value + value;
+      case 4200:
+        if (!match(value, /flex-|baseline/))
+          return MS + "grid-column-align" + substr(value, length2) + value;
+        break;
+      case 2592:
+      case 3360:
+        return MS + replace(value, "template-", "") + value;
+      case 4384:
+      case 3616:
+        if (children && children.some(function(element, index) {
+          return length2 = index, match(element.props, /grid-\w+-end/);
+        })) {
+          return ~indexof(value + (children = children[length2].value), "span", 0) ? value : MS + replace(value, "-start", "") + value + MS + "grid-row-span:" + (~indexof(children, "span", 0) ? match(children, /\d+/) : +match(children, /\d+/) - +match(value, /\d+/)) + ";";
+        }
+        return MS + replace(value, "-start", "") + value;
+      case 4896:
+      case 4128:
+        return children && children.some(function(element) {
+          return match(element.props, /grid-\w+-start/);
+        }) ? value : MS + replace(replace(value, "-end", "-span"), "span ", "") + value;
+      case 4095:
+      case 3583:
+      case 4068:
+      case 2532:
+        return replace(value, /(.+)-inline(.+)/, WEBKIT + "$1$2") + value;
+      case 8116:
+      case 7059:
+      case 5753:
+      case 5535:
+      case 5445:
+      case 5701:
+      case 4933:
+      case 4677:
+      case 5533:
+      case 5789:
+      case 5021:
+      case 4765:
+        if (strlen(value) - 1 - length2 > 6)
+          switch (charat(value, length2 + 1)) {
+            case 109:
+              if (charat(value, length2 + 4) !== 45)
+                break;
+            case 102:
+              return replace(value, /(.+:)(.+)-([^]+)/, "$1" + WEBKIT + "$2-$3$1" + MOZ + (charat(value, length2 + 3) == 108 ? "$3" : "$2-$3")) + value;
+            case 115:
+              return ~indexof(value, "stretch", 0) ? prefix(replace(value, "stretch", "fill-available"), length2, children) + value : value;
+          }
+        break;
+      case 5152:
+      case 5920:
+        return replace(value, /(.+?):(\d+)(\s*\/\s*(span)?\s*(\d+))?(.*)/, function(_2, a2, b2, c2, d2, e, f2) {
+          return MS + a2 + ":" + b2 + f2 + (c2 ? MS + a2 + "-span:" + (d2 ? e : +e - +b2) + f2 : "") + value;
+        });
+      case 4949:
+        if (charat(value, length2 + 6) === 121)
+          return replace(value, ":", ":" + WEBKIT) + value;
+        break;
+      case 6444:
+        switch (charat(value, charat(value, 14) === 45 ? 18 : 11)) {
+          case 120:
+            return replace(value, /(.+:)([^;\s!]+)(;|(\s+)?!.+)?/, "$1" + WEBKIT + (charat(value, 14) === 45 ? "inline-" : "") + "box$3$1" + WEBKIT + "$2$3$1" + MS + "$2box$3") + value;
+          case 100:
+            return replace(value, ":", ":" + MS) + value;
+        }
+        break;
+      case 5719:
+      case 2647:
+      case 2135:
+      case 3927:
+      case 2391:
+        return replace(value, "scroll-", "scroll-snap-") + value;
+    }
+    return value;
+  }
+
+  // node_modules/stylis/src/Serializer.js
+  function serialize(children, callback) {
+    var output = "";
+    for (var i2 = 0; i2 < children.length; i2++)
+      output += callback(children[i2], i2, children, callback) || "";
+    return output;
+  }
+  function stringify(element, index, children, callback) {
+    switch (element.type) {
+      case LAYER:
+        if (element.children.length)
+          break;
+      case IMPORT:
+      case DECLARATION:
+        return element.return = element.return || element.value;
+      case COMMENT:
+        return "";
+      case KEYFRAMES:
+        return element.return = element.value + "{" + serialize(element.children, callback) + "}";
+      case RULESET:
+        if (!strlen(element.value = element.props.join(",")))
+          return "";
+    }
+    return strlen(children = serialize(element.children, callback)) ? element.return = element.value + "{" + children + "}" : "";
+  }
+
+  // node_modules/stylis/src/Middleware.js
+  function middleware(collection) {
+    var length2 = sizeof(collection);
+    return function(element, index, children, callback) {
+      var output = "";
+      for (var i2 = 0; i2 < length2; i2++)
+        output += collection[i2](element, index, children, callback) || "";
+      return output;
+    };
+  }
+  function rulesheet(callback) {
+    return function(element) {
+      if (!element.root) {
+        if (element = element.return)
+          callback(element);
+      }
+    };
+  }
+  function prefixer(element, index, children, callback) {
+    if (element.length > -1) {
+      if (!element.return)
+        switch (element.type) {
+          case DECLARATION:
+            element.return = prefix(element.value, element.length, children);
+            return;
+          case KEYFRAMES:
+            return serialize([copy(element, { value: replace(element.value, "@", "@" + WEBKIT) })], callback);
+          case RULESET:
+            if (element.length)
+              return combine(children = element.props, function(value) {
+                switch (match(value, callback = /(::plac\w+|:read-\w+)/)) {
+                  case ":read-only":
+                  case ":read-write":
+                    lift(copy(element, { props: [replace(value, /:(read-\w+)/, ":" + MOZ + "$1")] }));
+                    lift(copy(element, { props: [value] }));
+                    assign(element, { props: filter(children, callback) });
+                    break;
+                  case "::placeholder":
+                    lift(copy(element, { props: [replace(value, /:(plac\w+)/, ":" + WEBKIT + "input-$1")] }));
+                    lift(copy(element, { props: [replace(value, /:(plac\w+)/, ":" + MOZ + "$1")] }));
+                    lift(copy(element, { props: [replace(value, /:(plac\w+)/, MS + "input-$1")] }));
+                    lift(copy(element, { props: [value] }));
+                    assign(element, { props: filter(children, callback) });
+                    break;
+                }
+                return "";
+              });
+        }
+    }
+  }
+
+  // node_modules/@emotion/unitless/dist/emotion-unitless.esm.js
+  var unitlessKeys = {
+    animationIterationCount: 1,
+    borderImageOutset: 1,
+    borderImageSlice: 1,
+    borderImageWidth: 1,
+    boxFlex: 1,
+    boxFlexGroup: 1,
+    boxOrdinalGroup: 1,
+    columnCount: 1,
+    columns: 1,
+    flex: 1,
+    flexGrow: 1,
+    flexPositive: 1,
+    flexShrink: 1,
+    flexNegative: 1,
+    flexOrder: 1,
+    gridRow: 1,
+    gridRowEnd: 1,
+    gridRowSpan: 1,
+    gridRowStart: 1,
+    gridColumn: 1,
+    gridColumnEnd: 1,
+    gridColumnSpan: 1,
+    gridColumnStart: 1,
+    msGridRow: 1,
+    msGridRowSpan: 1,
+    msGridColumn: 1,
+    msGridColumnSpan: 1,
+    fontWeight: 1,
+    lineHeight: 1,
+    opacity: 1,
+    order: 1,
+    orphans: 1,
+    tabSize: 1,
+    widows: 1,
+    zIndex: 1,
+    zoom: 1,
+    WebkitLineClamp: 1,
+    // SVG-related properties
+    fillOpacity: 1,
+    floodOpacity: 1,
+    stopOpacity: 1,
+    strokeDasharray: 1,
+    strokeDashoffset: 1,
+    strokeMiterlimit: 1,
+    strokeOpacity: 1,
+    strokeWidth: 1
+  };
+  var emotion_unitless_esm_default = unitlessKeys;
+
+  // node_modules/styled-components/dist/styled-components.browser.esm.js
+  var f = "undefined" != typeof process && void 0 !== process.env && (process.env.REACT_APP_SC_ATTR || process.env.SC_ATTR) || "data-styled";
+  var m = "active";
+  var y = "data-styled-version";
+  var v = "6.1.8";
+  var g = "/*!sc*/\n";
+  var S = "undefined" != typeof window && "HTMLElement" in window;
+  var w = Boolean("boolean" == typeof SC_DISABLE_SPEEDY ? SC_DISABLE_SPEEDY : "undefined" != typeof process && void 0 !== process.env && void 0 !== process.env.REACT_APP_SC_DISABLE_SPEEDY && "" !== process.env.REACT_APP_SC_DISABLE_SPEEDY ? "false" !== process.env.REACT_APP_SC_DISABLE_SPEEDY && process.env.REACT_APP_SC_DISABLE_SPEEDY : "undefined" != typeof process && void 0 !== process.env && void 0 !== process.env.SC_DISABLE_SPEEDY && "" !== process.env.SC_DISABLE_SPEEDY ? "false" !== process.env.SC_DISABLE_SPEEDY && process.env.SC_DISABLE_SPEEDY : true);
+  var b = {};
+  var E = /invalid hook call/i;
+  var N = /* @__PURE__ */ new Set();
+  var P = function(t, n) {
+    if (true) {
+      var o2 = n ? ' with the id of "'.concat(n, '"') : "", s2 = "The component ".concat(t).concat(o2, " has been created dynamically.\n") + "You may see this warning because you've called styled inside another component.\nTo resolve this only create new StyledComponents outside of any render method and function component.", i2 = console.error;
+      try {
+        var a2 = true;
+        console.error = function(t2) {
+          for (var n2 = [], o3 = 1; o3 < arguments.length; o3++)
+            n2[o3 - 1] = arguments[o3];
+          E.test(t2) ? (a2 = false, N.delete(s2)) : i2.apply(void 0, __spreadArray([t2], n2, false));
+        }, (0, import_react2.useRef)(), a2 && !N.has(s2) && (console.warn(s2), N.add(s2));
+      } catch (e) {
+        E.test(e.message) && N.delete(s2);
+      } finally {
+        console.error = i2;
+      }
+    }
+  };
+  var _ = Object.freeze([]);
+  var C = Object.freeze({});
+  function I(e, t, n) {
+    return void 0 === n && (n = C), e.theme !== n.theme && e.theme || t || n.theme;
+  }
+  var A = /* @__PURE__ */ new Set(["a", "abbr", "address", "area", "article", "aside", "audio", "b", "base", "bdi", "bdo", "big", "blockquote", "body", "br", "button", "canvas", "caption", "cite", "code", "col", "colgroup", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "div", "dl", "dt", "em", "embed", "fieldset", "figcaption", "figure", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "header", "hgroup", "hr", "html", "i", "iframe", "img", "input", "ins", "kbd", "keygen", "label", "legend", "li", "link", "main", "map", "mark", "menu", "menuitem", "meta", "meter", "nav", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "span", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th", "thead", "time", "tr", "track", "u", "ul", "use", "var", "video", "wbr", "circle", "clipPath", "defs", "ellipse", "foreignObject", "g", "image", "line", "linearGradient", "marker", "mask", "path", "pattern", "polygon", "polyline", "radialGradient", "rect", "stop", "svg", "text", "tspan"]);
+  var O = /[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g;
+  var D = /(^-|-$)/g;
+  function R(e) {
+    return e.replace(O, "-").replace(D, "");
+  }
+  var T = /(a)(d)/gi;
+  var k = 52;
+  var j = function(e) {
+    return String.fromCharCode(e + (e > 25 ? 39 : 97));
+  };
+  function x(e) {
+    var t, n = "";
+    for (t = Math.abs(e); t > k; t = t / k | 0)
+      n = j(t % k) + n;
+    return (j(t % k) + n).replace(T, "$1-$2");
+  }
+  var V;
+  var F = 5381;
+  var M = function(e, t) {
+    for (var n = t.length; n; )
+      e = 33 * e ^ t.charCodeAt(--n);
+    return e;
+  };
+  var $ = function(e) {
+    return M(F, e);
+  };
+  function z(e) {
+    return x($(e) >>> 0);
+  }
+  function B(e) {
+    return "string" == typeof e && e || e.displayName || e.name || "Component";
+  }
+  function L(e) {
+    return "string" == typeof e && e.charAt(0) === e.charAt(0).toLowerCase();
+  }
+  var G = "function" == typeof Symbol && Symbol.for;
+  var Y = G ? Symbol.for("react.memo") : 60115;
+  var W = G ? Symbol.for("react.forward_ref") : 60112;
+  var q = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
+  var H = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
+  var U = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
+  var J = ((V = {})[W] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true }, V[Y] = U, V);
+  function X(e) {
+    return ("type" in (t = e) && t.type.$$typeof) === Y ? U : "$$typeof" in e ? J[e.$$typeof] : q;
+    var t;
+  }
+  var Z = Object.defineProperty;
+  var K = Object.getOwnPropertyNames;
+  var Q = Object.getOwnPropertySymbols;
+  var ee = Object.getOwnPropertyDescriptor;
+  var te = Object.getPrototypeOf;
+  var ne = Object.prototype;
+  function oe(e, t, n) {
+    if ("string" != typeof t) {
+      if (ne) {
+        var o2 = te(t);
+        o2 && o2 !== ne && oe(e, o2, n);
+      }
+      var r2 = K(t);
+      Q && (r2 = r2.concat(Q(t)));
+      for (var s2 = X(e), i2 = X(t), a2 = 0; a2 < r2.length; ++a2) {
+        var c2 = r2[a2];
+        if (!(c2 in H || n && n[c2] || i2 && c2 in i2 || s2 && c2 in s2)) {
+          var l2 = ee(t, c2);
+          try {
+            Z(e, c2, l2);
+          } catch (e2) {
+          }
+        }
+      }
+    }
+    return e;
+  }
+  function re(e) {
+    return "function" == typeof e;
+  }
+  function se(e) {
+    return "object" == typeof e && "styledComponentId" in e;
+  }
+  function ie(e, t) {
+    return e && t ? "".concat(e, " ").concat(t) : e || t || "";
+  }
+  function ae(e, t) {
+    if (0 === e.length)
+      return "";
+    for (var n = e[0], o2 = 1; o2 < e.length; o2++)
+      n += t ? t + e[o2] : e[o2];
+    return n;
+  }
+  function ce(e) {
+    return null !== e && "object" == typeof e && e.constructor.name === Object.name && !("props" in e && e.$$typeof);
+  }
+  function le(e, t, n) {
+    if (void 0 === n && (n = false), !n && !ce(e) && !Array.isArray(e))
+      return t;
+    if (Array.isArray(t))
+      for (var o2 = 0; o2 < t.length; o2++)
+        e[o2] = le(e[o2], t[o2]);
+    else if (ce(t))
+      for (var o2 in t)
+        e[o2] = le(e[o2], t[o2]);
+    return e;
+  }
+  function ue(e, t) {
+    Object.defineProperty(e, "toString", { value: t });
+  }
+  var pe = true ? { 1: "Cannot create styled-component for component: %s.\n\n", 2: "Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n- Are you trying to reuse it across renders?\n- Are you accidentally calling collectStyles twice?\n\n", 3: "Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n", 4: "The `StyleSheetManager` expects a valid target or sheet prop!\n\n- Does this error occur on the client and is your target falsy?\n- Does this error occur on the server and is the sheet falsy?\n\n", 5: "The clone method cannot be used on the client!\n\n- Are you running in a client-like environment on the server?\n- Are you trying to run SSR on the client?\n\n", 6: "Trying to insert a new style tag, but the given Node is unmounted!\n\n- Are you using a custom target that isn't mounted?\n- Does your document not have a valid head element?\n- Have you accidentally removed a style tag manually?\n\n", 7: 'ThemeProvider: Please return an object from your "theme" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n', 8: 'ThemeProvider: Please make your "theme" prop an object.\n\n', 9: "Missing document `<head>`\n\n", 10: "Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n", 11: "_This error was replaced with a dev-time warning, it will be deleted for v4 final._ [createGlobalStyle] received children which will not be rendered. Please use the component without passing children elements.\n\n", 12: "It seems you are interpolating a keyframe declaration (%s) into an untagged string. This was supported in styled-components v3, but is not longer supported in v4 as keyframes are now injected on-demand. Please wrap your string in the css\\`\\` helper which ensures the styles are injected correctly. See https://www.styled-components.com/docs/api#css\n\n", 13: "%s is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.\n\n", 14: 'ThemeProvider: "theme" prop is required.\n\n', 15: "A stylis plugin has been supplied that is not named. We need a name for each plugin to be able to prevent styling collisions between different stylis configurations within the same app. Before you pass your plugin to `<StyleSheetManager stylisPlugins={[]}>`, please make sure each plugin is uniquely-named, e.g.\n\n```js\nObject.defineProperty(importedPlugin, 'name', { value: 'some-unique-name' });\n```\n\n", 16: "Reached the limit of how many styled components may be created at group %s.\nYou may only create up to 1,073,741,824 components. If you're creating components dynamically,\nas for instance in your render method then you may be running into this limitation.\n\n", 17: "CSSStyleSheet could not be found on HTMLStyleElement.\nHas styled-components' style tag been unmounted or altered by another script?\n", 18: "ThemeProvider: Please make sure your useTheme hook is within a `<ThemeProvider>`" } : {};
+  function de() {
+    for (var e = [], t = 0; t < arguments.length; t++)
+      e[t] = arguments[t];
+    for (var n = e[0], o2 = [], r2 = 1, s2 = e.length; r2 < s2; r2 += 1)
+      o2.push(e[r2]);
+    return o2.forEach(function(e2) {
+      n = n.replace(/%[a-z]/, e2);
+    }), n;
+  }
+  function he(t) {
+    for (var n = [], o2 = 1; o2 < arguments.length; o2++)
+      n[o2 - 1] = arguments[o2];
+    return false ? new Error("An error occurred. See https://github.com/styled-components/styled-components/blob/main/packages/styled-components/src/utils/errors.md#".concat(t, " for more information.").concat(n.length > 0 ? " Args: ".concat(n.join(", ")) : "")) : new Error(de.apply(void 0, __spreadArray([pe[t]], n, false)).trim());
+  }
+  var fe = function() {
+    function e(e2) {
+      this.groupSizes = new Uint32Array(512), this.length = 512, this.tag = e2;
+    }
+    return e.prototype.indexOfGroup = function(e2) {
+      for (var t = 0, n = 0; n < e2; n++)
+        t += this.groupSizes[n];
+      return t;
+    }, e.prototype.insertRules = function(e2, t) {
+      if (e2 >= this.groupSizes.length) {
+        for (var n = this.groupSizes, o2 = n.length, r2 = o2; e2 >= r2; )
+          if ((r2 <<= 1) < 0)
+            throw he(16, "".concat(e2));
+        this.groupSizes = new Uint32Array(r2), this.groupSizes.set(n), this.length = r2;
+        for (var s2 = o2; s2 < r2; s2++)
+          this.groupSizes[s2] = 0;
+      }
+      for (var i2 = this.indexOfGroup(e2 + 1), a2 = (s2 = 0, t.length); s2 < a2; s2++)
+        this.tag.insertRule(i2, t[s2]) && (this.groupSizes[e2]++, i2++);
+    }, e.prototype.clearGroup = function(e2) {
+      if (e2 < this.length) {
+        var t = this.groupSizes[e2], n = this.indexOfGroup(e2), o2 = n + t;
+        this.groupSizes[e2] = 0;
+        for (var r2 = n; r2 < o2; r2++)
+          this.tag.deleteRule(n);
+      }
+    }, e.prototype.getGroup = function(e2) {
+      var t = "";
+      if (e2 >= this.length || 0 === this.groupSizes[e2])
+        return t;
+      for (var n = this.groupSizes[e2], o2 = this.indexOfGroup(e2), r2 = o2 + n, s2 = o2; s2 < r2; s2++)
+        t += "".concat(this.tag.getRule(s2)).concat(g);
+      return t;
+    }, e;
+  }();
+  var me = /* @__PURE__ */ new Map();
+  var ye = /* @__PURE__ */ new Map();
+  var ve = 1;
+  var ge = function(e) {
+    if (me.has(e))
+      return me.get(e);
+    for (; ye.has(ve); )
+      ve++;
+    var t = ve++;
+    if ((0 | t) < 0 || t > 1073741824)
+      throw he(16, "".concat(t));
+    return me.set(e, t), ye.set(t, e), t;
+  };
+  var Se = function(e, t) {
+    ve = t + 1, me.set(e, t), ye.set(t, e);
+  };
+  var we = "style[".concat(f, "][").concat(y, '="').concat(v, '"]');
+  var be = new RegExp("^".concat(f, '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'));
+  var Ee = function(e, t, n) {
+    for (var o2, r2 = n.split(","), s2 = 0, i2 = r2.length; s2 < i2; s2++)
+      (o2 = r2[s2]) && e.registerName(t, o2);
+  };
+  var Ne = function(e, t) {
+    for (var n, o2 = (null !== (n = t.textContent) && void 0 !== n ? n : "").split(g), r2 = [], s2 = 0, i2 = o2.length; s2 < i2; s2++) {
+      var a2 = o2[s2].trim();
+      if (a2) {
+        var c2 = a2.match(be);
+        if (c2) {
+          var l2 = 0 | parseInt(c2[1], 10), u2 = c2[2];
+          0 !== l2 && (Se(u2, l2), Ee(e, u2, c2[3]), e.getTag().insertRules(l2, r2)), r2.length = 0;
+        } else
+          r2.push(a2);
+      }
+    }
+  };
+  function Pe() {
+    return "undefined" != typeof __webpack_nonce__ ? __webpack_nonce__ : null;
+  }
+  var _e = function(e) {
+    var t = document.head, n = e || t, o2 = document.createElement("style"), r2 = function(e2) {
+      var t2 = Array.from(e2.querySelectorAll("style[".concat(f, "]")));
+      return t2[t2.length - 1];
+    }(n), s2 = void 0 !== r2 ? r2.nextSibling : null;
+    o2.setAttribute(f, m), o2.setAttribute(y, v);
+    var i2 = Pe();
+    return i2 && o2.setAttribute("nonce", i2), n.insertBefore(o2, s2), o2;
+  };
+  var Ce = function() {
+    function e(e2) {
+      this.element = _e(e2), this.element.appendChild(document.createTextNode("")), this.sheet = function(e3) {
+        if (e3.sheet)
+          return e3.sheet;
+        for (var t = document.styleSheets, n = 0, o2 = t.length; n < o2; n++) {
+          var r2 = t[n];
+          if (r2.ownerNode === e3)
+            return r2;
+        }
+        throw he(17);
+      }(this.element), this.length = 0;
+    }
+    return e.prototype.insertRule = function(e2, t) {
+      try {
+        return this.sheet.insertRule(t, e2), this.length++, true;
+      } catch (e3) {
+        return false;
+      }
+    }, e.prototype.deleteRule = function(e2) {
+      this.sheet.deleteRule(e2), this.length--;
+    }, e.prototype.getRule = function(e2) {
+      var t = this.sheet.cssRules[e2];
+      return t && t.cssText ? t.cssText : "";
+    }, e;
+  }();
+  var Ie = function() {
+    function e(e2) {
+      this.element = _e(e2), this.nodes = this.element.childNodes, this.length = 0;
+    }
+    return e.prototype.insertRule = function(e2, t) {
+      if (e2 <= this.length && e2 >= 0) {
+        var n = document.createTextNode(t);
+        return this.element.insertBefore(n, this.nodes[e2] || null), this.length++, true;
+      }
+      return false;
+    }, e.prototype.deleteRule = function(e2) {
+      this.element.removeChild(this.nodes[e2]), this.length--;
+    }, e.prototype.getRule = function(e2) {
+      return e2 < this.length ? this.nodes[e2].textContent : "";
+    }, e;
+  }();
+  var Ae = function() {
+    function e(e2) {
+      this.rules = [], this.length = 0;
+    }
+    return e.prototype.insertRule = function(e2, t) {
+      return e2 <= this.length && (this.rules.splice(e2, 0, t), this.length++, true);
+    }, e.prototype.deleteRule = function(e2) {
+      this.rules.splice(e2, 1), this.length--;
+    }, e.prototype.getRule = function(e2) {
+      return e2 < this.length ? this.rules[e2] : "";
+    }, e;
+  }();
+  var Oe = S;
+  var De = { isServer: !S, useCSSOMInjection: !w };
+  var Re = function() {
+    function e(e2, n, o2) {
+      void 0 === e2 && (e2 = C), void 0 === n && (n = {});
+      var r2 = this;
+      this.options = __assign(__assign({}, De), e2), this.gs = n, this.names = new Map(o2), this.server = !!e2.isServer, !this.server && S && Oe && (Oe = false, function(e3) {
+        for (var t = document.querySelectorAll(we), n2 = 0, o3 = t.length; n2 < o3; n2++) {
+          var r3 = t[n2];
+          r3 && r3.getAttribute(f) !== m && (Ne(e3, r3), r3.parentNode && r3.parentNode.removeChild(r3));
+        }
+      }(this)), ue(this, function() {
+        return function(e3) {
+          for (var t = e3.getTag(), n2 = t.length, o3 = "", r3 = function(n3) {
+            var r4 = function(e4) {
+              return ye.get(e4);
+            }(n3);
+            if (void 0 === r4)
+              return "continue";
+            var s3 = e3.names.get(r4), i2 = t.getGroup(n3);
+            if (void 0 === s3 || 0 === i2.length)
+              return "continue";
+            var a2 = "".concat(f, ".g").concat(n3, '[id="').concat(r4, '"]'), c2 = "";
+            void 0 !== s3 && s3.forEach(function(e4) {
+              e4.length > 0 && (c2 += "".concat(e4, ","));
+            }), o3 += "".concat(i2).concat(a2, '{content:"').concat(c2, '"}').concat(g);
+          }, s2 = 0; s2 < n2; s2++)
+            r3(s2);
+          return o3;
+        }(r2);
+      });
+    }
+    return e.registerId = function(e2) {
+      return ge(e2);
+    }, e.prototype.reconstructWithOptions = function(n, o2) {
+      return void 0 === o2 && (o2 = true), new e(__assign(__assign({}, this.options), n), this.gs, o2 && this.names || void 0);
+    }, e.prototype.allocateGSInstance = function(e2) {
+      return this.gs[e2] = (this.gs[e2] || 0) + 1;
+    }, e.prototype.getTag = function() {
+      return this.tag || (this.tag = (e2 = function(e3) {
+        var t = e3.useCSSOMInjection, n = e3.target;
+        return e3.isServer ? new Ae(n) : t ? new Ce(n) : new Ie(n);
+      }(this.options), new fe(e2)));
+      var e2;
+    }, e.prototype.hasNameForId = function(e2, t) {
+      return this.names.has(e2) && this.names.get(e2).has(t);
+    }, e.prototype.registerName = function(e2, t) {
+      if (ge(e2), this.names.has(e2))
+        this.names.get(e2).add(t);
+      else {
+        var n = /* @__PURE__ */ new Set();
+        n.add(t), this.names.set(e2, n);
+      }
+    }, e.prototype.insertRules = function(e2, t, n) {
+      this.registerName(e2, t), this.getTag().insertRules(ge(e2), n);
+    }, e.prototype.clearNames = function(e2) {
+      this.names.has(e2) && this.names.get(e2).clear();
+    }, e.prototype.clearRules = function(e2) {
+      this.getTag().clearGroup(ge(e2)), this.clearNames(e2);
+    }, e.prototype.clearTag = function() {
+      this.tag = void 0;
+    }, e;
+  }();
+  var Te = /&/g;
+  var ke = /^\s*\/\/.*$/gm;
+  function je(e, t) {
+    return e.map(function(e2) {
+      return "rule" === e2.type && (e2.value = "".concat(t, " ").concat(e2.value), e2.value = e2.value.replaceAll(",", ",".concat(t, " ")), e2.props = e2.props.map(function(e3) {
+        return "".concat(t, " ").concat(e3);
+      })), Array.isArray(e2.children) && "@keyframes" !== e2.type && (e2.children = je(e2.children, t)), e2;
+    });
+  }
+  function xe(e) {
+    var t, n, o2, r2 = void 0 === e ? C : e, s2 = r2.options, i2 = void 0 === s2 ? C : s2, a2 = r2.plugins, c2 = void 0 === a2 ? _ : a2, l2 = function(e2, o3, r3) {
+      return r3.startsWith(n) && r3.endsWith(n) && r3.replaceAll(n, "").length > 0 ? ".".concat(t) : e2;
+    }, u2 = c2.slice();
+    u2.push(function(e2) {
+      e2.type === RULESET && e2.value.includes("&") && (e2.props[0] = e2.props[0].replace(Te, n).replace(o2, l2));
+    }), i2.prefix && u2.push(prefixer), u2.push(stringify);
+    var p3 = function(e2, r3, s3, a3) {
+      void 0 === r3 && (r3 = ""), void 0 === s3 && (s3 = ""), void 0 === a3 && (a3 = "&"), t = a3, n = r3, o2 = new RegExp("\\".concat(n, "\\b"), "g");
+      var c3 = e2.replace(ke, ""), l3 = compile(s3 || r3 ? "".concat(s3, " ").concat(r3, " { ").concat(c3, " }") : c3);
+      i2.namespace && (l3 = je(l3, i2.namespace));
+      var p4 = [];
+      return serialize(l3, middleware(u2.concat(rulesheet(function(e3) {
+        return p4.push(e3);
+      })))), p4;
+    };
+    return p3.hash = c2.length ? c2.reduce(function(e2, t2) {
+      return t2.name || he(15), M(e2, t2.name);
+    }, F).toString() : "", p3;
+  }
+  var Ve = new Re();
+  var Fe = xe();
+  var Me = import_react2.default.createContext({ shouldForwardProp: void 0, styleSheet: Ve, stylis: Fe });
+  var $e = Me.Consumer;
+  var ze = import_react2.default.createContext(void 0);
+  function Be() {
+    return (0, import_react2.useContext)(Me);
+  }
+  function Le(e) {
+    var t = (0, import_react2.useState)(e.stylisPlugins), n = t[0], r2 = t[1], c2 = Be().styleSheet, l2 = (0, import_react2.useMemo)(function() {
+      var t2 = c2;
+      return e.sheet ? t2 = e.sheet : e.target && (t2 = t2.reconstructWithOptions({ target: e.target }, false)), e.disableCSSOMInjection && (t2 = t2.reconstructWithOptions({ useCSSOMInjection: false })), t2;
+    }, [e.disableCSSOMInjection, e.sheet, e.target, c2]), u2 = (0, import_react2.useMemo)(function() {
+      return xe({ options: { namespace: e.namespace, prefix: e.enableVendorPrefixes }, plugins: n });
+    }, [e.enableVendorPrefixes, e.namespace, n]);
+    (0, import_react2.useEffect)(function() {
+      (0, import_shallowequal.default)(n, e.stylisPlugins) || r2(e.stylisPlugins);
+    }, [e.stylisPlugins]);
+    var d2 = (0, import_react2.useMemo)(function() {
+      return { shouldForwardProp: e.shouldForwardProp, styleSheet: l2, stylis: u2 };
+    }, [e.shouldForwardProp, l2, u2]);
+    return import_react2.default.createElement(Me.Provider, { value: d2 }, import_react2.default.createElement(ze.Provider, { value: u2 }, e.children));
+  }
+  var Ge = function() {
+    function e(e2, t) {
+      var n = this;
+      this.inject = function(e3, t2) {
+        void 0 === t2 && (t2 = Fe);
+        var o2 = n.name + t2.hash;
+        e3.hasNameForId(n.id, o2) || e3.insertRules(n.id, o2, t2(n.rules, o2, "@keyframes"));
+      }, this.name = e2, this.id = "sc-keyframes-".concat(e2), this.rules = t, ue(this, function() {
+        throw he(12, String(n.name));
+      });
+    }
+    return e.prototype.getName = function(e2) {
+      return void 0 === e2 && (e2 = Fe), this.name + e2.hash;
+    }, e;
+  }();
+  var Ye = function(e) {
+    return e >= "A" && e <= "Z";
+  };
+  function We(e) {
+    for (var t = "", n = 0; n < e.length; n++) {
+      var o2 = e[n];
+      if (1 === n && "-" === o2 && "-" === e[0])
+        return e;
+      Ye(o2) ? t += "-" + o2.toLowerCase() : t += o2;
+    }
+    return t.startsWith("ms-") ? "-" + t : t;
+  }
+  var qe = function(e) {
+    return null == e || false === e || "" === e;
+  };
+  var He = function(t) {
+    var n, o2, r2 = [];
+    for (var s2 in t) {
+      var i2 = t[s2];
+      t.hasOwnProperty(s2) && !qe(i2) && (Array.isArray(i2) && i2.isCss || re(i2) ? r2.push("".concat(We(s2), ":"), i2, ";") : ce(i2) ? r2.push.apply(r2, __spreadArray(__spreadArray(["".concat(s2, " {")], He(i2), false), ["}"], false)) : r2.push("".concat(We(s2), ": ").concat((n = s2, null == (o2 = i2) || "boolean" == typeof o2 || "" === o2 ? "" : "number" != typeof o2 || 0 === o2 || n in emotion_unitless_esm_default || n.startsWith("--") ? String(o2).trim() : "".concat(o2, "px")), ";")));
+    }
+    return r2;
+  };
+  function Ue(e, t, n, o2) {
+    if (qe(e))
+      return [];
+    if (se(e))
+      return [".".concat(e.styledComponentId)];
+    if (re(e)) {
+      if (!re(s2 = e) || s2.prototype && s2.prototype.isReactComponent || !t)
+        return [e];
+      var r2 = e(t);
+      return "object" != typeof r2 || Array.isArray(r2) || r2 instanceof Ge || ce(r2) || null === r2 || console.error("".concat(B(e), " is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.")), Ue(r2, t, n, o2);
+    }
+    var s2;
+    return e instanceof Ge ? n ? (e.inject(n, o2), [e.getName(o2)]) : [e] : ce(e) ? He(e) : Array.isArray(e) ? Array.prototype.concat.apply(_, e.map(function(e2) {
+      return Ue(e2, t, n, o2);
+    })) : [e.toString()];
+  }
+  function Je(e) {
+    for (var t = 0; t < e.length; t += 1) {
+      var n = e[t];
+      if (re(n) && !se(n))
+        return false;
+    }
+    return true;
+  }
+  var Xe = $(v);
+  var Ze = function() {
+    function e(e2, t, n) {
+      this.rules = e2, this.staticRulesId = "", this.isStatic = false, this.componentId = t, this.baseHash = M(Xe, t), this.baseStyle = n, Re.registerId(t);
+    }
+    return e.prototype.generateAndInjectStyles = function(e2, t, n) {
+      var o2 = this.baseStyle ? this.baseStyle.generateAndInjectStyles(e2, t, n) : "";
+      if (this.isStatic && !n.hash)
+        if (this.staticRulesId && t.hasNameForId(this.componentId, this.staticRulesId))
+          o2 = ie(o2, this.staticRulesId);
+        else {
+          var r2 = ae(Ue(this.rules, e2, t, n)), s2 = x(M(this.baseHash, r2) >>> 0);
+          if (!t.hasNameForId(this.componentId, s2)) {
+            var i2 = n(r2, ".".concat(s2), void 0, this.componentId);
+            t.insertRules(this.componentId, s2, i2);
+          }
+          o2 = ie(o2, s2), this.staticRulesId = s2;
+        }
+      else {
+        for (var a2 = M(this.baseHash, n.hash), c2 = "", l2 = 0; l2 < this.rules.length; l2++) {
+          var u2 = this.rules[l2];
+          if ("string" == typeof u2)
+            c2 += u2, a2 = M(a2, u2);
+          else if (u2) {
+            var p3 = ae(Ue(u2, e2, t, n));
+            a2 = M(a2, p3 + l2), c2 += p3;
+          }
+        }
+        if (c2) {
+          var d2 = x(a2 >>> 0);
+          t.hasNameForId(this.componentId, d2) || t.insertRules(this.componentId, d2, n(c2, ".".concat(d2), void 0, this.componentId)), o2 = ie(o2, d2);
+        }
+      }
+      return o2;
+    }, e;
+  }();
+  var Ke = import_react2.default.createContext(void 0);
+  var Qe = Ke.Consumer;
+  function tt(e) {
+    var n = import_react2.default.useContext(Ke), r2 = (0, import_react2.useMemo)(function() {
+      return function(e2, n2) {
+        if (!e2)
+          throw he(14);
+        if (re(e2)) {
+          var o2 = e2(n2);
+          if (null === o2 || Array.isArray(o2) || "object" != typeof o2)
+            throw he(7);
+          return o2;
+        }
+        if (Array.isArray(e2) || "object" != typeof e2)
+          throw he(8);
+        return n2 ? __assign(__assign({}, n2), e2) : e2;
+      }(e.theme, n);
+    }, [e.theme, n]);
+    return e.children ? import_react2.default.createElement(Ke.Provider, { value: r2 }, e.children) : null;
+  }
+  var nt = {};
+  var ot = /* @__PURE__ */ new Set();
+  function rt(e, r2, s2) {
+    var i2 = se(e), a2 = e, c2 = !L(e), p3 = r2.attrs, d2 = void 0 === p3 ? _ : p3, h = r2.componentId, f2 = void 0 === h ? function(e2, t) {
+      var n = "string" != typeof e2 ? "sc" : R(e2);
+      nt[n] = (nt[n] || 0) + 1;
+      var o2 = "".concat(n, "-").concat(z(v + n + nt[n]));
+      return t ? "".concat(t, "-").concat(o2) : o2;
+    }(r2.displayName, r2.parentComponentId) : h, m2 = r2.displayName, y2 = void 0 === m2 ? function(e2) {
+      return L(e2) ? "styled.".concat(e2) : "Styled(".concat(B(e2), ")");
+    }(e) : m2, g2 = r2.displayName && r2.componentId ? "".concat(R(r2.displayName), "-").concat(r2.componentId) : r2.componentId || f2, S2 = i2 && a2.attrs ? a2.attrs.concat(d2).filter(Boolean) : d2, w3 = r2.shouldForwardProp;
+    if (i2 && a2.shouldForwardProp) {
+      var b2 = a2.shouldForwardProp;
+      if (r2.shouldForwardProp) {
+        var E2 = r2.shouldForwardProp;
+        w3 = function(e2, t) {
+          return b2(e2, t) && E2(e2, t);
+        };
+      } else
+        w3 = b2;
+    }
+    var N2 = new Ze(s2, g2, i2 ? a2.componentStyle : void 0);
+    function O2(e2, r3) {
+      return function(e3, r4, s3) {
+        var i3 = e3.attrs, a3 = e3.componentStyle, c3 = e3.defaultProps, p4 = e3.foldedComponentIds, d3 = e3.styledComponentId, h2 = e3.target, f3 = import_react2.default.useContext(Ke), m3 = Be(), y3 = e3.shouldForwardProp || m3.shouldForwardProp;
+        (0, import_react2.useDebugValue)(d3);
+        var v2 = I(r4, f3, c3) || C, g3 = function(e4, n, o2) {
+          for (var r5, s4 = __assign(__assign({}, n), { className: void 0, theme: o2 }), i4 = 0; i4 < e4.length; i4 += 1) {
+            var a4 = re(r5 = e4[i4]) ? r5(s4) : r5;
+            for (var c4 in a4)
+              s4[c4] = "className" === c4 ? ie(s4[c4], a4[c4]) : "style" === c4 ? __assign(__assign({}, s4[c4]), a4[c4]) : a4[c4];
+          }
+          return n.className && (s4.className = ie(s4.className, n.className)), s4;
+        }(i3, r4, v2), S3 = g3.as || h2, w4 = {};
+        for (var b3 in g3)
+          void 0 === g3[b3] || "$" === b3[0] || "as" === b3 || "theme" === b3 && g3.theme === v2 || ("forwardedAs" === b3 ? w4.as = g3.forwardedAs : y3 && !y3(b3, S3) || (w4[b3] = g3[b3], y3 || false || isPropValid(b3) || ot.has(b3) || !A.has(S3) || (ot.add(b3), console.warn('styled-components: it looks like an unknown prop "'.concat(b3, '" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)')))));
+        var E3 = function(e4, t) {
+          var n = Be(), o2 = e4.generateAndInjectStyles(t, n.styleSheet, n.stylis);
+          return (0, import_react2.useDebugValue)(o2), o2;
+        }(a3, g3);
+        e3.warnTooManyClasses && e3.warnTooManyClasses(E3);
+        var N3 = ie(p4, d3);
+        return E3 && (N3 += " " + E3), g3.className && (N3 += " " + g3.className), w4[L(S3) && !A.has(S3) ? "class" : "className"] = N3, w4.ref = s3, (0, import_react2.createElement)(S3, w4);
+      }(D2, e2, r3);
+    }
+    O2.displayName = y2;
+    var D2 = import_react2.default.forwardRef(O2);
+    return D2.attrs = S2, D2.componentStyle = N2, D2.displayName = y2, D2.shouldForwardProp = w3, D2.foldedComponentIds = i2 ? ie(a2.foldedComponentIds, a2.styledComponentId) : "", D2.styledComponentId = g2, D2.target = i2 ? a2.target : e, Object.defineProperty(D2, "defaultProps", { get: function() {
+      return this._foldedDefaultProps;
+    }, set: function(e2) {
+      this._foldedDefaultProps = i2 ? function(e3) {
+        for (var t = [], n = 1; n < arguments.length; n++)
+          t[n - 1] = arguments[n];
+        for (var o2 = 0, r3 = t; o2 < r3.length; o2++)
+          le(e3, r3[o2], true);
+        return e3;
+      }({}, a2.defaultProps, e2) : e2;
+    } }), P(y2, g2), D2.warnTooManyClasses = /* @__PURE__ */ function(e2, t) {
+      var n = {}, o2 = false;
+      return function(r3) {
+        if (!o2 && (n[r3] = true, Object.keys(n).length >= 200)) {
+          var s3 = t ? ' with the id of "'.concat(t, '"') : "";
+          console.warn("Over ".concat(200, " classes were generated for component ").concat(e2).concat(s3, ".\n") + "Consider using the attrs method, together with a style object for frequently changed styles.\nExample:\n  const Component = styled.div.attrs(props => ({\n    style: {\n      background: props.background,\n    },\n  }))`width: 100%;`\n\n  <Component />"), o2 = true, n = {};
+        }
+      };
+    }(y2, g2), ue(D2, function() {
+      return ".".concat(D2.styledComponentId);
+    }), c2 && oe(D2, e, { attrs: true, componentStyle: true, displayName: true, foldedComponentIds: true, shouldForwardProp: true, styledComponentId: true, target: true }), D2;
+  }
+  function st(e, t) {
+    for (var n = [e[0]], o2 = 0, r2 = t.length; o2 < r2; o2 += 1)
+      n.push(t[o2], e[o2 + 1]);
+    return n;
+  }
+  var it = function(e) {
+    return Object.assign(e, { isCss: true });
+  };
+  function at(t) {
+    for (var n = [], o2 = 1; o2 < arguments.length; o2++)
+      n[o2 - 1] = arguments[o2];
+    if (re(t) || ce(t))
+      return it(Ue(st(_, __spreadArray([t], n, true))));
+    var r2 = t;
+    return 0 === n.length && 1 === r2.length && "string" == typeof r2[0] ? Ue(r2) : it(Ue(st(r2, n)));
+  }
+  function ct(n, o2, r2) {
+    if (void 0 === r2 && (r2 = C), !o2)
+      throw he(1, o2);
+    var s2 = function(t) {
+      for (var s3 = [], i2 = 1; i2 < arguments.length; i2++)
+        s3[i2 - 1] = arguments[i2];
+      return n(o2, r2, at.apply(void 0, __spreadArray([t], s3, false)));
+    };
+    return s2.attrs = function(e) {
+      return ct(n, o2, __assign(__assign({}, r2), { attrs: Array.prototype.concat(r2.attrs, e).filter(Boolean) }));
+    }, s2.withConfig = function(e) {
+      return ct(n, o2, __assign(__assign({}, r2), e));
+    }, s2;
+  }
+  var lt = function(e) {
+    return ct(rt, e);
+  };
+  var ut = lt;
+  A.forEach(function(e) {
+    ut[e] = lt(e);
+  });
+  var pt = function() {
+    function e(e2, t) {
+      this.rules = e2, this.componentId = t, this.isStatic = Je(e2), Re.registerId(this.componentId + 1);
+    }
+    return e.prototype.createStyles = function(e2, t, n, o2) {
+      var r2 = o2(ae(Ue(this.rules, t, n, o2)), ""), s2 = this.componentId + e2;
+      n.insertRules(s2, s2, r2);
+    }, e.prototype.removeStyles = function(e2, t) {
+      t.clearRules(this.componentId + e2);
+    }, e.prototype.renderStyles = function(e2, t, n, o2) {
+      e2 > 2 && Re.registerId(this.componentId + e2), this.removeStyles(e2, n), this.createStyles(e2, t, n, o2);
+    }, e;
+  }();
+  function dt(n) {
+    for (var r2 = [], s2 = 1; s2 < arguments.length; s2++)
+      r2[s2 - 1] = arguments[s2];
+    var i2 = at.apply(void 0, __spreadArray([n], r2, false)), a2 = "sc-global-".concat(z(JSON.stringify(i2))), c2 = new pt(i2, a2);
+    P(a2);
+    var l2 = function(e) {
+      var t = Be(), n2 = import_react2.default.useContext(Ke), r3 = import_react2.default.useRef(t.styleSheet.allocateGSInstance(a2)).current;
+      return import_react2.default.Children.count(e.children) && console.warn("The global style component ".concat(a2, " was given child JSX. createGlobalStyle does not render children.")), i2.some(function(e2) {
+        return "string" == typeof e2 && -1 !== e2.indexOf("@import");
+      }) && console.warn("Please do not use @import CSS syntax in createGlobalStyle at this time, as the CSSOM APIs we use in production do not handle it well. Instead, we recommend using a library such as react-helmet to inject a typical <link> meta tag to the stylesheet, or simply embedding it manually in your index.html <head> section for a simpler app."), t.styleSheet.server && u2(r3, e, t.styleSheet, n2, t.stylis), import_react2.default.useLayoutEffect(function() {
+        if (!t.styleSheet.server)
+          return u2(r3, e, t.styleSheet, n2, t.stylis), function() {
+            return c2.removeStyles(r3, t.styleSheet);
+          };
+      }, [r3, e, t.styleSheet, n2, t.stylis]), null;
+    };
+    function u2(e, n2, o2, r3, s3) {
+      if (c2.isStatic)
+        c2.renderStyles(e, b, o2, s3);
+      else {
+        var i3 = __assign(__assign({}, n2), { theme: I(n2, r3, l2.defaultProps) });
+        c2.renderStyles(e, i3, o2, s3);
+      }
+    }
+    return import_react2.default.memo(l2);
+  }
+  function ht(t) {
+    for (var n = [], o2 = 1; o2 < arguments.length; o2++)
+      n[o2 - 1] = arguments[o2];
+    "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");
+    var r2 = ae(at.apply(void 0, __spreadArray([t], n, false))), s2 = z(r2);
+    return new Ge(s2, r2);
+  }
+  var mt = function() {
+    function e() {
+      var e2 = this;
+      this._emitSheetCSS = function() {
+        var t = e2.instance.toString(), n = Pe(), o2 = ae([n && 'nonce="'.concat(n, '"'), "".concat(f, '="true"'), "".concat(y, '="').concat(v, '"')].filter(Boolean), " ");
+        return "<style ".concat(o2, ">").concat(t, "</style>");
+      }, this.getStyleTags = function() {
+        if (e2.sealed)
+          throw he(2);
+        return e2._emitSheetCSS();
+      }, this.getStyleElement = function() {
+        var n;
+        if (e2.sealed)
+          throw he(2);
+        var r2 = ((n = {})[f] = "", n[y] = v, n.dangerouslySetInnerHTML = { __html: e2.instance.toString() }, n), s2 = Pe();
+        return s2 && (r2.nonce = s2), [import_react2.default.createElement("style", __assign({}, r2, { key: "sc-0-0" }))];
+      }, this.seal = function() {
+        e2.sealed = true;
+      }, this.instance = new Re({ isServer: true }), this.sealed = false;
+    }
+    return e.prototype.collectStyles = function(e2) {
+      if (this.sealed)
+        throw he(2);
+      return import_react2.default.createElement(Le, { sheet: this.instance }, e2);
+    }, e.prototype.interleaveWithNodeStream = function(e2) {
+      throw he(3);
+    }, e;
+  }();
+  "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native");
+  var vt = "__sc-".concat(f, "__");
+  "undefined" != typeof window && (window[vt] || (window[vt] = 0), 1 === window[vt] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window[vt] += 1);
+
   // src/components/Title.tsx
   var import_react25 = __toESM(require_react());
 
@@ -28633,16 +29985,16 @@
       };
     }
   };
-  var w = WINDOW || {};
-  if (!w[NAMESPACE_IDENTIFIER])
-    w[NAMESPACE_IDENTIFIER] = {};
-  if (!w[NAMESPACE_IDENTIFIER].styles)
-    w[NAMESPACE_IDENTIFIER].styles = {};
-  if (!w[NAMESPACE_IDENTIFIER].hooks)
-    w[NAMESPACE_IDENTIFIER].hooks = {};
-  if (!w[NAMESPACE_IDENTIFIER].shims)
-    w[NAMESPACE_IDENTIFIER].shims = [];
-  var namespace = w[NAMESPACE_IDENTIFIER];
+  var w2 = WINDOW || {};
+  if (!w2[NAMESPACE_IDENTIFIER])
+    w2[NAMESPACE_IDENTIFIER] = {};
+  if (!w2[NAMESPACE_IDENTIFIER].styles)
+    w2[NAMESPACE_IDENTIFIER].styles = {};
+  if (!w2[NAMESPACE_IDENTIFIER].hooks)
+    w2[NAMESPACE_IDENTIFIER].hooks = {};
+  if (!w2[NAMESPACE_IDENTIFIER].shims)
+    w2[NAMESPACE_IDENTIFIER].shims = [];
+  var namespace = w2[NAMESPACE_IDENTIFIER];
   var functions = [];
   var listener = function listener2() {
     DOCUMENT.removeEventListener("DOMContentLoaded", listener2);
@@ -29134,7 +30486,7 @@
       });
     }
   };
-  var parse = {
+  var parse2 = {
     icon: function icon(_icon) {
       if (_icon === null) {
         return null;
@@ -29175,7 +30527,7 @@
     noAuto,
     config,
     dom,
-    parse,
+    parse: parse2,
     library,
     findIconDefinition,
     toHtml
@@ -29458,20 +30810,20 @@
   }
   var noop$1 = function noop3() {
   };
-  var p = config.measurePerformance && PERFORMANCE && PERFORMANCE.mark && PERFORMANCE.measure ? PERFORMANCE : {
+  var p2 = config.measurePerformance && PERFORMANCE && PERFORMANCE.mark && PERFORMANCE.measure ? PERFORMANCE : {
     mark: noop$1,
     measure: noop$1
   };
   var preamble = 'FA "6.5.1"';
   var begin = function begin2(name) {
-    p.mark("".concat(preamble, " ").concat(name, " begins"));
+    p2.mark("".concat(preamble, " ").concat(name, " begins"));
     return function() {
       return end(name);
     };
   };
   var end = function end2(name) {
-    p.mark("".concat(preamble, " ").concat(name, " ends"));
-    p.measure("".concat(preamble, " ").concat(name), "".concat(preamble, " ").concat(name, " begins"), "".concat(preamble, " ").concat(name, " ends"));
+    p2.mark("".concat(preamble, " ").concat(name, " ends"));
+    p2.measure("".concat(preamble, " ").concat(name), "".concat(preamble, " ").concat(name, " begins"), "".concat(preamble, " ").concat(name, " ends"));
   };
   var perf = {
     begin,
@@ -29528,7 +30880,7 @@
     return comment2;
   }
   var mutators = {
-    replace: function replace(mutation) {
+    replace: function replace2(mutation) {
       var node2 = mutation[0];
       if (node2.parentNode) {
         mutation[1].forEach(function(_abstract) {
@@ -30180,7 +31532,7 @@
       }
     });
   }
-  function replace2(node2) {
+  function replace3(node2) {
     return Promise.all([replaceForPosition(node2, "::before"), replaceForPosition(node2, "::after")]);
   }
   function processable(node2) {
@@ -30190,7 +31542,7 @@
     if (!IS_DOM)
       return;
     return new Promise(function(resolve, reject) {
-      var operations = toArray(root2.querySelectorAll("*")).filter(processable).map(replace2);
+      var operations = toArray(root2.querySelectorAll("*")).filter(processable).map(replace3);
       var end3 = perf.begin("searchPseudoElements");
       disableObservation();
       Promise.all(operations).then(function() {
@@ -30585,7 +31937,7 @@
 
   // node_modules/@fortawesome/react-fontawesome/index.es.js
   var import_prop_types2 = __toESM(require_prop_types());
-  var import_react2 = __toESM(require_react());
+  var import_react3 = __toESM(require_react());
   function ownKeys2(object, enumerableOnly) {
     var keys2 = Object.keys(object);
     if (Object.getOwnPropertySymbols) {
@@ -30825,7 +32177,7 @@
   function objectWithKey(key, value) {
     return Array.isArray(value) && value.length > 0 || !Array.isArray(value) && value ? _defineProperty2({}, key, value) : {};
   }
-  var FontAwesomeIcon = /* @__PURE__ */ import_react2.default.forwardRef(function(props, ref) {
+  var FontAwesomeIcon = /* @__PURE__ */ import_react3.default.forwardRef(function(props, ref) {
     var iconArgs = props.icon, maskArgs = props.mask, symbol = props.symbol, className = props.className, title = props.title, titleId = props.titleId, maskId = props.maskId;
     var iconLookup = normalizeIconArgs(iconArgs);
     var classes = objectWithKey("classes", [].concat(_toConsumableArray2(classList(props)), _toConsumableArray2(className.split(" "))));
@@ -30910,1433 +32262,13 @@
     transform: null,
     swapOpacity: false
   };
-  var convertCurry = convert.bind(null, import_react2.default.createElement);
+  var convertCurry = convert.bind(null, import_react3.default.createElement);
 
   // node_modules/@fortawesome/free-solid-svg-icons/index.mjs
   var faChevronDown = {
     prefix: "fas",
     iconName: "chevron-down",
     icon: [512, 512, [], "f078", "M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"]
-  };
-
-  // node_modules/styled-components/node_modules/tslib/tslib.es6.js
-  var __assign = function() {
-    __assign = Object.assign || function __assign2(t) {
-      for (var s2, i2 = 1, n = arguments.length; i2 < n; i2++) {
-        s2 = arguments[i2];
-        for (var p3 in s2)
-          if (Object.prototype.hasOwnProperty.call(s2, p3))
-            t[p3] = s2[p3];
-      }
-      return t;
-    };
-    return __assign.apply(this, arguments);
-  };
-  function __spreadArray(to, from2, pack) {
-    if (pack || arguments.length === 2)
-      for (var i2 = 0, l2 = from2.length, ar; i2 < l2; i2++) {
-        if (ar || !(i2 in from2)) {
-          if (!ar)
-            ar = Array.prototype.slice.call(from2, 0, i2);
-          ar[i2] = from2[i2];
-        }
-      }
-    return to.concat(ar || Array.prototype.slice.call(from2));
-  }
-
-  // node_modules/styled-components/node_modules/@emotion/memoize/dist/emotion-memoize.esm.js
-  function memoize(fn) {
-    var cache = /* @__PURE__ */ Object.create(null);
-    return function(arg) {
-      if (cache[arg] === void 0)
-        cache[arg] = fn(arg);
-      return cache[arg];
-    };
-  }
-
-  // node_modules/styled-components/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.esm.js
-  var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|abbr|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|enterKeyHint|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|translate|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|incremental|fallback|inert|itemProp|itemScope|itemType|itemID|itemRef|on|option|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/;
-  var isPropValid = /* @__PURE__ */ memoize(
-    function(prop) {
-      return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111 && prop.charCodeAt(1) === 110 && prop.charCodeAt(2) < 91;
-    }
-    /* Z+1 */
-  );
-
-  // node_modules/styled-components/dist/styled-components.browser.esm.js
-  var import_react3 = __toESM(require_react());
-  var import_shallowequal = __toESM(require_shallowequal());
-
-  // node_modules/stylis/src/Enum.js
-  var MS = "-ms-";
-  var MOZ = "-moz-";
-  var WEBKIT = "-webkit-";
-  var COMMENT = "comm";
-  var RULESET = "rule";
-  var DECLARATION = "decl";
-  var IMPORT = "@import";
-  var KEYFRAMES = "@keyframes";
-  var LAYER = "@layer";
-
-  // node_modules/stylis/src/Utility.js
-  var abs = Math.abs;
-  var from = String.fromCharCode;
-  var assign = Object.assign;
-  function hash(value, length2) {
-    return charat(value, 0) ^ 45 ? (((length2 << 2 ^ charat(value, 0)) << 2 ^ charat(value, 1)) << 2 ^ charat(value, 2)) << 2 ^ charat(value, 3) : 0;
-  }
-  function trim(value) {
-    return value.trim();
-  }
-  function match(value, pattern) {
-    return (value = pattern.exec(value)) ? value[0] : value;
-  }
-  function replace3(value, pattern, replacement) {
-    return value.replace(pattern, replacement);
-  }
-  function indexof(value, search, position2) {
-    return value.indexOf(search, position2);
-  }
-  function charat(value, index) {
-    return value.charCodeAt(index) | 0;
-  }
-  function substr(value, begin3, end3) {
-    return value.slice(begin3, end3);
-  }
-  function strlen(value) {
-    return value.length;
-  }
-  function sizeof(value) {
-    return value.length;
-  }
-  function append(value, array) {
-    return array.push(value), value;
-  }
-  function combine(array, callback) {
-    return array.map(callback).join("");
-  }
-  function filter(array, pattern) {
-    return array.filter(function(value) {
-      return !match(value, pattern);
-    });
-  }
-
-  // node_modules/stylis/src/Tokenizer.js
-  var line = 1;
-  var column = 1;
-  var length = 0;
-  var position = 0;
-  var character = 0;
-  var characters = "";
-  function node(value, root2, parent, type, props, children, length2, siblings) {
-    return { value, root: root2, parent, type, props, children, line, column, length: length2, return: "", siblings };
-  }
-  function copy(root2, props) {
-    return assign(node("", null, null, "", null, null, 0, root2.siblings), root2, { length: -root2.length }, props);
-  }
-  function lift(root2) {
-    while (root2.root)
-      root2 = copy(root2.root, { children: [root2] });
-    append(root2, root2.siblings);
-  }
-  function char() {
-    return character;
-  }
-  function prev() {
-    character = position > 0 ? charat(characters, --position) : 0;
-    if (column--, character === 10)
-      column = 1, line--;
-    return character;
-  }
-  function next() {
-    character = position < length ? charat(characters, position++) : 0;
-    if (column++, character === 10)
-      column = 1, line++;
-    return character;
-  }
-  function peek() {
-    return charat(characters, position);
-  }
-  function caret() {
-    return position;
-  }
-  function slice(begin3, end3) {
-    return substr(characters, begin3, end3);
-  }
-  function token(type) {
-    switch (type) {
-      case 0:
-      case 9:
-      case 10:
-      case 13:
-      case 32:
-        return 5;
-      case 33:
-      case 43:
-      case 44:
-      case 47:
-      case 62:
-      case 64:
-      case 126:
-      case 59:
-      case 123:
-      case 125:
-        return 4;
-      case 58:
-        return 3;
-      case 34:
-      case 39:
-      case 40:
-      case 91:
-        return 2;
-      case 41:
-      case 93:
-        return 1;
-    }
-    return 0;
-  }
-  function alloc(value) {
-    return line = column = 1, length = strlen(characters = value), position = 0, [];
-  }
-  function dealloc(value) {
-    return characters = "", value;
-  }
-  function delimit(type) {
-    return trim(slice(position - 1, delimiter(type === 91 ? type + 2 : type === 40 ? type + 1 : type)));
-  }
-  function whitespace(type) {
-    while (character = peek())
-      if (character < 33)
-        next();
-      else
-        break;
-    return token(type) > 2 || token(character) > 3 ? "" : " ";
-  }
-  function escaping(index, count) {
-    while (--count && next())
-      if (character < 48 || character > 102 || character > 57 && character < 65 || character > 70 && character < 97)
-        break;
-    return slice(index, caret() + (count < 6 && peek() == 32 && next() == 32));
-  }
-  function delimiter(type) {
-    while (next())
-      switch (character) {
-        case type:
-          return position;
-        case 34:
-        case 39:
-          if (type !== 34 && type !== 39)
-            delimiter(character);
-          break;
-        case 40:
-          if (type === 41)
-            delimiter(type);
-          break;
-        case 92:
-          next();
-          break;
-      }
-    return position;
-  }
-  function commenter(type, index) {
-    while (next())
-      if (type + character === 47 + 10)
-        break;
-      else if (type + character === 42 + 42 && peek() === 47)
-        break;
-    return "/*" + slice(index, position - 1) + "*" + from(type === 47 ? type : next());
-  }
-  function identifier(index) {
-    while (!token(peek()))
-      next();
-    return slice(index, position);
-  }
-
-  // node_modules/stylis/src/Parser.js
-  function compile(value) {
-    return dealloc(parse2("", null, null, null, [""], value = alloc(value), 0, [0], value));
-  }
-  function parse2(value, root2, parent, rule, rules, rulesets, pseudo, points, declarations) {
-    var index = 0;
-    var offset = 0;
-    var length2 = pseudo;
-    var atrule = 0;
-    var property = 0;
-    var previous = 0;
-    var variable = 1;
-    var scanning = 1;
-    var ampersand = 1;
-    var character2 = 0;
-    var type = "";
-    var props = rules;
-    var children = rulesets;
-    var reference = rule;
-    var characters2 = type;
-    while (scanning)
-      switch (previous = character2, character2 = next()) {
-        case 40:
-          if (previous != 108 && charat(characters2, length2 - 1) == 58) {
-            if (indexof(characters2 += replace3(delimit(character2), "&", "&\f"), "&\f", abs(index ? points[index - 1] : 0)) != -1)
-              ampersand = -1;
-            break;
-          }
-        case 34:
-        case 39:
-        case 91:
-          characters2 += delimit(character2);
-          break;
-        case 9:
-        case 10:
-        case 13:
-        case 32:
-          characters2 += whitespace(previous);
-          break;
-        case 92:
-          characters2 += escaping(caret() - 1, 7);
-          continue;
-        case 47:
-          switch (peek()) {
-            case 42:
-            case 47:
-              append(comment(commenter(next(), caret()), root2, parent, declarations), declarations);
-              break;
-            default:
-              characters2 += "/";
-          }
-          break;
-        case 123 * variable:
-          points[index++] = strlen(characters2) * ampersand;
-        case 125 * variable:
-        case 59:
-        case 0:
-          switch (character2) {
-            case 0:
-            case 125:
-              scanning = 0;
-            case 59 + offset:
-              if (ampersand == -1)
-                characters2 = replace3(characters2, /\f/g, "");
-              if (property > 0 && strlen(characters2) - length2)
-                append(property > 32 ? declaration(characters2 + ";", rule, parent, length2 - 1, declarations) : declaration(replace3(characters2, " ", "") + ";", rule, parent, length2 - 2, declarations), declarations);
-              break;
-            case 59:
-              characters2 += ";";
-            default:
-              append(reference = ruleset(characters2, root2, parent, index, offset, rules, points, type, props = [], children = [], length2, rulesets), rulesets);
-              if (character2 === 123)
-                if (offset === 0)
-                  parse2(characters2, root2, reference, reference, props, rulesets, length2, points, children);
-                else
-                  switch (atrule === 99 && charat(characters2, 3) === 110 ? 100 : atrule) {
-                    case 100:
-                    case 108:
-                    case 109:
-                    case 115:
-                      parse2(value, reference, reference, rule && append(ruleset(value, reference, reference, 0, 0, rules, points, type, rules, props = [], length2, children), children), rules, children, length2, points, rule ? props : children);
-                      break;
-                    default:
-                      parse2(characters2, reference, reference, reference, [""], children, 0, points, children);
-                  }
-          }
-          index = offset = property = 0, variable = ampersand = 1, type = characters2 = "", length2 = pseudo;
-          break;
-        case 58:
-          length2 = 1 + strlen(characters2), property = previous;
-        default:
-          if (variable < 1) {
-            if (character2 == 123)
-              --variable;
-            else if (character2 == 125 && variable++ == 0 && prev() == 125)
-              continue;
-          }
-          switch (characters2 += from(character2), character2 * variable) {
-            case 38:
-              ampersand = offset > 0 ? 1 : (characters2 += "\f", -1);
-              break;
-            case 44:
-              points[index++] = (strlen(characters2) - 1) * ampersand, ampersand = 1;
-              break;
-            case 64:
-              if (peek() === 45)
-                characters2 += delimit(next());
-              atrule = peek(), offset = length2 = strlen(type = characters2 += identifier(caret())), character2++;
-              break;
-            case 45:
-              if (previous === 45 && strlen(characters2) == 2)
-                variable = 0;
-          }
-      }
-    return rulesets;
-  }
-  function ruleset(value, root2, parent, index, offset, rules, points, type, props, children, length2, siblings) {
-    var post = offset - 1;
-    var rule = offset === 0 ? rules : [""];
-    var size = sizeof(rule);
-    for (var i2 = 0, j2 = 0, k2 = 0; i2 < index; ++i2)
-      for (var x2 = 0, y2 = substr(value, post + 1, post = abs(j2 = points[i2])), z2 = value; x2 < size; ++x2)
-        if (z2 = trim(j2 > 0 ? rule[x2] + " " + y2 : replace3(y2, /&\f/g, rule[x2])))
-          props[k2++] = z2;
-    return node(value, root2, parent, offset === 0 ? RULESET : type, props, children, length2, siblings);
-  }
-  function comment(value, root2, parent, siblings) {
-    return node(value, root2, parent, COMMENT, from(char()), substr(value, 2, -2), 0, siblings);
-  }
-  function declaration(value, root2, parent, length2, siblings) {
-    return node(value, root2, parent, DECLARATION, substr(value, 0, length2), substr(value, length2 + 1, -1), length2, siblings);
-  }
-
-  // node_modules/stylis/src/Prefixer.js
-  function prefix(value, length2, children) {
-    switch (hash(value, length2)) {
-      case 5103:
-        return WEBKIT + "print-" + value + value;
-      case 5737:
-      case 4201:
-      case 3177:
-      case 3433:
-      case 1641:
-      case 4457:
-      case 2921:
-      case 5572:
-      case 6356:
-      case 5844:
-      case 3191:
-      case 6645:
-      case 3005:
-      case 6391:
-      case 5879:
-      case 5623:
-      case 6135:
-      case 4599:
-      case 4855:
-      case 4215:
-      case 6389:
-      case 5109:
-      case 5365:
-      case 5621:
-      case 3829:
-        return WEBKIT + value + value;
-      case 4789:
-        return MOZ + value + value;
-      case 5349:
-      case 4246:
-      case 4810:
-      case 6968:
-      case 2756:
-        return WEBKIT + value + MOZ + value + MS + value + value;
-      case 5936:
-        switch (charat(value, length2 + 11)) {
-          case 114:
-            return WEBKIT + value + MS + replace3(value, /[svh]\w+-[tblr]{2}/, "tb") + value;
-          case 108:
-            return WEBKIT + value + MS + replace3(value, /[svh]\w+-[tblr]{2}/, "tb-rl") + value;
-          case 45:
-            return WEBKIT + value + MS + replace3(value, /[svh]\w+-[tblr]{2}/, "lr") + value;
-        }
-      case 6828:
-      case 4268:
-      case 2903:
-        return WEBKIT + value + MS + value + value;
-      case 6165:
-        return WEBKIT + value + MS + "flex-" + value + value;
-      case 5187:
-        return WEBKIT + value + replace3(value, /(\w+).+(:[^]+)/, WEBKIT + "box-$1$2" + MS + "flex-$1$2") + value;
-      case 5443:
-        return WEBKIT + value + MS + "flex-item-" + replace3(value, /flex-|-self/g, "") + (!match(value, /flex-|baseline/) ? MS + "grid-row-" + replace3(value, /flex-|-self/g, "") : "") + value;
-      case 4675:
-        return WEBKIT + value + MS + "flex-line-pack" + replace3(value, /align-content|flex-|-self/g, "") + value;
-      case 5548:
-        return WEBKIT + value + MS + replace3(value, "shrink", "negative") + value;
-      case 5292:
-        return WEBKIT + value + MS + replace3(value, "basis", "preferred-size") + value;
-      case 6060:
-        return WEBKIT + "box-" + replace3(value, "-grow", "") + WEBKIT + value + MS + replace3(value, "grow", "positive") + value;
-      case 4554:
-        return WEBKIT + replace3(value, /([^-])(transform)/g, "$1" + WEBKIT + "$2") + value;
-      case 6187:
-        return replace3(replace3(replace3(value, /(zoom-|grab)/, WEBKIT + "$1"), /(image-set)/, WEBKIT + "$1"), value, "") + value;
-      case 5495:
-      case 3959:
-        return replace3(value, /(image-set\([^]*)/, WEBKIT + "$1$`$1");
-      case 4968:
-        return replace3(replace3(value, /(.+:)(flex-)?(.*)/, WEBKIT + "box-pack:$3" + MS + "flex-pack:$3"), /s.+-b[^;]+/, "justify") + WEBKIT + value + value;
-      case 4200:
-        if (!match(value, /flex-|baseline/))
-          return MS + "grid-column-align" + substr(value, length2) + value;
-        break;
-      case 2592:
-      case 3360:
-        return MS + replace3(value, "template-", "") + value;
-      case 4384:
-      case 3616:
-        if (children && children.some(function(element, index) {
-          return length2 = index, match(element.props, /grid-\w+-end/);
-        })) {
-          return ~indexof(value + (children = children[length2].value), "span", 0) ? value : MS + replace3(value, "-start", "") + value + MS + "grid-row-span:" + (~indexof(children, "span", 0) ? match(children, /\d+/) : +match(children, /\d+/) - +match(value, /\d+/)) + ";";
-        }
-        return MS + replace3(value, "-start", "") + value;
-      case 4896:
-      case 4128:
-        return children && children.some(function(element) {
-          return match(element.props, /grid-\w+-start/);
-        }) ? value : MS + replace3(replace3(value, "-end", "-span"), "span ", "") + value;
-      case 4095:
-      case 3583:
-      case 4068:
-      case 2532:
-        return replace3(value, /(.+)-inline(.+)/, WEBKIT + "$1$2") + value;
-      case 8116:
-      case 7059:
-      case 5753:
-      case 5535:
-      case 5445:
-      case 5701:
-      case 4933:
-      case 4677:
-      case 5533:
-      case 5789:
-      case 5021:
-      case 4765:
-        if (strlen(value) - 1 - length2 > 6)
-          switch (charat(value, length2 + 1)) {
-            case 109:
-              if (charat(value, length2 + 4) !== 45)
-                break;
-            case 102:
-              return replace3(value, /(.+:)(.+)-([^]+)/, "$1" + WEBKIT + "$2-$3$1" + MOZ + (charat(value, length2 + 3) == 108 ? "$3" : "$2-$3")) + value;
-            case 115:
-              return ~indexof(value, "stretch", 0) ? prefix(replace3(value, "stretch", "fill-available"), length2, children) + value : value;
-          }
-        break;
-      case 5152:
-      case 5920:
-        return replace3(value, /(.+?):(\d+)(\s*\/\s*(span)?\s*(\d+))?(.*)/, function(_2, a2, b2, c2, d2, e, f2) {
-          return MS + a2 + ":" + b2 + f2 + (c2 ? MS + a2 + "-span:" + (d2 ? e : +e - +b2) + f2 : "") + value;
-        });
-      case 4949:
-        if (charat(value, length2 + 6) === 121)
-          return replace3(value, ":", ":" + WEBKIT) + value;
-        break;
-      case 6444:
-        switch (charat(value, charat(value, 14) === 45 ? 18 : 11)) {
-          case 120:
-            return replace3(value, /(.+:)([^;\s!]+)(;|(\s+)?!.+)?/, "$1" + WEBKIT + (charat(value, 14) === 45 ? "inline-" : "") + "box$3$1" + WEBKIT + "$2$3$1" + MS + "$2box$3") + value;
-          case 100:
-            return replace3(value, ":", ":" + MS) + value;
-        }
-        break;
-      case 5719:
-      case 2647:
-      case 2135:
-      case 3927:
-      case 2391:
-        return replace3(value, "scroll-", "scroll-snap-") + value;
-    }
-    return value;
-  }
-
-  // node_modules/stylis/src/Serializer.js
-  function serialize(children, callback) {
-    var output = "";
-    for (var i2 = 0; i2 < children.length; i2++)
-      output += callback(children[i2], i2, children, callback) || "";
-    return output;
-  }
-  function stringify(element, index, children, callback) {
-    switch (element.type) {
-      case LAYER:
-        if (element.children.length)
-          break;
-      case IMPORT:
-      case DECLARATION:
-        return element.return = element.return || element.value;
-      case COMMENT:
-        return "";
-      case KEYFRAMES:
-        return element.return = element.value + "{" + serialize(element.children, callback) + "}";
-      case RULESET:
-        if (!strlen(element.value = element.props.join(",")))
-          return "";
-    }
-    return strlen(children = serialize(element.children, callback)) ? element.return = element.value + "{" + children + "}" : "";
-  }
-
-  // node_modules/stylis/src/Middleware.js
-  function middleware(collection) {
-    var length2 = sizeof(collection);
-    return function(element, index, children, callback) {
-      var output = "";
-      for (var i2 = 0; i2 < length2; i2++)
-        output += collection[i2](element, index, children, callback) || "";
-      return output;
-    };
-  }
-  function rulesheet(callback) {
-    return function(element) {
-      if (!element.root) {
-        if (element = element.return)
-          callback(element);
-      }
-    };
-  }
-  function prefixer(element, index, children, callback) {
-    if (element.length > -1) {
-      if (!element.return)
-        switch (element.type) {
-          case DECLARATION:
-            element.return = prefix(element.value, element.length, children);
-            return;
-          case KEYFRAMES:
-            return serialize([copy(element, { value: replace3(element.value, "@", "@" + WEBKIT) })], callback);
-          case RULESET:
-            if (element.length)
-              return combine(children = element.props, function(value) {
-                switch (match(value, callback = /(::plac\w+|:read-\w+)/)) {
-                  case ":read-only":
-                  case ":read-write":
-                    lift(copy(element, { props: [replace3(value, /:(read-\w+)/, ":" + MOZ + "$1")] }));
-                    lift(copy(element, { props: [value] }));
-                    assign(element, { props: filter(children, callback) });
-                    break;
-                  case "::placeholder":
-                    lift(copy(element, { props: [replace3(value, /:(plac\w+)/, ":" + WEBKIT + "input-$1")] }));
-                    lift(copy(element, { props: [replace3(value, /:(plac\w+)/, ":" + MOZ + "$1")] }));
-                    lift(copy(element, { props: [replace3(value, /:(plac\w+)/, MS + "input-$1")] }));
-                    lift(copy(element, { props: [value] }));
-                    assign(element, { props: filter(children, callback) });
-                    break;
-                }
-                return "";
-              });
-        }
-    }
-  }
-
-  // node_modules/@emotion/unitless/dist/emotion-unitless.esm.js
-  var unitlessKeys = {
-    animationIterationCount: 1,
-    borderImageOutset: 1,
-    borderImageSlice: 1,
-    borderImageWidth: 1,
-    boxFlex: 1,
-    boxFlexGroup: 1,
-    boxOrdinalGroup: 1,
-    columnCount: 1,
-    columns: 1,
-    flex: 1,
-    flexGrow: 1,
-    flexPositive: 1,
-    flexShrink: 1,
-    flexNegative: 1,
-    flexOrder: 1,
-    gridRow: 1,
-    gridRowEnd: 1,
-    gridRowSpan: 1,
-    gridRowStart: 1,
-    gridColumn: 1,
-    gridColumnEnd: 1,
-    gridColumnSpan: 1,
-    gridColumnStart: 1,
-    msGridRow: 1,
-    msGridRowSpan: 1,
-    msGridColumn: 1,
-    msGridColumnSpan: 1,
-    fontWeight: 1,
-    lineHeight: 1,
-    opacity: 1,
-    order: 1,
-    orphans: 1,
-    tabSize: 1,
-    widows: 1,
-    zIndex: 1,
-    zoom: 1,
-    WebkitLineClamp: 1,
-    // SVG-related properties
-    fillOpacity: 1,
-    floodOpacity: 1,
-    stopOpacity: 1,
-    strokeDasharray: 1,
-    strokeDashoffset: 1,
-    strokeMiterlimit: 1,
-    strokeOpacity: 1,
-    strokeWidth: 1
-  };
-  var emotion_unitless_esm_default = unitlessKeys;
-
-  // node_modules/styled-components/dist/styled-components.browser.esm.js
-  var f = "undefined" != typeof process && void 0 !== process.env && (process.env.REACT_APP_SC_ATTR || process.env.SC_ATTR) || "data-styled";
-  var m = "active";
-  var y = "data-styled-version";
-  var v = "6.1.8";
-  var g = "/*!sc*/\n";
-  var S = "undefined" != typeof window && "HTMLElement" in window;
-  var w2 = Boolean("boolean" == typeof SC_DISABLE_SPEEDY ? SC_DISABLE_SPEEDY : "undefined" != typeof process && void 0 !== process.env && void 0 !== process.env.REACT_APP_SC_DISABLE_SPEEDY && "" !== process.env.REACT_APP_SC_DISABLE_SPEEDY ? "false" !== process.env.REACT_APP_SC_DISABLE_SPEEDY && process.env.REACT_APP_SC_DISABLE_SPEEDY : "undefined" != typeof process && void 0 !== process.env && void 0 !== process.env.SC_DISABLE_SPEEDY && "" !== process.env.SC_DISABLE_SPEEDY ? "false" !== process.env.SC_DISABLE_SPEEDY && process.env.SC_DISABLE_SPEEDY : true);
-  var b = {};
-  var E = /invalid hook call/i;
-  var N = /* @__PURE__ */ new Set();
-  var P = function(t, n) {
-    if (true) {
-      var o2 = n ? ' with the id of "'.concat(n, '"') : "", s2 = "The component ".concat(t).concat(o2, " has been created dynamically.\n") + "You may see this warning because you've called styled inside another component.\nTo resolve this only create new StyledComponents outside of any render method and function component.", i2 = console.error;
-      try {
-        var a2 = true;
-        console.error = function(t2) {
-          for (var n2 = [], o3 = 1; o3 < arguments.length; o3++)
-            n2[o3 - 1] = arguments[o3];
-          E.test(t2) ? (a2 = false, N.delete(s2)) : i2.apply(void 0, __spreadArray([t2], n2, false));
-        }, (0, import_react3.useRef)(), a2 && !N.has(s2) && (console.warn(s2), N.add(s2));
-      } catch (e) {
-        E.test(e.message) && N.delete(s2);
-      } finally {
-        console.error = i2;
-      }
-    }
-  };
-  var _ = Object.freeze([]);
-  var C = Object.freeze({});
-  function I(e, t, n) {
-    return void 0 === n && (n = C), e.theme !== n.theme && e.theme || t || n.theme;
-  }
-  var A = /* @__PURE__ */ new Set(["a", "abbr", "address", "area", "article", "aside", "audio", "b", "base", "bdi", "bdo", "big", "blockquote", "body", "br", "button", "canvas", "caption", "cite", "code", "col", "colgroup", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "div", "dl", "dt", "em", "embed", "fieldset", "figcaption", "figure", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "header", "hgroup", "hr", "html", "i", "iframe", "img", "input", "ins", "kbd", "keygen", "label", "legend", "li", "link", "main", "map", "mark", "menu", "menuitem", "meta", "meter", "nav", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "span", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th", "thead", "time", "tr", "track", "u", "ul", "use", "var", "video", "wbr", "circle", "clipPath", "defs", "ellipse", "foreignObject", "g", "image", "line", "linearGradient", "marker", "mask", "path", "pattern", "polygon", "polyline", "radialGradient", "rect", "stop", "svg", "text", "tspan"]);
-  var O = /[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g;
-  var D = /(^-|-$)/g;
-  function R(e) {
-    return e.replace(O, "-").replace(D, "");
-  }
-  var T = /(a)(d)/gi;
-  var k = 52;
-  var j = function(e) {
-    return String.fromCharCode(e + (e > 25 ? 39 : 97));
-  };
-  function x(e) {
-    var t, n = "";
-    for (t = Math.abs(e); t > k; t = t / k | 0)
-      n = j(t % k) + n;
-    return (j(t % k) + n).replace(T, "$1-$2");
-  }
-  var V;
-  var F = 5381;
-  var M = function(e, t) {
-    for (var n = t.length; n; )
-      e = 33 * e ^ t.charCodeAt(--n);
-    return e;
-  };
-  var $ = function(e) {
-    return M(F, e);
-  };
-  function z(e) {
-    return x($(e) >>> 0);
-  }
-  function B(e) {
-    return "string" == typeof e && e || e.displayName || e.name || "Component";
-  }
-  function L(e) {
-    return "string" == typeof e && e.charAt(0) === e.charAt(0).toLowerCase();
-  }
-  var G = "function" == typeof Symbol && Symbol.for;
-  var Y = G ? Symbol.for("react.memo") : 60115;
-  var W = G ? Symbol.for("react.forward_ref") : 60112;
-  var q = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
-  var H = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
-  var U = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
-  var J = ((V = {})[W] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true }, V[Y] = U, V);
-  function X(e) {
-    return ("type" in (t = e) && t.type.$$typeof) === Y ? U : "$$typeof" in e ? J[e.$$typeof] : q;
-    var t;
-  }
-  var Z = Object.defineProperty;
-  var K = Object.getOwnPropertyNames;
-  var Q = Object.getOwnPropertySymbols;
-  var ee = Object.getOwnPropertyDescriptor;
-  var te = Object.getPrototypeOf;
-  var ne = Object.prototype;
-  function oe(e, t, n) {
-    if ("string" != typeof t) {
-      if (ne) {
-        var o2 = te(t);
-        o2 && o2 !== ne && oe(e, o2, n);
-      }
-      var r2 = K(t);
-      Q && (r2 = r2.concat(Q(t)));
-      for (var s2 = X(e), i2 = X(t), a2 = 0; a2 < r2.length; ++a2) {
-        var c2 = r2[a2];
-        if (!(c2 in H || n && n[c2] || i2 && c2 in i2 || s2 && c2 in s2)) {
-          var l2 = ee(t, c2);
-          try {
-            Z(e, c2, l2);
-          } catch (e2) {
-          }
-        }
-      }
-    }
-    return e;
-  }
-  function re(e) {
-    return "function" == typeof e;
-  }
-  function se(e) {
-    return "object" == typeof e && "styledComponentId" in e;
-  }
-  function ie(e, t) {
-    return e && t ? "".concat(e, " ").concat(t) : e || t || "";
-  }
-  function ae(e, t) {
-    if (0 === e.length)
-      return "";
-    for (var n = e[0], o2 = 1; o2 < e.length; o2++)
-      n += t ? t + e[o2] : e[o2];
-    return n;
-  }
-  function ce(e) {
-    return null !== e && "object" == typeof e && e.constructor.name === Object.name && !("props" in e && e.$$typeof);
-  }
-  function le(e, t, n) {
-    if (void 0 === n && (n = false), !n && !ce(e) && !Array.isArray(e))
-      return t;
-    if (Array.isArray(t))
-      for (var o2 = 0; o2 < t.length; o2++)
-        e[o2] = le(e[o2], t[o2]);
-    else if (ce(t))
-      for (var o2 in t)
-        e[o2] = le(e[o2], t[o2]);
-    return e;
-  }
-  function ue(e, t) {
-    Object.defineProperty(e, "toString", { value: t });
-  }
-  var pe = true ? { 1: "Cannot create styled-component for component: %s.\n\n", 2: "Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n- Are you trying to reuse it across renders?\n- Are you accidentally calling collectStyles twice?\n\n", 3: "Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n", 4: "The `StyleSheetManager` expects a valid target or sheet prop!\n\n- Does this error occur on the client and is your target falsy?\n- Does this error occur on the server and is the sheet falsy?\n\n", 5: "The clone method cannot be used on the client!\n\n- Are you running in a client-like environment on the server?\n- Are you trying to run SSR on the client?\n\n", 6: "Trying to insert a new style tag, but the given Node is unmounted!\n\n- Are you using a custom target that isn't mounted?\n- Does your document not have a valid head element?\n- Have you accidentally removed a style tag manually?\n\n", 7: 'ThemeProvider: Please return an object from your "theme" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n', 8: 'ThemeProvider: Please make your "theme" prop an object.\n\n', 9: "Missing document `<head>`\n\n", 10: "Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n", 11: "_This error was replaced with a dev-time warning, it will be deleted for v4 final._ [createGlobalStyle] received children which will not be rendered. Please use the component without passing children elements.\n\n", 12: "It seems you are interpolating a keyframe declaration (%s) into an untagged string. This was supported in styled-components v3, but is not longer supported in v4 as keyframes are now injected on-demand. Please wrap your string in the css\\`\\` helper which ensures the styles are injected correctly. See https://www.styled-components.com/docs/api#css\n\n", 13: "%s is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.\n\n", 14: 'ThemeProvider: "theme" prop is required.\n\n', 15: "A stylis plugin has been supplied that is not named. We need a name for each plugin to be able to prevent styling collisions between different stylis configurations within the same app. Before you pass your plugin to `<StyleSheetManager stylisPlugins={[]}>`, please make sure each plugin is uniquely-named, e.g.\n\n```js\nObject.defineProperty(importedPlugin, 'name', { value: 'some-unique-name' });\n```\n\n", 16: "Reached the limit of how many styled components may be created at group %s.\nYou may only create up to 1,073,741,824 components. If you're creating components dynamically,\nas for instance in your render method then you may be running into this limitation.\n\n", 17: "CSSStyleSheet could not be found on HTMLStyleElement.\nHas styled-components' style tag been unmounted or altered by another script?\n", 18: "ThemeProvider: Please make sure your useTheme hook is within a `<ThemeProvider>`" } : {};
-  function de() {
-    for (var e = [], t = 0; t < arguments.length; t++)
-      e[t] = arguments[t];
-    for (var n = e[0], o2 = [], r2 = 1, s2 = e.length; r2 < s2; r2 += 1)
-      o2.push(e[r2]);
-    return o2.forEach(function(e2) {
-      n = n.replace(/%[a-z]/, e2);
-    }), n;
-  }
-  function he(t) {
-    for (var n = [], o2 = 1; o2 < arguments.length; o2++)
-      n[o2 - 1] = arguments[o2];
-    return false ? new Error("An error occurred. See https://github.com/styled-components/styled-components/blob/main/packages/styled-components/src/utils/errors.md#".concat(t, " for more information.").concat(n.length > 0 ? " Args: ".concat(n.join(", ")) : "")) : new Error(de.apply(void 0, __spreadArray([pe[t]], n, false)).trim());
-  }
-  var fe = function() {
-    function e(e2) {
-      this.groupSizes = new Uint32Array(512), this.length = 512, this.tag = e2;
-    }
-    return e.prototype.indexOfGroup = function(e2) {
-      for (var t = 0, n = 0; n < e2; n++)
-        t += this.groupSizes[n];
-      return t;
-    }, e.prototype.insertRules = function(e2, t) {
-      if (e2 >= this.groupSizes.length) {
-        for (var n = this.groupSizes, o2 = n.length, r2 = o2; e2 >= r2; )
-          if ((r2 <<= 1) < 0)
-            throw he(16, "".concat(e2));
-        this.groupSizes = new Uint32Array(r2), this.groupSizes.set(n), this.length = r2;
-        for (var s2 = o2; s2 < r2; s2++)
-          this.groupSizes[s2] = 0;
-      }
-      for (var i2 = this.indexOfGroup(e2 + 1), a2 = (s2 = 0, t.length); s2 < a2; s2++)
-        this.tag.insertRule(i2, t[s2]) && (this.groupSizes[e2]++, i2++);
-    }, e.prototype.clearGroup = function(e2) {
-      if (e2 < this.length) {
-        var t = this.groupSizes[e2], n = this.indexOfGroup(e2), o2 = n + t;
-        this.groupSizes[e2] = 0;
-        for (var r2 = n; r2 < o2; r2++)
-          this.tag.deleteRule(n);
-      }
-    }, e.prototype.getGroup = function(e2) {
-      var t = "";
-      if (e2 >= this.length || 0 === this.groupSizes[e2])
-        return t;
-      for (var n = this.groupSizes[e2], o2 = this.indexOfGroup(e2), r2 = o2 + n, s2 = o2; s2 < r2; s2++)
-        t += "".concat(this.tag.getRule(s2)).concat(g);
-      return t;
-    }, e;
-  }();
-  var me = /* @__PURE__ */ new Map();
-  var ye = /* @__PURE__ */ new Map();
-  var ve = 1;
-  var ge = function(e) {
-    if (me.has(e))
-      return me.get(e);
-    for (; ye.has(ve); )
-      ve++;
-    var t = ve++;
-    if ((0 | t) < 0 || t > 1073741824)
-      throw he(16, "".concat(t));
-    return me.set(e, t), ye.set(t, e), t;
-  };
-  var Se = function(e, t) {
-    ve = t + 1, me.set(e, t), ye.set(t, e);
-  };
-  var we = "style[".concat(f, "][").concat(y, '="').concat(v, '"]');
-  var be = new RegExp("^".concat(f, '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'));
-  var Ee = function(e, t, n) {
-    for (var o2, r2 = n.split(","), s2 = 0, i2 = r2.length; s2 < i2; s2++)
-      (o2 = r2[s2]) && e.registerName(t, o2);
-  };
-  var Ne = function(e, t) {
-    for (var n, o2 = (null !== (n = t.textContent) && void 0 !== n ? n : "").split(g), r2 = [], s2 = 0, i2 = o2.length; s2 < i2; s2++) {
-      var a2 = o2[s2].trim();
-      if (a2) {
-        var c2 = a2.match(be);
-        if (c2) {
-          var l2 = 0 | parseInt(c2[1], 10), u2 = c2[2];
-          0 !== l2 && (Se(u2, l2), Ee(e, u2, c2[3]), e.getTag().insertRules(l2, r2)), r2.length = 0;
-        } else
-          r2.push(a2);
-      }
-    }
-  };
-  function Pe() {
-    return "undefined" != typeof __webpack_nonce__ ? __webpack_nonce__ : null;
-  }
-  var _e = function(e) {
-    var t = document.head, n = e || t, o2 = document.createElement("style"), r2 = function(e2) {
-      var t2 = Array.from(e2.querySelectorAll("style[".concat(f, "]")));
-      return t2[t2.length - 1];
-    }(n), s2 = void 0 !== r2 ? r2.nextSibling : null;
-    o2.setAttribute(f, m), o2.setAttribute(y, v);
-    var i2 = Pe();
-    return i2 && o2.setAttribute("nonce", i2), n.insertBefore(o2, s2), o2;
-  };
-  var Ce = function() {
-    function e(e2) {
-      this.element = _e(e2), this.element.appendChild(document.createTextNode("")), this.sheet = function(e3) {
-        if (e3.sheet)
-          return e3.sheet;
-        for (var t = document.styleSheets, n = 0, o2 = t.length; n < o2; n++) {
-          var r2 = t[n];
-          if (r2.ownerNode === e3)
-            return r2;
-        }
-        throw he(17);
-      }(this.element), this.length = 0;
-    }
-    return e.prototype.insertRule = function(e2, t) {
-      try {
-        return this.sheet.insertRule(t, e2), this.length++, true;
-      } catch (e3) {
-        return false;
-      }
-    }, e.prototype.deleteRule = function(e2) {
-      this.sheet.deleteRule(e2), this.length--;
-    }, e.prototype.getRule = function(e2) {
-      var t = this.sheet.cssRules[e2];
-      return t && t.cssText ? t.cssText : "";
-    }, e;
-  }();
-  var Ie = function() {
-    function e(e2) {
-      this.element = _e(e2), this.nodes = this.element.childNodes, this.length = 0;
-    }
-    return e.prototype.insertRule = function(e2, t) {
-      if (e2 <= this.length && e2 >= 0) {
-        var n = document.createTextNode(t);
-        return this.element.insertBefore(n, this.nodes[e2] || null), this.length++, true;
-      }
-      return false;
-    }, e.prototype.deleteRule = function(e2) {
-      this.element.removeChild(this.nodes[e2]), this.length--;
-    }, e.prototype.getRule = function(e2) {
-      return e2 < this.length ? this.nodes[e2].textContent : "";
-    }, e;
-  }();
-  var Ae = function() {
-    function e(e2) {
-      this.rules = [], this.length = 0;
-    }
-    return e.prototype.insertRule = function(e2, t) {
-      return e2 <= this.length && (this.rules.splice(e2, 0, t), this.length++, true);
-    }, e.prototype.deleteRule = function(e2) {
-      this.rules.splice(e2, 1), this.length--;
-    }, e.prototype.getRule = function(e2) {
-      return e2 < this.length ? this.rules[e2] : "";
-    }, e;
-  }();
-  var Oe = S;
-  var De = { isServer: !S, useCSSOMInjection: !w2 };
-  var Re = function() {
-    function e(e2, n, o2) {
-      void 0 === e2 && (e2 = C), void 0 === n && (n = {});
-      var r2 = this;
-      this.options = __assign(__assign({}, De), e2), this.gs = n, this.names = new Map(o2), this.server = !!e2.isServer, !this.server && S && Oe && (Oe = false, function(e3) {
-        for (var t = document.querySelectorAll(we), n2 = 0, o3 = t.length; n2 < o3; n2++) {
-          var r3 = t[n2];
-          r3 && r3.getAttribute(f) !== m && (Ne(e3, r3), r3.parentNode && r3.parentNode.removeChild(r3));
-        }
-      }(this)), ue(this, function() {
-        return function(e3) {
-          for (var t = e3.getTag(), n2 = t.length, o3 = "", r3 = function(n3) {
-            var r4 = function(e4) {
-              return ye.get(e4);
-            }(n3);
-            if (void 0 === r4)
-              return "continue";
-            var s3 = e3.names.get(r4), i2 = t.getGroup(n3);
-            if (void 0 === s3 || 0 === i2.length)
-              return "continue";
-            var a2 = "".concat(f, ".g").concat(n3, '[id="').concat(r4, '"]'), c2 = "";
-            void 0 !== s3 && s3.forEach(function(e4) {
-              e4.length > 0 && (c2 += "".concat(e4, ","));
-            }), o3 += "".concat(i2).concat(a2, '{content:"').concat(c2, '"}').concat(g);
-          }, s2 = 0; s2 < n2; s2++)
-            r3(s2);
-          return o3;
-        }(r2);
-      });
-    }
-    return e.registerId = function(e2) {
-      return ge(e2);
-    }, e.prototype.reconstructWithOptions = function(n, o2) {
-      return void 0 === o2 && (o2 = true), new e(__assign(__assign({}, this.options), n), this.gs, o2 && this.names || void 0);
-    }, e.prototype.allocateGSInstance = function(e2) {
-      return this.gs[e2] = (this.gs[e2] || 0) + 1;
-    }, e.prototype.getTag = function() {
-      return this.tag || (this.tag = (e2 = function(e3) {
-        var t = e3.useCSSOMInjection, n = e3.target;
-        return e3.isServer ? new Ae(n) : t ? new Ce(n) : new Ie(n);
-      }(this.options), new fe(e2)));
-      var e2;
-    }, e.prototype.hasNameForId = function(e2, t) {
-      return this.names.has(e2) && this.names.get(e2).has(t);
-    }, e.prototype.registerName = function(e2, t) {
-      if (ge(e2), this.names.has(e2))
-        this.names.get(e2).add(t);
-      else {
-        var n = /* @__PURE__ */ new Set();
-        n.add(t), this.names.set(e2, n);
-      }
-    }, e.prototype.insertRules = function(e2, t, n) {
-      this.registerName(e2, t), this.getTag().insertRules(ge(e2), n);
-    }, e.prototype.clearNames = function(e2) {
-      this.names.has(e2) && this.names.get(e2).clear();
-    }, e.prototype.clearRules = function(e2) {
-      this.getTag().clearGroup(ge(e2)), this.clearNames(e2);
-    }, e.prototype.clearTag = function() {
-      this.tag = void 0;
-    }, e;
-  }();
-  var Te = /&/g;
-  var ke = /^\s*\/\/.*$/gm;
-  function je(e, t) {
-    return e.map(function(e2) {
-      return "rule" === e2.type && (e2.value = "".concat(t, " ").concat(e2.value), e2.value = e2.value.replaceAll(",", ",".concat(t, " ")), e2.props = e2.props.map(function(e3) {
-        return "".concat(t, " ").concat(e3);
-      })), Array.isArray(e2.children) && "@keyframes" !== e2.type && (e2.children = je(e2.children, t)), e2;
-    });
-  }
-  function xe(e) {
-    var t, n, o2, r2 = void 0 === e ? C : e, s2 = r2.options, i2 = void 0 === s2 ? C : s2, a2 = r2.plugins, c2 = void 0 === a2 ? _ : a2, l2 = function(e2, o3, r3) {
-      return r3.startsWith(n) && r3.endsWith(n) && r3.replaceAll(n, "").length > 0 ? ".".concat(t) : e2;
-    }, u2 = c2.slice();
-    u2.push(function(e2) {
-      e2.type === RULESET && e2.value.includes("&") && (e2.props[0] = e2.props[0].replace(Te, n).replace(o2, l2));
-    }), i2.prefix && u2.push(prefixer), u2.push(stringify);
-    var p3 = function(e2, r3, s3, a3) {
-      void 0 === r3 && (r3 = ""), void 0 === s3 && (s3 = ""), void 0 === a3 && (a3 = "&"), t = a3, n = r3, o2 = new RegExp("\\".concat(n, "\\b"), "g");
-      var c3 = e2.replace(ke, ""), l3 = compile(s3 || r3 ? "".concat(s3, " ").concat(r3, " { ").concat(c3, " }") : c3);
-      i2.namespace && (l3 = je(l3, i2.namespace));
-      var p4 = [];
-      return serialize(l3, middleware(u2.concat(rulesheet(function(e3) {
-        return p4.push(e3);
-      })))), p4;
-    };
-    return p3.hash = c2.length ? c2.reduce(function(e2, t2) {
-      return t2.name || he(15), M(e2, t2.name);
-    }, F).toString() : "", p3;
-  }
-  var Ve = new Re();
-  var Fe = xe();
-  var Me = import_react3.default.createContext({ shouldForwardProp: void 0, styleSheet: Ve, stylis: Fe });
-  var $e = Me.Consumer;
-  var ze = import_react3.default.createContext(void 0);
-  function Be() {
-    return (0, import_react3.useContext)(Me);
-  }
-  function Le(e) {
-    var t = (0, import_react3.useState)(e.stylisPlugins), n = t[0], r2 = t[1], c2 = Be().styleSheet, l2 = (0, import_react3.useMemo)(function() {
-      var t2 = c2;
-      return e.sheet ? t2 = e.sheet : e.target && (t2 = t2.reconstructWithOptions({ target: e.target }, false)), e.disableCSSOMInjection && (t2 = t2.reconstructWithOptions({ useCSSOMInjection: false })), t2;
-    }, [e.disableCSSOMInjection, e.sheet, e.target, c2]), u2 = (0, import_react3.useMemo)(function() {
-      return xe({ options: { namespace: e.namespace, prefix: e.enableVendorPrefixes }, plugins: n });
-    }, [e.enableVendorPrefixes, e.namespace, n]);
-    (0, import_react3.useEffect)(function() {
-      (0, import_shallowequal.default)(n, e.stylisPlugins) || r2(e.stylisPlugins);
-    }, [e.stylisPlugins]);
-    var d2 = (0, import_react3.useMemo)(function() {
-      return { shouldForwardProp: e.shouldForwardProp, styleSheet: l2, stylis: u2 };
-    }, [e.shouldForwardProp, l2, u2]);
-    return import_react3.default.createElement(Me.Provider, { value: d2 }, import_react3.default.createElement(ze.Provider, { value: u2 }, e.children));
-  }
-  var Ge = function() {
-    function e(e2, t) {
-      var n = this;
-      this.inject = function(e3, t2) {
-        void 0 === t2 && (t2 = Fe);
-        var o2 = n.name + t2.hash;
-        e3.hasNameForId(n.id, o2) || e3.insertRules(n.id, o2, t2(n.rules, o2, "@keyframes"));
-      }, this.name = e2, this.id = "sc-keyframes-".concat(e2), this.rules = t, ue(this, function() {
-        throw he(12, String(n.name));
-      });
-    }
-    return e.prototype.getName = function(e2) {
-      return void 0 === e2 && (e2 = Fe), this.name + e2.hash;
-    }, e;
-  }();
-  var Ye = function(e) {
-    return e >= "A" && e <= "Z";
-  };
-  function We(e) {
-    for (var t = "", n = 0; n < e.length; n++) {
-      var o2 = e[n];
-      if (1 === n && "-" === o2 && "-" === e[0])
-        return e;
-      Ye(o2) ? t += "-" + o2.toLowerCase() : t += o2;
-    }
-    return t.startsWith("ms-") ? "-" + t : t;
-  }
-  var qe = function(e) {
-    return null == e || false === e || "" === e;
-  };
-  var He = function(t) {
-    var n, o2, r2 = [];
-    for (var s2 in t) {
-      var i2 = t[s2];
-      t.hasOwnProperty(s2) && !qe(i2) && (Array.isArray(i2) && i2.isCss || re(i2) ? r2.push("".concat(We(s2), ":"), i2, ";") : ce(i2) ? r2.push.apply(r2, __spreadArray(__spreadArray(["".concat(s2, " {")], He(i2), false), ["}"], false)) : r2.push("".concat(We(s2), ": ").concat((n = s2, null == (o2 = i2) || "boolean" == typeof o2 || "" === o2 ? "" : "number" != typeof o2 || 0 === o2 || n in emotion_unitless_esm_default || n.startsWith("--") ? String(o2).trim() : "".concat(o2, "px")), ";")));
-    }
-    return r2;
-  };
-  function Ue(e, t, n, o2) {
-    if (qe(e))
-      return [];
-    if (se(e))
-      return [".".concat(e.styledComponentId)];
-    if (re(e)) {
-      if (!re(s2 = e) || s2.prototype && s2.prototype.isReactComponent || !t)
-        return [e];
-      var r2 = e(t);
-      return "object" != typeof r2 || Array.isArray(r2) || r2 instanceof Ge || ce(r2) || null === r2 || console.error("".concat(B(e), " is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.")), Ue(r2, t, n, o2);
-    }
-    var s2;
-    return e instanceof Ge ? n ? (e.inject(n, o2), [e.getName(o2)]) : [e] : ce(e) ? He(e) : Array.isArray(e) ? Array.prototype.concat.apply(_, e.map(function(e2) {
-      return Ue(e2, t, n, o2);
-    })) : [e.toString()];
-  }
-  function Je(e) {
-    for (var t = 0; t < e.length; t += 1) {
-      var n = e[t];
-      if (re(n) && !se(n))
-        return false;
-    }
-    return true;
-  }
-  var Xe = $(v);
-  var Ze = function() {
-    function e(e2, t, n) {
-      this.rules = e2, this.staticRulesId = "", this.isStatic = false, this.componentId = t, this.baseHash = M(Xe, t), this.baseStyle = n, Re.registerId(t);
-    }
-    return e.prototype.generateAndInjectStyles = function(e2, t, n) {
-      var o2 = this.baseStyle ? this.baseStyle.generateAndInjectStyles(e2, t, n) : "";
-      if (this.isStatic && !n.hash)
-        if (this.staticRulesId && t.hasNameForId(this.componentId, this.staticRulesId))
-          o2 = ie(o2, this.staticRulesId);
-        else {
-          var r2 = ae(Ue(this.rules, e2, t, n)), s2 = x(M(this.baseHash, r2) >>> 0);
-          if (!t.hasNameForId(this.componentId, s2)) {
-            var i2 = n(r2, ".".concat(s2), void 0, this.componentId);
-            t.insertRules(this.componentId, s2, i2);
-          }
-          o2 = ie(o2, s2), this.staticRulesId = s2;
-        }
-      else {
-        for (var a2 = M(this.baseHash, n.hash), c2 = "", l2 = 0; l2 < this.rules.length; l2++) {
-          var u2 = this.rules[l2];
-          if ("string" == typeof u2)
-            c2 += u2, a2 = M(a2, u2);
-          else if (u2) {
-            var p3 = ae(Ue(u2, e2, t, n));
-            a2 = M(a2, p3 + l2), c2 += p3;
-          }
-        }
-        if (c2) {
-          var d2 = x(a2 >>> 0);
-          t.hasNameForId(this.componentId, d2) || t.insertRules(this.componentId, d2, n(c2, ".".concat(d2), void 0, this.componentId)), o2 = ie(o2, d2);
-        }
-      }
-      return o2;
-    }, e;
-  }();
-  var Ke = import_react3.default.createContext(void 0);
-  var Qe = Ke.Consumer;
-  var nt = {};
-  var ot = /* @__PURE__ */ new Set();
-  function rt(e, r2, s2) {
-    var i2 = se(e), a2 = e, c2 = !L(e), p3 = r2.attrs, d2 = void 0 === p3 ? _ : p3, h = r2.componentId, f2 = void 0 === h ? function(e2, t) {
-      var n = "string" != typeof e2 ? "sc" : R(e2);
-      nt[n] = (nt[n] || 0) + 1;
-      var o2 = "".concat(n, "-").concat(z(v + n + nt[n]));
-      return t ? "".concat(t, "-").concat(o2) : o2;
-    }(r2.displayName, r2.parentComponentId) : h, m2 = r2.displayName, y2 = void 0 === m2 ? function(e2) {
-      return L(e2) ? "styled.".concat(e2) : "Styled(".concat(B(e2), ")");
-    }(e) : m2, g2 = r2.displayName && r2.componentId ? "".concat(R(r2.displayName), "-").concat(r2.componentId) : r2.componentId || f2, S2 = i2 && a2.attrs ? a2.attrs.concat(d2).filter(Boolean) : d2, w3 = r2.shouldForwardProp;
-    if (i2 && a2.shouldForwardProp) {
-      var b2 = a2.shouldForwardProp;
-      if (r2.shouldForwardProp) {
-        var E2 = r2.shouldForwardProp;
-        w3 = function(e2, t) {
-          return b2(e2, t) && E2(e2, t);
-        };
-      } else
-        w3 = b2;
-    }
-    var N2 = new Ze(s2, g2, i2 ? a2.componentStyle : void 0);
-    function O2(e2, r3) {
-      return function(e3, r4, s3) {
-        var i3 = e3.attrs, a3 = e3.componentStyle, c3 = e3.defaultProps, p4 = e3.foldedComponentIds, d3 = e3.styledComponentId, h2 = e3.target, f3 = import_react3.default.useContext(Ke), m3 = Be(), y3 = e3.shouldForwardProp || m3.shouldForwardProp;
-        (0, import_react3.useDebugValue)(d3);
-        var v2 = I(r4, f3, c3) || C, g3 = function(e4, n, o2) {
-          for (var r5, s4 = __assign(__assign({}, n), { className: void 0, theme: o2 }), i4 = 0; i4 < e4.length; i4 += 1) {
-            var a4 = re(r5 = e4[i4]) ? r5(s4) : r5;
-            for (var c4 in a4)
-              s4[c4] = "className" === c4 ? ie(s4[c4], a4[c4]) : "style" === c4 ? __assign(__assign({}, s4[c4]), a4[c4]) : a4[c4];
-          }
-          return n.className && (s4.className = ie(s4.className, n.className)), s4;
-        }(i3, r4, v2), S3 = g3.as || h2, w4 = {};
-        for (var b3 in g3)
-          void 0 === g3[b3] || "$" === b3[0] || "as" === b3 || "theme" === b3 && g3.theme === v2 || ("forwardedAs" === b3 ? w4.as = g3.forwardedAs : y3 && !y3(b3, S3) || (w4[b3] = g3[b3], y3 || false || isPropValid(b3) || ot.has(b3) || !A.has(S3) || (ot.add(b3), console.warn('styled-components: it looks like an unknown prop "'.concat(b3, '" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.)')))));
-        var E3 = function(e4, t) {
-          var n = Be(), o2 = e4.generateAndInjectStyles(t, n.styleSheet, n.stylis);
-          return (0, import_react3.useDebugValue)(o2), o2;
-        }(a3, g3);
-        e3.warnTooManyClasses && e3.warnTooManyClasses(E3);
-        var N3 = ie(p4, d3);
-        return E3 && (N3 += " " + E3), g3.className && (N3 += " " + g3.className), w4[L(S3) && !A.has(S3) ? "class" : "className"] = N3, w4.ref = s3, (0, import_react3.createElement)(S3, w4);
-      }(D2, e2, r3);
-    }
-    O2.displayName = y2;
-    var D2 = import_react3.default.forwardRef(O2);
-    return D2.attrs = S2, D2.componentStyle = N2, D2.displayName = y2, D2.shouldForwardProp = w3, D2.foldedComponentIds = i2 ? ie(a2.foldedComponentIds, a2.styledComponentId) : "", D2.styledComponentId = g2, D2.target = i2 ? a2.target : e, Object.defineProperty(D2, "defaultProps", { get: function() {
-      return this._foldedDefaultProps;
-    }, set: function(e2) {
-      this._foldedDefaultProps = i2 ? function(e3) {
-        for (var t = [], n = 1; n < arguments.length; n++)
-          t[n - 1] = arguments[n];
-        for (var o2 = 0, r3 = t; o2 < r3.length; o2++)
-          le(e3, r3[o2], true);
-        return e3;
-      }({}, a2.defaultProps, e2) : e2;
-    } }), P(y2, g2), D2.warnTooManyClasses = /* @__PURE__ */ function(e2, t) {
-      var n = {}, o2 = false;
-      return function(r3) {
-        if (!o2 && (n[r3] = true, Object.keys(n).length >= 200)) {
-          var s3 = t ? ' with the id of "'.concat(t, '"') : "";
-          console.warn("Over ".concat(200, " classes were generated for component ").concat(e2).concat(s3, ".\n") + "Consider using the attrs method, together with a style object for frequently changed styles.\nExample:\n  const Component = styled.div.attrs(props => ({\n    style: {\n      background: props.background,\n    },\n  }))`width: 100%;`\n\n  <Component />"), o2 = true, n = {};
-        }
-      };
-    }(y2, g2), ue(D2, function() {
-      return ".".concat(D2.styledComponentId);
-    }), c2 && oe(D2, e, { attrs: true, componentStyle: true, displayName: true, foldedComponentIds: true, shouldForwardProp: true, styledComponentId: true, target: true }), D2;
-  }
-  function st(e, t) {
-    for (var n = [e[0]], o2 = 0, r2 = t.length; o2 < r2; o2 += 1)
-      n.push(t[o2], e[o2 + 1]);
-    return n;
-  }
-  var it = function(e) {
-    return Object.assign(e, { isCss: true });
-  };
-  function at(t) {
-    for (var n = [], o2 = 1; o2 < arguments.length; o2++)
-      n[o2 - 1] = arguments[o2];
-    if (re(t) || ce(t))
-      return it(Ue(st(_, __spreadArray([t], n, true))));
-    var r2 = t;
-    return 0 === n.length && 1 === r2.length && "string" == typeof r2[0] ? Ue(r2) : it(Ue(st(r2, n)));
-  }
-  function ct(n, o2, r2) {
-    if (void 0 === r2 && (r2 = C), !o2)
-      throw he(1, o2);
-    var s2 = function(t) {
-      for (var s3 = [], i2 = 1; i2 < arguments.length; i2++)
-        s3[i2 - 1] = arguments[i2];
-      return n(o2, r2, at.apply(void 0, __spreadArray([t], s3, false)));
-    };
-    return s2.attrs = function(e) {
-      return ct(n, o2, __assign(__assign({}, r2), { attrs: Array.prototype.concat(r2.attrs, e).filter(Boolean) }));
-    }, s2.withConfig = function(e) {
-      return ct(n, o2, __assign(__assign({}, r2), e));
-    }, s2;
-  }
-  var lt = function(e) {
-    return ct(rt, e);
-  };
-  var ut = lt;
-  A.forEach(function(e) {
-    ut[e] = lt(e);
-  });
-  var pt = function() {
-    function e(e2, t) {
-      this.rules = e2, this.componentId = t, this.isStatic = Je(e2), Re.registerId(this.componentId + 1);
-    }
-    return e.prototype.createStyles = function(e2, t, n, o2) {
-      var r2 = o2(ae(Ue(this.rules, t, n, o2)), ""), s2 = this.componentId + e2;
-      n.insertRules(s2, s2, r2);
-    }, e.prototype.removeStyles = function(e2, t) {
-      t.clearRules(this.componentId + e2);
-    }, e.prototype.renderStyles = function(e2, t, n, o2) {
-      e2 > 2 && Re.registerId(this.componentId + e2), this.removeStyles(e2, n), this.createStyles(e2, t, n, o2);
-    }, e;
-  }();
-  function dt(n) {
-    for (var r2 = [], s2 = 1; s2 < arguments.length; s2++)
-      r2[s2 - 1] = arguments[s2];
-    var i2 = at.apply(void 0, __spreadArray([n], r2, false)), a2 = "sc-global-".concat(z(JSON.stringify(i2))), c2 = new pt(i2, a2);
-    P(a2);
-    var l2 = function(e) {
-      var t = Be(), n2 = import_react3.default.useContext(Ke), r3 = import_react3.default.useRef(t.styleSheet.allocateGSInstance(a2)).current;
-      return import_react3.default.Children.count(e.children) && console.warn("The global style component ".concat(a2, " was given child JSX. createGlobalStyle does not render children.")), i2.some(function(e2) {
-        return "string" == typeof e2 && -1 !== e2.indexOf("@import");
-      }) && console.warn("Please do not use @import CSS syntax in createGlobalStyle at this time, as the CSSOM APIs we use in production do not handle it well. Instead, we recommend using a library such as react-helmet to inject a typical <link> meta tag to the stylesheet, or simply embedding it manually in your index.html <head> section for a simpler app."), t.styleSheet.server && u2(r3, e, t.styleSheet, n2, t.stylis), import_react3.default.useLayoutEffect(function() {
-        if (!t.styleSheet.server)
-          return u2(r3, e, t.styleSheet, n2, t.stylis), function() {
-            return c2.removeStyles(r3, t.styleSheet);
-          };
-      }, [r3, e, t.styleSheet, n2, t.stylis]), null;
-    };
-    function u2(e, n2, o2, r3, s3) {
-      if (c2.isStatic)
-        c2.renderStyles(e, b, o2, s3);
-      else {
-        var i3 = __assign(__assign({}, n2), { theme: I(n2, r3, l2.defaultProps) });
-        c2.renderStyles(e, i3, o2, s3);
-      }
-    }
-    return import_react3.default.memo(l2);
-  }
-  function ht(t) {
-    for (var n = [], o2 = 1; o2 < arguments.length; o2++)
-      n[o2 - 1] = arguments[o2];
-    "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");
-    var r2 = ae(at.apply(void 0, __spreadArray([t], n, false))), s2 = z(r2);
-    return new Ge(s2, r2);
-  }
-  var mt = function() {
-    function e() {
-      var e2 = this;
-      this._emitSheetCSS = function() {
-        var t = e2.instance.toString(), n = Pe(), o2 = ae([n && 'nonce="'.concat(n, '"'), "".concat(f, '="true"'), "".concat(y, '="').concat(v, '"')].filter(Boolean), " ");
-        return "<style ".concat(o2, ">").concat(t, "</style>");
-      }, this.getStyleTags = function() {
-        if (e2.sealed)
-          throw he(2);
-        return e2._emitSheetCSS();
-      }, this.getStyleElement = function() {
-        var n;
-        if (e2.sealed)
-          throw he(2);
-        var r2 = ((n = {})[f] = "", n[y] = v, n.dangerouslySetInnerHTML = { __html: e2.instance.toString() }, n), s2 = Pe();
-        return s2 && (r2.nonce = s2), [import_react3.default.createElement("style", __assign({}, r2, { key: "sc-0-0" }))];
-      }, this.seal = function() {
-        e2.sealed = true;
-      }, this.instance = new Re({ isServer: true }), this.sealed = false;
-    }
-    return e.prototype.collectStyles = function(e2) {
-      if (this.sealed)
-        throw he(2);
-      return import_react3.default.createElement(Le, { sheet: this.instance }, e2);
-    }, e.prototype.interleaveWithNodeStream = function(e2) {
-      throw he(3);
-    }, e;
-  }();
-  "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native");
-  var vt = "__sc-".concat(f, "__");
-  "undefined" != typeof window && (window[vt] || (window[vt] = 0), 1 === window[vt] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window[vt] += 1);
-
-  // src/components/styles/style.ts
-  var gradientAnimation = ht`
-    0% {
-        opacity: 0;
-        background-position: 0% 50%;
-    }
-    100% {
-        opacity: 1;
-        background-position: 0;
-    }
-`;
-  var GlobalStyle = dt`
-	html {
-		font-family: 'Inter', sans-serif;
-        user-select: none;
-
-        max-width: 100vw;
-        overflow-x: hidden;
-	}
-
-	body {
-        position: relative;
-		width: 100vw;
-        min-width: 100vw;
-        max-width: 100vw;
-		overflow-x: hidden;
-
-        background: linear-gradient(-45deg, #08887d, #581d88);
-        background-repeat: no-repeat;
-	}
-
-    body {
-
-    }
-
-    a {
-        color: white;
-    }
-
-    /* Fonts */
-    @font-face {
-      font-family: 'Kumbh Sans Regular';
-      src: url('./font/KumbhSans-Regular.ttf') format('truetype');
-    }
-
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #292929;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: rgb(116, 116, 116);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgb(161, 161, 161);
-    }
-`;
-  var Gradient = ut.div`
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    box-sizing: border-box;
-    animation: ${gradientAnimation} 15s ease-in-out forwards;
-    animation-iteration-count: infinite;
-    animation-delay: ${(props) => props.delay || "0s"};
-`;
-  var colors = {
-    primary: "#b7b7b7",
-    secondary: "#757575",
-    tertiary: "#2c2c2c",
-    textBlack: "#000000",
-    textWhite: "#FFFFFF"
   };
 
   // node_modules/framer-motion/dist/es/motion/index.mjs
@@ -40199,24 +40131,25 @@
     flex-flow: column nowrap;
     justify-content: center;
 
-    padding: 15vw 10vw;
+    padding: 20vw 10vw;
     box-sizing: border-box;
 
     pointer-events: none;
 
     @media screen and (max-width: 768px){
         min-height: 100vh;
+        padding: 5vw 7.5vw 35vw 7.5vw;
     }
 `;
   var TitleH1 = ut(motion.div)`
+    color: ${(props) => props.theme.text};
     font-size: 3.5rem;
-    color: #ffffff !important;
     letter-spacing: 4px;
 
     &::after {
         content: " ";
         display: inline-block;
-        border-bottom: 2px solid ${colors.textWhite};
+        border-bottom: 2px solid ${(props) => props.theme.foreground};
         transform: scaleX(0);
         transform-origin: 0% 50%;
     }
@@ -40227,7 +40160,7 @@
 `;
   var P2 = ut(motion.p)`
     position: relative;
-    color: ${colors.textWhite};
+    color: ${(props) => props.theme.text};
     letter-spacing: 1px;
     padding: 1.25em 0;
 
@@ -40236,15 +40169,15 @@
     line-height: 1.5;
 `;
   var B2 = ut(motion.p)`
-    color: ${colors.textWhite};
+    color: ${(props) => props.theme.text};
     letter-spacing: 2px;
     font-weight: 600;
 `;
   var IT = ut(motion.p)`
-    color: ${colors.textWhite};
+    color: ${(props) => props.theme.text};
     font-style: italic;
 `;
-  var SeparatorLine = ut(motion.div)`
+  var SeparatorLineLeft = ut(motion.div)`
     width: 100%;
 
     &::before {
@@ -40254,8 +40187,23 @@
         width: 50%;
         height: 1px;
 
-        margin: 2rem 0;
-        background: ${colors.textWhite};
+        margin: 1.3rem 0;
+        background: ${(props) => props.theme.text};
+    }
+`;
+  var SeparatorLineRight = ut(motion.div)`
+    width: 100%;
+
+    &::before {
+        content: " ";
+
+        display: inline-block;
+        width: 50%;
+        height: 1px;
+
+        margin: 1.3rem 0;
+        margin-left: 50%;
+        background: ${(props) => props.theme.text};
     }
 `;
   var Dropper = ut.div`
@@ -40269,7 +40217,7 @@
     bottom: 0px;
 
     cursor: pointer;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.07), #00000000);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), #00000000);
 `;
   var DropperIcon = ut(FontAwesomeIcon)`
     position: absolute;
@@ -40278,14 +40226,14 @@
     bottom: 20px;
 
     font-size: 2rem;
-    color: ${colors.textWhite};
+    color: ${(props) => props.theme.text};
     text-shadow: 0 0 8px #0000007d;
     letter-spacing: 4px;
 
     &::after {
         content: " ";
         display: inline-block;
-        border-bottom: 2px solid ${colors.textWhite};
+        border-bottom: 2px solid ${(props) => props.theme.text};
         transform: scaleX(0);
         transform-origin: 0% 50%;
     }
@@ -40345,6 +40293,109 @@
       ), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DropperIcon, { icon: faChevronDown }) })
     ] });
   }
+
+  // src/components/styles/style.ts
+  var darkTheme = {
+    background: "#262F35",
+    foreground: "#fff",
+    accent: "#ffc4a8",
+    text: "#fff",
+    themeIcon: "img/ico/sun.svg"
+  };
+  var lightTheme = {
+    background: "#fff",
+    foreground: "#262F35",
+    accent: "#ffc4a8",
+    text: "#262F35",
+    themeIcon: "img/ico/dark.svg"
+  };
+  var gradientAnimation = ht`
+    0% {
+        opacity: 0;
+        background-position: 0% 50%;
+    }
+    100% {
+        opacity: 1;
+        background-position: 0;
+    }
+`;
+  var GlobalStyle = dt`
+	html {
+		font-family: 'Inter', sans-serif;
+        user-select: none;
+
+        max-width: 100vw;
+        overflow-x: hidden;
+	}
+
+	body {
+        position: relative;
+		width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+
+		overflow-x: hidden;
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+	}
+
+    p,
+    div,
+    span,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        transition: color 475ms 250ms ease-in-out;
+    }
+
+    a {
+        color: ${(props) => props.theme.text};
+    }
+
+    /* Fonts */
+    @font-face {
+      font-family: 'Kumbh Sans Regular';
+      src: url('./font/KumbhSans-Regular.ttf') format('truetype');
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #292929;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgb(116, 116, 116);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(161, 161, 161);
+    }
+`;
+  var Gradient = ut.div`
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    /* animation: ${gradientAnimation} 15s ease-in-out forwards; */
+    animation-iteration-count: infinite;
+    animation-delay: ${(props) => props.delay || "0s"};
+`;
 
   // src/components/styles/article.style.ts
   var StyledArticle = ut.div`
@@ -40416,7 +40467,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 3rem;
     font-weight: 600;
-    color: ${colors.primary};
+    color: ${darkTheme.background};
     word-spacing: 8px;
     letter-spacing: 12.5px;
 
@@ -40460,17 +40511,17 @@
     font-size: 1.25rem;
     font-weight: lighter;
 
-    color: ${colors.textBlack};
-    background-color: ${colors.primary};
-    box-shadow: 0 0 8px ${colors.textBlack};
+    color: ${darkTheme.textBlack};
+    background-color: ${darkTheme.background};
+    box-shadow: 0 0 8px ${darkTheme.textBlack};
 
     pointer-events: all;
 
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        color: ${colors.primary};
-        background-color: ${colors.textBlack};
+        color: ${darkTheme.background};
+        background-color: ${darkTheme.textBlack};
         cursor: pointer;
     }
 
@@ -40541,7 +40592,7 @@ color: white;`;
   // src/pages/Home/Articles/AboutArticle.tsx
   var import_jsx_runtime5 = __toESM(require_jsx_runtime());
   function AboutArticle() {
-    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(StyledArticle, { color: colors.secondary, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ArticleInfo, { children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(StyledArticle, { color: darkTheme.foreground, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ArticleInfo, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ArticleInfoTitle, { children: "ABOUT ME" }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ArticleInfoP, { children: "Read more about what I do :)" }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
@@ -40557,9 +40608,7 @@ color: white;`;
 
   // src/pages/Home/Home.tsx
   var import_jsx_runtime6 = __toESM(require_jsx_runtime());
-  var HomeStyle = ut.div`
-	transition: background 2s ease-in-out;
-`;
+  var HomeStyle = ut.div``;
   function Home() {
     return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(HomeStyle, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Title, { title: "" }),
@@ -40568,6 +40617,9 @@ color: white;`;
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(AboutArticle, {})
     ] });
   }
+
+  // src/components/Navbar.tsx
+  var import_react26 = __toESM(require_react());
 
   // src/components/styles/navbar.style.ts
   var Nav = ut.nav`
@@ -40611,7 +40663,7 @@ color: white;`;
     position: relative;
     text-align: center;
 
-    color: ${colors.textWhite};
+    color: ${(props) => props.theme.text};
     font-weight: lighter;
     font-size: 1.2em;
     text-decoration: none;
@@ -40634,15 +40686,19 @@ color: white;`;
         left: 0;
         right: 0;
 
-        width: 0;
+        width: 100%;
         height: 2px;
 
-        background: ${colors.textWhite};
-        transition: width 400ms ease-in-out;
+        transform-origin: center;
+        transform: scaleX(0);
+
+        background: ${(props) => props.theme.text};
+        transition: width 400ms ease-out,
+            transform 400ms ease-out;
     }
 
     &:hover::after {
-        width: 100%;
+        transform: scaleX(1);
     }
 
     &.active, &:hover {
@@ -40650,38 +40706,89 @@ color: white;`;
         letter-spacing: 4px;
 
         &::after {
-            width: 100%;
+            transform: scaleX(1);
         }
     }
+`;
+  var ThemeToggle = ut.button`
+    position: absolute;
+    right: 35px;
+
+    background: none;
+    border: none;
+    color: ${(props) => props.theme.text};
+    font-size: 1.4em;
+
+    min-height: 25px;
+    min-width: 25px;
+    cursor: pointer;
+
+    background-image: url(${(props) => props.theme.themeIcon});
+    background-size: cover;
+
+    &:hover {
+        color: ${darkTheme.text};
+    }
+`;
+  var ThemeAnimation = ut.div`
+    content: "";
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    background-color: ${darkTheme.background};
+
+    transform: ${(props) => props.transform + "scale(3) rotate(45deg)"};
+    transition: transform 500ms ease-out;
 `;
 
   // src/components/Navbar.tsx
   var import_jsx_runtime7 = __toESM(require_jsx_runtime());
   function NavBar() {
-    return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Nav, { id: "nav", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(NavUl, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(UlLi, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
-        StyledLink,
-        {
-          to: "/about",
-          onClick: scrollToTop,
-          children: "ABOUT"
-        }
-      ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(UlLi, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
-        StyledLink,
-        {
-          to: "/",
-          onClick: scrollToTop,
-          children: "HOME"
-        }
-      ) })
-    ] }) });
+    const { theme, toggleTheme } = (0, import_react26.useContext)(ThemeContext);
+    return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(Nav, { id: "nav", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(NavUl, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(UlLi, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+          StyledLink,
+          {
+            to: "/about",
+            onClick: scrollToTop,
+            children: "About"
+          }
+        ) }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(UlLi, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+          StyledLink,
+          {
+            to: "/",
+            onClick: scrollToTop,
+            children: "Home"
+          }
+        ) }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(UlLi, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+          StyledLink,
+          {
+            to: "/projects",
+            onClick: scrollToTop,
+            children: "Projects"
+          }
+        ) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ThemeToggle, { id: "theme-toggle", onClick: toggleTheme })
+    ] });
   }
 
-  // src/pages/Media/Media.tsx
-  var import_react26 = __toESM(require_react());
+  // src/pages/Projects/Media/Media.tsx
+  var import_react27 = __toESM(require_react());
 
-  // src/pages/Media/Media.style.ts
+  // src/pages/Projects/Media/Media.style.ts
   var Body = ut.div`
     position: absolute;
     width: 100%;
@@ -40863,11 +40970,11 @@ color: white;`;
     z-index: 1;
 `;
 
-  // src/pages/Media/Media.tsx
+  // src/pages/Projects/Media/Media.tsx
   var import_jsx_runtime8 = __toESM(require_jsx_runtime());
   function KxnzenMediaPage() {
     const [scope, animate2] = useAnimate();
-    (0, import_react26.useEffect)(() => {
+    (0, import_react27.useEffect)(() => {
       const delay2 = 0.1;
       const items = document.querySelectorAll(".item");
       items.forEach((item, i2) => {
@@ -41093,16 +41200,17 @@ color: white;`;
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(B2, { children: "2020 - 2022" }),
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
               "CFGM - SMiX (IT Systems and Networks)",
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "Salesians Terrassa" })
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {})
             ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "Salesians Terrassa" }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(SeparatorLineRight, {}),
             /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(P2, { children: [
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(B2, { children: "2022 - Present" }),
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
               "Currently studying a CFGS in DAW, (Web Development)",
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "La Salle Gr\xE0cia" })
-            ] })
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {})
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(IT, { children: "La Salle Gr\xE0cia" })
           ]
         }
       ),
@@ -41134,7 +41242,7 @@ color: white;`;
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
               "Placeta de la Font Trobada, 1, 08221 Terrassa, Barcelona"
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(SeparatorLine, {}),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(SeparatorLineLeft, {}),
             /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(P2, { children: [
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(B2, { children: "2023 - Present" }),
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("br", {}),
@@ -41152,41 +41260,138 @@ color: white;`;
   };
   var About_default = About;
 
-  // src/App.tsx
+  // src/pages/Projects/Projects.tsx
   var import_jsx_runtime10 = __toESM(require_jsx_runtime());
-  var MemoizedHome = import_react27.default.memo(Home);
-  var MemoizedAbout = import_react27.default.memo(About_default);
-  var MemoizedKxnzenMedia = import_react27.default.memo(KxnzenMediaPage);
+  var ProjectsGrid = ut.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 1rem 4.25rem;
+    margin: 5rem 0;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 150vh;
+`;
+  var ProjectCardTitle = ut.h2`
+    font-size: 3rem;
+    color: ${(props) => props.theme.text};
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+`;
+  var ProjectCardP = ut.p`
+    font-size: 1.5rem;
+    color: ${(props) => props.theme.text};
+    margin-bottom: 1rem;
+`;
+  var ProjectCard2 = ut.div`
+    display: flex;
+    flex-flow: column nowrap;
+
+    min-height: 30vh;
+
+    padding: 2rem;
+    border: 1px solid #000;
+`;
+  var ProjectCard4 = ut.div`
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 30vh;
+
+    padding: 2rem;
+    border: 1px solid #000;
+`;
+  var ProjectCard8 = ut.div`
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 30vh;
+
+    grid-column: span 2;
+    grid-row: span 2;
+
+    padding: 2rem;
+    border: 1px solid #000;
+`;
+  var Projects = () => {
+    return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(TitleDiv, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(TitleH1, { children: "Projects" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(ProjectsGrid, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(ProjectCard2, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ProjectCardTitle, { children: "Project 1" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ProjectCardP, { children: "This is a description of project 1." })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ProjectCard4, { children: "Sk" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ProjectCard8, { children: "Project 4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(ProjectCard2, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ProjectCardTitle, { children: "@Kxnzen_.Media" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ProjectCardP, {})
+        ] })
+      ] })
+    ] });
+  };
+  var Projects_default = Projects;
+
+  // src/App.tsx
+  var import_jsx_runtime11 = __toESM(require_jsx_runtime());
+  var ThemeContext = import_react28.default.createContext(null);
+  var MemoizedHome = import_react28.default.memo(Home);
+  var MemoizedAbout = import_react28.default.memo(About_default);
+  var MemoizedKxnzenMedia = import_react28.default.memo(KxnzenMediaPage);
+  var MemoizedProjects = import_react28.default.memo(Projects_default);
   var App = () => {
     console.log("Loaded app");
-    return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(HelmetExport, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("title", { children: "hxnzen - Home" }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("meta", { name: "title", content: "kxnzen - Home" }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+    const [theme, setTheme] = (0, import_react28.useState)(lightTheme);
+    const [togglePosition, setTogglePosition] = (0, import_react28.useState)("translate(200vw, 200vh)");
+    const toggleTheme = () => {
+      console.log("Toggling theme");
+      setTheme(theme === lightTheme ? darkTheme : lightTheme);
+      setTogglePosition(
+        togglePosition === "translate(200vw, 200vh)" ? "translate(0, 0)" : "translate(200vw, 200vh)"
+      );
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(HelmetExport, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("title", { children: "hxnzen - Home" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("meta", { name: "title", content: "kxnzen - Home" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
           "meta",
           {
             name: "description",
             content: "A portfolio site for my style and work."
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("meta", { name: "author", content: "kxnzen" }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("meta", { property: "og:type", content: "website" }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("meta", { property: "og:url", content: "https://polcondal.github.io" })
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("meta", { name: "author", content: "kxnzen" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("meta", { property: "og:type", content: "website" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("meta", { property: "og:url", content: "https://polcondal.github.io" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(GlobalStyle, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(BrowserRouter, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(NavBar, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Routes, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedHome, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/about", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedAbout, {}) }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Route, { path: "/media", element: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(MemoizedKxnzenMedia, {}) })
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(ThemeContext.Provider, { value: { theme, toggleTheme }, children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(tt, { theme, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(GlobalStyle, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(BrowserRouter, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(NavBar, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(ThemeAnimation, { transform: togglePosition }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Routes, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(MemoizedHome, {}) }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Route, { path: "/about", element: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(MemoizedAbout, {}) }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Route, { path: "/media", element: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(MemoizedKxnzenMedia, {}) }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Route, { path: "/projects", element: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(MemoizedProjects, {}) })
+          ] })
         ] })
-      ] })
+      ] }) })
     ] });
   };
   var root = import_client.default.createRoot(document.getElementById("root"));
-  root.render(/* @__PURE__ */ (0, import_jsx_runtime10.jsx)(App, {}));
+  root.render(/* @__PURE__ */ (0, import_jsx_runtime11.jsx)(App, {}));
   var App_default = App;
 })();
 /*! Bundled license information:
