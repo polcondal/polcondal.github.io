@@ -1,9 +1,27 @@
 <!-- Copyright (c) kxnzen, All rights reserved. -->
 <!DOCTYPE html>
+
+<head>
+      <script type="text/javascript">
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+</head>
+
 <html lang="en">
     <script type="module" crossorigin src="/assets/index-R0qetcZY.js"></script>
 
-    <body>
+    <body>
+
         <div id="root"></div>
     </body>
 </html>
