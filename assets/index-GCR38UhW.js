@@ -78,8 +78,8 @@ object-assign
     background: ${e=>e.fade?"linear-gradient(to top, rgba(0, 0, 0, 0.1), #00000000)":""};
 `,Qj=zg(sE(qj))`
     position: absolute;
+    width: 100%;
 
-    left: 50%;
     bottom: 20px;
 
     font-size: 2rem;
@@ -140,7 +140,7 @@ object-assign
 `,tA=zg(sE.div)`
     color: ${e=>e.theme.text};
     font-family: "Kumbh Sans Regular", sans-serif;
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     letter-spacing: 4px;
 
     &::after {
@@ -745,39 +745,68 @@ object-assign
     /* animation: ${BA} 15s ease-in-out forwards; */
     animation-iteration-count: infinite;
     animation-delay: ${e=>e.delay||"0s"};
-`;const $A=zg.div`
+`;const $A="0 1px 2px 1px rgba(0, 0, 0, 0.1)",WA=zg.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3.5em;
     padding: 1rem 2rem;
     margin: 5rem 0;
 
+    width: 100%;
+
     box-sizing: border-box;
 
     justify-content: center;
     align-items: center;
-`,WA=zg.h2`
-    font-size: 3rem;
+`,HA=zg.h2`
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 1.5rem;
     color: ${e=>e.theme.text};
-    letter-spacing: 4px;
+    letter-spacing: 1px;
 
     text-align: center;
+    padding: 1rem;
+
+    width: 100%;
+
+    background-color: ${e=>e.theme.background};
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: ${$A};
     transition: color 0.35s ease-out,
         opacity 0.35s ease-out;
 
     z-index: 1;
-`,HA=zg.p`
-    font-size: 1.5rem;
-    color: ${e=>e.theme.text};
-    margin-bottom: 1rem;
+`,YA=zg.p`
+    position: absolute;
+    bottom: 0;
+    right: 0;
 
+    font-size: 1.1rem;
+    padding: 0.5rem;
+
+    font-family: "Kumbh Sans Regular", sans-serif;
+
+    color: ${e=>e.theme.text};
+    background-color: ${e=>e.theme.background};
+
+    box-sizing: border-box;
+    border-radius: 10px 0 0 0;
+
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: ${$A};
+
+    transform: translateY(100%);
     transition: color 0.35s ease-out,
-        opacity 0.35s ease-out;
+        opacity 0.35s ease-out,
+        transform 220ms ease-out;
 
     opacity: 0;
     z-index: 1;
-`,YA=zg.img`
+`,qA=zg.img`
     position: absolute;
     object-fit: cover;
 
@@ -787,38 +816,6 @@ object-assign
     height: 100%;
 
     z-index: 1;
-`,qA=zg(wd)`
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    grid-row: span 2;
-    box-sizing: border-box;
-    text-decoration: none;
-
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.15);
-
-    height: 100%;
-    max-height: 100%;
-
-    transition: background-color 0.35s ease-out,
-        color 0.35s ease-out,
-        transform 0.35s ease-out;
-
-    contain: content;
-    z-index: 1;
-
-    &:hover {
-        transform: scale(1.01);
-
-        ${HA} {
-            opacity: 1;
-        }
-    }
 `,KA=zg.p`
     position: absolute;
     display: flex;
@@ -834,37 +831,91 @@ object-assign
     padding: 0.75em;
     min-width: 9em;
 
-    ${e=>"work"===e.mode?"background-color: #ffbaba;":"background-color: #c2d1ff;"};
-
-    color: ${dP.foreground};
+    ${e=>"work"===e.mode?"background-color: #ffbaba; color: #ffbaba;":"background-color: #c2d1ff; color: #c2d1ff;"};
 
     text-align: center;
     box-sizing: border-box;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(40%);
+    transition: transform 220ms ease-out, color 250ms ease-out;
 
     border-radius: 0 10px 0 0;
     z-index: 2;
-`,GA=({mode:e})=>G.jsx(KA,{mode:e,children:"work"===e?"Work Project":"Personal Project"}),XA=zg(qA)`
-    min-height: 30vh;
+`,GA=({mode:e})=>G.jsx(KA,{mode:e,children:"work"===e?"Work Project":"Personal Project"}),XA=zg(wd)`
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    grid-row: span 2;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.15);
+    font-family: "Kumbh Sans Regular", sans-serif;
+
+    width: 100%;
+    min-height: 45vh;
+    height: 100%;
+    max-height: 100%;
+
+    transition: background-color 0.35s ease-out,
+        color 0.35s ease-out,
+        transform 0.35s ease-out;
+
+    contain: content;
+    z-index: 1;
+
+    &:hover {
+        transform: scale(1.01);
+
+        ${YA} {
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+
+        ${KA} {
+            color: ${dP.foreground};
+            transform: translateY(0);
+        }
+    }
+`,QA=zg(XA)`
     padding: 2rem;
 
     grid-row: span 2;
 
     background-color: ${e=>e.theme.content};
     border-radius: 5px;
-`,QA=zg(WA)`
-    font-size: 3rem;
+
+    @media (max-width: 768px) {
+        grid-column: span 2;
+    }
+
+    ${HA} {
+        text-align: center;
+    }
+
+    ${YA} {
+        min-width: 60%;
+        max-width: 60%;
+    }
+`,ZA=zg(HA)`
+    font-size: 2.5rem;
     color: ${e=>e.theme.text};
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
     z-index: 2;
-`,ZA=zg(HA)`
+`,JA=zg(YA)`
     font-size: 1.5rem;
     color: ${e=>e.theme.text};
-    margin-bottom: 1rem;
-`,JA=zg(qA)`
-    min-height: 30vh;
+`,eO=zg(XA)`
+    min-height: 60vh;
     padding: 2rem;
 
     grid-column: span 2;
@@ -872,14 +923,15 @@ object-assign
 
     background-color: ${e=>e.theme.content};
 
-    ${QA} {
+    ${ZA} {
         text-align: center;
     }
 
-    ${HA} {
-        font-size: 2rem;
+    ${YA} {
+        min-width: 80%;
+        max-width: 80%;
     }
-`,eO=zg(qA)`
+`;zg(XA)`
     min-width: 100%;
     min-height: 60vh;
 
@@ -891,15 +943,15 @@ object-assign
 
     background-color: ${e=>e.theme.content};
 
-    ${WA} {
+    ${HA} {
         font-size: 4rem;
         letter-spacing: 3px;
     }
 
-    ${HA} {
+    ${YA} {
         font-size: 2rem;
     }
-`,tO=zg.div`
+`;const tO=zg.div`
     display: flex;
     flex-direction: row wrap;
     justify-content: space-evenly;
@@ -969,6 +1021,10 @@ object-assign
     &:hover {
         transform: scale(1.01);
     }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `,sO=zg.div`
     display: flex;
     position: relative;
@@ -978,6 +1034,10 @@ object-assign
 
     width: 80%;
     height: 100%;
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+    }
 
     ${rA} {
         margin: 2rem 0;
@@ -991,6 +1051,7 @@ object-assign
         margin: 1rem 0;
     }
 `,lO=zg(sO)`
+    text-align: right;
 
     ${oO}, ${rA}, ${tA} {
         align-self: flex-end;
@@ -1000,7 +1061,7 @@ object-assign
     ${oO}, ${rA}, ${tA} {
         align-self: flex-start;
     }
-`,cO=()=>G.jsxs(G.Fragment,{children:[G.jsxs(Jj,{children:[G.jsx(tA,{children:"SkyNet Web Redesign"}),G.jsx(rA,{children:"During my internshp at SkyNet Worlwide Express I was tasked with redesigning the main website for the company's Spanish branch."}),G.jsx(rA,{children:"The goal was to fix the current website's responsive issues and make it more user-friendly and streamlined to todays Web standards."}),G.jsx(rA,{children:"The website was built using a combination of vanilla HTML, CSS, JavaScript, and PHP."}),G.jsx(Zj,{fade:!1})]}),G.jsxs(uO,{children:[G.jsx(rA,{children:"The result of the redesign was a more modern and user-friendly website."}),G.jsx(oO,{src:uP.skynet_proj,alt:"SkyNet Worldwide Express ES website image",loading:"lazy"})]}),G.jsxs(lO,{children:[G.jsx(tA,{children:"Before and After"}),G.jsx(sA,{}),G.jsxs(rA,{children:["The website lacked responsiveness and had a very lacking usability.",G.jsx("br",{}),"Additionally, it was not optimized for SEO and presented significant accessibility issues."]}),G.jsx(oO,{src:uP.skynet_before_lh,alt:"SkyNet Worldwide Express ES website image",loading:"lazy"}),G.jsxs(rA,{children:["Not only the index page was redesigned, but also every other page of the website.",G.jsx("br",{}),"This also includes the user forms and the backend"]})]}),G.jsxs(uO,{children:[G.jsxs(rA,{children:["After a month of work, I was able to deliver a fully responsive and SEO optimized website.",G.jsx("br",{}),"I was able to successfully enhance the performance metrics of the website, despite the increased load of CSS and scripts compared to the previous version."]}),G.jsx(oO,{src:uP.skynet_after_lh,alt:"SkyNet Worldwide Express ES website image",loading:"lazy"})]}),G.jsx(sO,{children:G.jsxs(rA,{children:["Check it out yourself! ",G.jsx("a",{href:"https://www.skynet.es",children:"skynet.es"})]})})]}),fO=zg(sE.main)`
+`,cO=()=>G.jsxs(G.Fragment,{children:[G.jsxs(Jj,{children:[G.jsx(tA,{children:"SkyNet Web Redesign"}),G.jsx(rA,{children:"During my internship at SkyNet Worlwide Express I was tasked with redesigning the main website for the company's Spanish branch."}),G.jsx(rA,{children:"The goal was to fix the current website's responsive issues and to make it more user-friendly and streamlined to todays Web standards."}),G.jsx(rA,{children:"The website was built using a combination of vanilla HTML, CSS, JavaScript, and PHP."}),G.jsx(Zj,{fade:!1})]}),G.jsxs(uO,{children:[G.jsx(rA,{children:"The result of the redesign was a more modern and user-friendly website."}),G.jsx(oO,{src:uP.skynet_proj,alt:"SkyNet Worldwide Express ES website image",loading:"lazy"})]}),G.jsxs(lO,{children:[G.jsx(tA,{children:"Before and After"}),G.jsx(sA,{}),G.jsxs(rA,{children:["The website lacked responsiveness and had a very lacking usability.",G.jsx("br",{}),"Additionally, it was not optimized for SEO and presented significant accessibility issues."]}),G.jsx(oO,{src:uP.skynet_before_lh,alt:"SkyNet Worldwide Express ES website image",loading:"lazy"}),G.jsxs(rA,{children:["Not only the index page was redesigned, but also every other page of the website.",G.jsx("br",{}),"This also includes the user forms and the backend"]})]}),G.jsxs(uO,{children:[G.jsxs(rA,{children:["After a month of work, I was able to deliver a fully responsive and SEO optimized website.",G.jsx("br",{}),G.jsx("br",{}),"I was able to successfully enhance the performance metrics of the website, despite the increased load of CSS and scripts compared to the previous version.",G.jsx("br",{}),G.jsx("br",{}),"This was achieved by using preloading techniques and optimizing the images that were being served in conventional formats such as JPEG and PNG."]}),G.jsx(oO,{src:uP.skynet_after_lh,alt:"SkyNet Worldwide Express ES website image",loading:"lazy"})]}),G.jsx(sO,{children:G.jsxs(rA,{children:["Check it out yourself! ",G.jsx("a",{href:"https://www.skynet.es",children:"skynet.es"})]})})]}),fO=zg(sE.main)`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1041,4 +1102,4 @@ object-assign
     width: 90%;
     height: 100%;
     box-sizing: border-box;
-`;function mO(){return G.jsxs(hO,{children:[G.jsx("h1",{children:"©️ kxnzen - 2024"}),G.jsxs(pO,{className:"footer-content",children:[G.jsx("a",{href:"",children:"LinkedIn"}),G.jsx("a",{href:"",children:"GitHub"})]})]})}const gO=V.memo((function(){return G.jsxs(G.Fragment,{children:[G.jsx(Qh,{children:G.jsx("meta",{name:"title",content:"kxnzen - Home"})}),G.jsx(uA,{title:""}),G.jsx(vA,{})]})})),vO=V.memo((()=>{const{scrollYProgress:e}=function({container:e,target:t,layoutEffect:n=!0,...r}={}){const a=vy(FE);return(n?Ug:F.useEffect)((()=>(DE(0,t),DE(0,e),IE((({x:e,y:t})=>{a.scrollX.set(e.current),a.scrollXProgress.set(e.progress),a.scrollY.set(t.current),a.scrollYProgress.set(t.progress)}),{...r,container:(null==e?void 0:e.current)||void 0,target:(null==t?void 0:t.current)||void 0}))),[e,t,JSON.stringify(r.offset)]),a}(),t=cE(e,[0,.4],[0,1]),n=cE(e,[0,.4],[-20,0]),r=cE(e,[0,.4],[-200,0]),a=cE(e,[.4,.9],[0,1]),i=cE(e,[.4,.9],[20,0]),o=cE(e,[.4,.9],[200,0]);return G.jsxs(G.Fragment,{children:[G.jsx(Qh,{children:G.jsx("meta",{name:"title",content:"kxnzen - About"})}),G.jsxs(Jj,{initial:{opacity:0,y:-100},animate:{opacity:1,y:0},transition:{delay:0,duration:.75,ease:"circInOut"},children:[G.jsx(tA,{initial:{opacity:0,y:-200},animate:{opacity:1,y:0},transition:{delay:0,duration:.8,ease:"circInOut"},children:"About Me"}),G.jsx(rA,{children:"I started this journey as a young teenager, wanting to make all sorts of interactable and fun things with my own code and design."}),G.jsx(rA,{children:"Having studied in this field for around 4 years now, I have touched on many different technologies and frameworks, but I always keep coming back to the Web :)"})]}),G.jsxs("div",{style:{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",padding:"0 4rem",textAlign:"center"},children:[G.jsx(rA,{initial:{opacity:0,y:-50},animate:{opacity:1,y:0},transition:{delay:1.5,duration:2,ease:"circInOut"},style:{fontStyle:"italic"},children:'"Underpromise, '}),G.jsx(rA,{initial:{opacity:0,y:150},animate:{opacity:1,y:0},transition:{delay:2.35,duration:2,ease:"circInOut"},style:{fontStyle:"italic"},children:'Overdeliver."'})]}),G.jsxs(Jj,{style:{textAlign:"right",opacity:t,translateX:r},children:[G.jsx(tA,{style:{rotate:n},children:"Education"}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2020 - 2022"}),G.jsx(rA,{children:"CFGM - SMiX (IT Systems and Networks)"}),G.jsx(iA,{children:"Salesians Terrassa"})]}),G.jsx(sA,{}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2022 - Present"}),G.jsx(rA,{children:"Currently studying a CFGS in DAW, (Web Development)"}),G.jsx(iA,{children:"La Salle Gràcia"})]})]}),G.jsxs(Jj,{style:{textAlign:"left",opacity:a,translateX:o},children:[G.jsx(tA,{style:{rotate:i},children:"Experience"}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2021 - 2022"}),G.jsx(rA,{children:"IT Technician / Shop Assistant"}),G.jsx(iA,{children:"- Hardware repair, software installations and configuration."}),G.jsxs(rA,{children:["Casarramona S.A.",G.jsx("br",{}),"Placeta de la Font Trobada, 1, 08221 Terrassa, Barcelona"]})]}),G.jsx(oA,{}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2023 - Present"}),G.jsx(rA,{children:"IT Technician"}),G.jsxs(iA,{children:["- IT Support, Custom solutions and ",G.jsx(wd,{style:{pointerEvents:"all"},to:"/skynet",children:"Website redesign."})]}),G.jsxs(rA,{children:["SkyNet Worldwide Express Spain (BCN)",G.jsx("br",{}),"Carrer Prat de la Manta, 14, 08902 L' Hospitalet de Llobregat, Barcelona"]})]})]})]})})),yO=V.memo((function(){const[e,t]=sP();return F.useEffect((()=>{document.querySelectorAll(".item").forEach(((e,n)=>{t(e,{opacity:1},{delay:.1*n})}))}),[t]),G.jsxs(G.Fragment,{children:[G.jsx(AA,{children:"A story of passion, love and dedication."}),G.jsx(CA,{children:G.jsx(TA,{width:"100%",height:"100%",src:"https://www.youtube.com/embed/xZR9_C09G2k?autoplay=1&mute=1&controls=0&loop=1&list=PLOVnTjOl-zywuswYBCQA_F0tyXiMXMlbK&showinfo=0&rel=0",allowFullScreen:!0})}),G.jsxs(PA,{children:[G.jsxs(jA,{children:[G.jsx("p",{children:"Watch the full experiences on YouTube:"}),G.jsx("p",{children:G.jsx("a",{href:"\r\n                        https://www.youtube.com/@kxnzen_pole2988/videos",children:G.jsx("img",{src:"./img/ico/yt.svg",alt:"",width:70,height:70})})})]}),G.jsxs(OA,{children:[G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/lambo.jpg",alt:""}),G.jsx(LA,{children:"Wild Watermelon"}),G.jsx(NA,{children:"#FE677EAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/growler.jpg",alt:""}),G.jsx(LA,{children:"Smooth Blackberry Tart"}),G.jsx(NA,{children:"#563440AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/custom.jpg",alt:""}),G.jsx(LA,{children:"Passion Candy Red"}),G.jsx(NA,{children:"#DA0037AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/obeyf.jpg",alt:""}),G.jsx(LA,{children:"Faux-Black Olive"}),G.jsx(NA,{children:"#40393DAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/dominator asp.jpg",alt:""}),G.jsx(LA,{children:"Pastel Reddish Pink"}),G.jsx(NA,{children:"#FF6A7CAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/rsx.jpg",alt:""}),G.jsx(LA,{children:"Scarborough Variant"}),G.jsx(NA,{children:"#7D9491AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/r200.jpg",alt:""}),G.jsx(LA,{children:"Mondrian Blue Variant"}),G.jsx(NA,{children:"#0F4B88AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/rxfd.jpg",alt:""}),G.jsx(LA,{children:"Honeysuckle Green"}),G.jsx(NA,{children:"#EAE068AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/pigalle.jpg",alt:""}),G.jsx(LA,{children:"Mojo Orange"}),G.jsx(NA,{children:"#C84B31AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/jester rr.jpg",alt:""}),G.jsx(LA,{children:"Pale Copper"}),G.jsx(NA,{children:"#DA8A6DAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/penumbra.jpg",alt:""}),G.jsx(LA,{children:"Cucumber Ice"}),G.jsx(NA,{children:"#CED8A1AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/s13.jpg",alt:""}),G.jsx(LA,{children:"Folkstone Variant"}),G.jsx(NA,{children:"#6B6360AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/schlagen.jpg",alt:""}),G.jsx(LA,{children:"Brown Rose"}),G.jsx(NA,{children:"#AD736fAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/coquette.jpg",alt:""}),G.jsx(LA,{children:"Thatch Brown"}),G.jsx(NA,{children:"#AE9293AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/growler2.jpg",alt:""}),G.jsx(LA,{children:"Portage Blue"}),G.jsx(NA,{children:"#88ABE6AA"})]})]}),G.jsx("div",{children:G.jsx(zA,{children:G.jsx(_A,{children:"© kxnzen_.media | 2019 - 2023"})})})]})]})})),bO=V.memo((()=>G.jsxs(G.Fragment,{children:[G.jsxs(Jj,{children:[G.jsx(tA,{children:"My Projects"}),G.jsx(rA,{children:"This is a list of projects I have worked on, both professional and personal!"})]}),G.jsxs($A,{children:[G.jsxs(XA,{to:"/portfolio",children:[G.jsx(WA,{children:"My Portfolio (This Page)"}),G.jsx(HA,{children:"This is a description of project 1."}),G.jsx(GA,{mode:"personal"})]}),G.jsxs(eO,{to:"/garagelegends",children:[G.jsx(YA,{src:uP.prowler_bg,alt:"Garage Legends game image",loading:"lazy"}),G.jsx(WA,{children:"GARAGE LEGENDS"}),G.jsx(lA,{}),G.jsx(HA,{children:"This is a description of project 3."}),G.jsx(GA,{mode:"personal"})]}),G.jsxs(JA,{to:"/skynet",children:[G.jsx(YA,{src:uP.skynet_proj,alt:"SkyNet Worldwide Express ES website image",loading:"lazy",style:{top:0}}),G.jsxs(QA,{children:["SkyNet Worldwide Express",G.jsx("br",{}),"Website Redesign"]}),G.jsx(lA,{}),G.jsx(ZA,{children:"I was tasked with a restyling of the Multi-Page Application that had been published in 2017"}),G.jsx(GA,{mode:"work"})]}),G.jsxs(XA,{to:"/media",children:[G.jsx(YA,{src:uP.kxnzen_bg2,alt:"Garage Legends game image",loading:"lazy"}),G.jsx(WA,{children:"@kxnzen_.media"}),G.jsx(HA,{children:"This is a description of project 2."}),G.jsx(GA,{mode:"personal"})]})]}),G.jsxs("p",{style:{textAlign:"center"},children:["Oh, hey, You've reached the end! ",G.jsx("br",{})]})]})));let xO=null;const wO=document.getElementById("root"),kO=localStorage.getItem("theme")||0,SO=()=>{(()=>{const e=document.createElement("script");function t(){dataLayer.push(arguments)}e.src="https://www.googletagmanager.com/gtag/js?id=G-D5GBY0XTGR",e.async=!0,document.head.appendChild(e),window.dataLayer=window.dataLayer||[],t("js",new Date),t("config","G-D5GBY0XTGR")})();const[e,t]=F.useState(kO),[n,r]=F.useState(0===kO?dP:fP),[a,i]=F.useState(0===kO?"translate(200vw, 300vh)":"translate(0, 0)");return G.jsxs(G.Fragment,{children:[G.jsxs(Qh,{children:[G.jsx("title",{children:"hxnzen - Home"}),G.jsx("meta",{charSet:"UTF-8"}),G.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1.0"}),G.jsx("meta",{name:"description",content:"A personal portfolio site for my work,\r\n                    projects, and style."}),G.jsx("meta",{name:"author",content:"kxnzen"}),G.jsx("meta",{property:"og:type",content:"website"}),G.jsx("meta",{property:"og:url",content:"https://polcondal.github.io"}),G.jsx("link",{rel:"preload",as:"font",type:"font/ttf",href:"/font/KumbhSans-Regular.ttf",crossOrigin:"anonymous"}),G.jsx("link",{rel:"preconnect",href:"https://www.googletagmanager.com",crossOrigin:"anonymous"})]}),G.jsx(cP.Provider,{value:{theme:n,toggleTheme:()=>{const n=0===e?1:0,o=0===n?dP:fP;t(n),localStorage.setItem("theme",n.toString()),r(o),i("translate(200vw, 300vh)"===a?"translate(0, 0)":"translate(200vw, 300vh)")}},children:G.jsxs(Tg,{theme:n,children:[G.jsx(UA,{}),G.jsxs(yd,{children:[G.jsx(pP,{}),G.jsx(EA,{}),G.jsx(SA,{transform:a}),G.jsxs(cd,{children:[G.jsx(ld,{path:"/",element:G.jsx(gO,{})}),G.jsx(ld,{path:"/about",element:G.jsx(vO,{})}),G.jsx(ld,{path:"/projects",element:G.jsx(bO,{})}),G.jsx(ld,{path:"/media",element:G.jsx(yO,{})}),G.jsx(ld,{path:"/garagelegends",element:G.jsx(iO,{})}),G.jsx(ld,{path:"/skynet",element:G.jsx(cO,{})}),G.jsx(ld,{path:"/portfolio",element:G.jsx(dO,{})})]}),G.jsx(mO,{})]})]})})]})};xO||(xO=X.createRoot(wO),console.log("Cleared root node")),console.log("Rendering App"),xO.render(G.jsx(SO,{}));
+`;function mO(){return G.jsxs(hO,{children:[G.jsx("h1",{children:"©️ kxnzen - 2024"}),G.jsxs(pO,{className:"footer-content",children:[G.jsx("a",{href:"https://www.linkedin.com/in/pol-c-358bb3226/",children:"LinkedIn"}),G.jsx("a",{href:"https://github.com/polcondal",children:"GitHub"})]})]})}const gO=V.memo((function(){return G.jsxs(G.Fragment,{children:[G.jsx(Qh,{children:G.jsx("meta",{name:"title",content:"kxnzen - Home"})}),G.jsx(uA,{title:""}),G.jsx(vA,{})]})})),vO=V.memo((()=>{const{scrollYProgress:e}=function({container:e,target:t,layoutEffect:n=!0,...r}={}){const a=vy(FE);return(n?Ug:F.useEffect)((()=>(DE(0,t),DE(0,e),IE((({x:e,y:t})=>{a.scrollX.set(e.current),a.scrollXProgress.set(e.progress),a.scrollY.set(t.current),a.scrollYProgress.set(t.progress)}),{...r,container:(null==e?void 0:e.current)||void 0,target:(null==t?void 0:t.current)||void 0}))),[e,t,JSON.stringify(r.offset)]),a}(),t=cE(e,[0,.4],[0,1]),n=cE(e,[0,.4],[-20,0]),r=cE(e,[0,.4],[-200,0]),a=cE(e,[.4,.8],[0,1]),i=cE(e,[.4,.8],[20,0]),o=cE(e,[.4,.8],[200,0]);return G.jsxs(G.Fragment,{children:[G.jsx(Qh,{children:G.jsx("meta",{name:"title",content:"kxnzen - About"})}),G.jsxs(Jj,{initial:{opacity:0,y:-100},animate:{opacity:1,y:0},transition:{delay:0,duration:.75,ease:"circInOut"},children:[G.jsx(tA,{initial:{opacity:0,y:-200},animate:{opacity:1,y:0},transition:{delay:0,duration:.8,ease:"circInOut"},children:"About Me"}),G.jsx(rA,{children:"I started this journey as a young teenager, wanting to make all sorts of interactable and fun things with my own code and design."}),G.jsx(rA,{children:"Having studied in this field for around 4 years now, I have touched on many different technologies and frameworks, but I always keep coming back to the Web :)"}),G.jsx(Zj,{fade:!1})]}),G.jsxs("div",{style:{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",padding:"0 4rem",textAlign:"center"},children:[G.jsx(rA,{initial:{opacity:0,y:-50},animate:{opacity:1,y:0},transition:{delay:1.5,duration:2,ease:"circInOut"},style:{fontStyle:"italic"},children:'"Underpromise, '}),G.jsx(rA,{initial:{opacity:0,y:150},animate:{opacity:1,y:0},transition:{delay:2.35,duration:2,ease:"circInOut"},style:{fontStyle:"italic"},children:'Overdeliver."'})]}),G.jsxs(Jj,{style:{textAlign:"right",opacity:t,translateX:r},children:[G.jsx(tA,{style:{rotate:n},children:"Education"}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2020 - 2022"}),G.jsx(rA,{children:"CFGM - SMiX (IT Systems and Networks)"}),G.jsx(iA,{children:"Salesians Terrassa"})]}),G.jsx(sA,{}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2022 - Present"}),G.jsx(rA,{children:"Currently studying a CFGS in DAW, (Web Development)"}),G.jsx(iA,{children:"La Salle Gràcia"})]})]}),G.jsxs(Jj,{style:{textAlign:"left",opacity:a,translateX:o},children:[G.jsx(tA,{style:{rotate:i},children:"Experience"}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2021 - 2022"}),G.jsx(rA,{children:"IT Technician / Shop Assistant"}),G.jsx(iA,{children:"- Hardware repair, software installations and configuration."}),G.jsxs(rA,{children:["Casarramona S.A.",G.jsx("br",{}),"Placeta de la Font Trobada, 1, 08221 Terrassa, Barcelona"]})]}),G.jsx(oA,{}),G.jsxs(nA,{children:[G.jsx(aA,{children:"2023 - Present"}),G.jsx(rA,{children:"IT Technician"}),G.jsxs(iA,{children:["- IT Support, Custom solutions and ",G.jsx(wd,{style:{pointerEvents:"all"},to:"/skynet",children:"Website redesign."})]}),G.jsxs(rA,{children:["SkyNet Worldwide Express Spain (BCN)",G.jsx("br",{}),"Carrer Prat de la Manta, 14, 08902 L' Hospitalet de Llobregat, Barcelona"]})]})]})]})})),yO=V.memo((function(){const[e,t]=sP();return F.useEffect((()=>{document.querySelectorAll(".item").forEach(((e,n)=>{t(e,{opacity:1},{delay:.1*n})}))}),[t]),G.jsxs(G.Fragment,{children:[G.jsx(AA,{children:"A story of passion, love and dedication."}),G.jsx(CA,{children:G.jsx(TA,{width:"100%",height:"100%",src:"https://www.youtube.com/embed/xZR9_C09G2k?autoplay=1&mute=1&controls=0&loop=1&list=PLOVnTjOl-zywuswYBCQA_F0tyXiMXMlbK&showinfo=0&rel=0",allowFullScreen:!0})}),G.jsxs(PA,{children:[G.jsxs(jA,{children:[G.jsx("p",{children:"Watch the full experiences on YouTube:"}),G.jsx("p",{children:G.jsx("a",{href:"\r\n                        https://www.youtube.com/@kxnzen_pole2988/videos",children:G.jsx("img",{src:"./img/ico/yt.svg",alt:"",width:70,height:70})})})]}),G.jsxs(OA,{children:[G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/lambo.jpg",alt:""}),G.jsx(LA,{children:"Wild Watermelon"}),G.jsx(NA,{children:"#FE677EAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/growler.jpg",alt:""}),G.jsx(LA,{children:"Smooth Blackberry Tart"}),G.jsx(NA,{children:"#563440AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/custom.jpg",alt:""}),G.jsx(LA,{children:"Passion Candy Red"}),G.jsx(NA,{children:"#DA0037AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/obeyf.jpg",alt:""}),G.jsx(LA,{children:"Faux-Black Olive"}),G.jsx(NA,{children:"#40393DAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/dominator asp.jpg",alt:""}),G.jsx(LA,{children:"Pastel Reddish Pink"}),G.jsx(NA,{children:"#FF6A7CAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/rsx.jpg",alt:""}),G.jsx(LA,{children:"Scarborough Variant"}),G.jsx(NA,{children:"#7D9491AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/r200.jpg",alt:""}),G.jsx(LA,{children:"Mondrian Blue Variant"}),G.jsx(NA,{children:"#0F4B88AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/rxfd.jpg",alt:""}),G.jsx(LA,{children:"Honeysuckle Green"}),G.jsx(NA,{children:"#EAE068AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/pigalle.jpg",alt:""}),G.jsx(LA,{children:"Mojo Orange"}),G.jsx(NA,{children:"#C84B31AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/jester rr.jpg",alt:""}),G.jsx(LA,{children:"Pale Copper"}),G.jsx(NA,{children:"#DA8A6DAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/penumbra.jpg",alt:""}),G.jsx(LA,{children:"Cucumber Ice"}),G.jsx(NA,{children:"#CED8A1AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/s13.jpg",alt:""}),G.jsx(LA,{children:"Folkstone Variant"}),G.jsx(NA,{children:"#6B6360AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/schlagen.jpg",alt:""}),G.jsx(LA,{children:"Brown Rose"}),G.jsx(NA,{children:"#AD736fAA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/coquette.jpg",alt:""}),G.jsx(LA,{children:"Thatch Brown"}),G.jsx(NA,{children:"#AE9293AA"})]}),G.jsxs(MA,{className:"item",children:[G.jsx(RA,{src:"img/thumbs/growler2.jpg",alt:""}),G.jsx(LA,{children:"Portage Blue"}),G.jsx(NA,{children:"#88ABE6AA"})]})]}),G.jsx("div",{children:G.jsx(zA,{children:G.jsx(_A,{children:"© kxnzen_.media | 2019 - 2023"})})})]})]})})),bO=V.memo((()=>G.jsxs(G.Fragment,{children:[G.jsxs(Jj,{children:[G.jsx(tA,{children:"My Projects"}),G.jsx(rA,{children:"This is a list of projects I have worked on, both professional and personal!"}),G.jsx(Zj,{fade:!1})]}),G.jsxs(WA,{children:[G.jsxs(QA,{to:"/portfolio",children:[G.jsx(HA,{children:"My Portfolio (This Page)"}),G.jsx(YA,{children:"Some insights on how I built this website."}),G.jsx(GA,{mode:"personal"})]}),G.jsxs(eO,{to:"/skynet",children:[G.jsx(qA,{src:uP.skynet_proj,alt:"SkyNet Worldwide Express ES website image",loading:"lazy",style:{top:0}}),G.jsxs(ZA,{children:["SkyNet Worldwide Express",G.jsx("br",{}),"Website Redesign"]}),G.jsx(lA,{}),G.jsx(JA,{children:"A complete redesign of the SkyNet Worldwide Express ES website that had been last updated back in 2017."}),G.jsx(GA,{mode:"work"})]}),G.jsxs(QA,{to:"/media",children:[G.jsx(qA,{src:uP.kxnzen_bg2,alt:"Garage Legends game image",loading:"lazy"}),G.jsx(HA,{children:"@kxnzen_.media"}),G.jsx(YA,{children:"A video"}),G.jsx(GA,{mode:"personal"})]})]}),G.jsxs(rA,{style:{textAlign:"center"},children:["Oh, hey, You've reached the end! ",G.jsx("br",{})]})]})));let xO=null;const wO=document.getElementById("root"),kO=localStorage.getItem("theme")||0,SO=()=>{(()=>{const e=document.createElement("script");function t(){dataLayer.push(arguments)}e.src="https://www.googletagmanager.com/gtag/js?id=G-D5GBY0XTGR",e.async=!0,document.head.appendChild(e),window.dataLayer=window.dataLayer||[],t("js",new Date),t("config","G-D5GBY0XTGR")})();const[e,t]=F.useState(kO),[n,r]=F.useState(0===kO?dP:fP),[a,i]=F.useState(0===kO?"translate(200vw, 300vh)":"translate(0, 0)");return G.jsxs(G.Fragment,{children:[G.jsxs(Qh,{children:[G.jsx("title",{children:"hxnzen - Home"}),G.jsx("meta",{charSet:"UTF-8"}),G.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1.0"}),G.jsx("meta",{name:"description",content:"A personal portfolio site for my work,\r\n                    projects, and style."}),G.jsx("meta",{name:"author",content:"kxnzen"}),G.jsx("meta",{property:"og:type",content:"website"}),G.jsx("meta",{property:"og:url",content:"https://polcondal.github.io"}),G.jsx("link",{rel:"preload",as:"font",type:"font/ttf",href:"/font/KumbhSans-Regular.ttf",crossOrigin:"anonymous"}),G.jsx("link",{rel:"preconnect",href:"https://www.googletagmanager.com",crossOrigin:"anonymous"})]}),G.jsx(cP.Provider,{value:{theme:n,toggleTheme:()=>{const n=0===e?1:0,o=0===n?dP:fP;t(n),localStorage.setItem("theme",n.toString()),r(o),i("translate(200vw, 300vh)"===a?"translate(0, 0)":"translate(200vw, 300vh)")}},children:G.jsxs(Tg,{theme:n,children:[G.jsx(UA,{}),G.jsxs(yd,{children:[G.jsx(pP,{}),G.jsx(EA,{}),G.jsx(SA,{transform:a}),G.jsxs(cd,{children:[G.jsx(ld,{path:"/",element:G.jsx(gO,{})}),G.jsx(ld,{path:"/about",element:G.jsx(vO,{})}),G.jsx(ld,{path:"/projects",element:G.jsx(bO,{})}),G.jsx(ld,{path:"/media",element:G.jsx(yO,{})}),G.jsx(ld,{path:"/garagelegends",element:G.jsx(iO,{})}),G.jsx(ld,{path:"/skynet",element:G.jsx(cO,{})}),G.jsx(ld,{path:"/portfolio",element:G.jsx(dO,{})})]}),G.jsx(mO,{})]})]})})]})};xO||(xO=X.createRoot(wO),console.log("Cleared root node")),console.log("Rendering App"),xO.render(G.jsx(SO,{}));
