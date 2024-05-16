@@ -1,4 +1,4 @@
-import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}from"./index-FIHZQoSJ.js";import{r as l,L as m}from"./react-BvwDac9z.js";const h=t=>{const o=({to:o,children:s,imgSrc:r,imgAlt:n})=>{const[i,a]=l.useState(!1),d=l.useRef();return l.useEffect((()=>{const e=new IntersectionObserver((([e])=>a(e.isIntersecting)),{threshold:.95});return d.current&&e.observe(d.current),()=>{d.current&&e.unobserve(d.current)}}),[]),e.jsxs(t,{ref:d,to:o,className:i?"hover":"",children:[e.jsx(f,{src:r,alt:n,loading:"lazy",style:{top:0,left:0}}),s]})};var s;return o.displayName=`WithIntersectionObserver(${s=t,s.displayName||s.name||"Unnamed Component"})`,o},x="0 1px 2px 1px rgba(0, 0, 0, 0.1)",p=t.div`
+import{r as e,j as t,L as o}from"./react-DNnkrXfw.js";import{p as s,C as r,l as n,B as i,a,P as d,D as c,b as l,S as m}from"./index-UvDYH2bK.js";const h=o=>{const s=({to:s,children:r,imgSrc:n,imgAlt:i})=>{const[a,d]=e.useState(!1),c=e.useRef();return e.useEffect((()=>{const e=new IntersectionObserver((([e])=>d(e.isIntersecting)),{threshold:.95});return c.current&&e.observe(c.current),()=>{c.current&&e.unobserve(c.current)}}),[]),t.jsxs(o,{ref:c,to:s,className:a?"hover":"",children:[t.jsx(f,{src:n,alt:i,loading:"lazy",style:{top:0,left:0}}),r]})};var r;return s.displayName=`WithIntersectionObserver(${r=o,r.displayName||r.name||"Unnamed Component"})`,s},x="0 1px 2px 1px rgba(0, 0, 0, 0.1)",p=s.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3.5em;
@@ -15,7 +15,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
     @media screen and (max-width: 768px) {
       padding: 1vw 0;
     }
-`,g=t.h2`
+`,g=s.h2`
     position: absolute;
     top: 0;
     left: 0;
@@ -39,7 +39,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
     box-sizing: border-box;
 
     z-index: 1;
-`,b=t.p`
+`,b=s.p`
     position: absolute;
     bottom: 0;
     right: 0;
@@ -64,7 +64,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
 
     opacity: 0;
     z-index: 1;
-`,f=t.img`
+`,f=s.img`
     position: absolute;
     object-fit: cover;
 
@@ -76,7 +76,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
     z-index: 1;
 
     transition: filter 0.35s ease-out;
-`,u=t.p`
+`,u=s.p`
     position: absolute;
     display: flex;
     justify-content: center;
@@ -99,7 +99,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
 
     transition: transform 220ms ease-out, color 250ms ease-out;
     z-index: 2;
-`,j=({$date:t})=>e.jsx(u,{$date:t,children:t}),w=t.p`
+`,j=({$date:e})=>t.jsx(u,{$date:e,children:e}),w=s.p`
     position: absolute;
     display: flex;
     justify-content: center;
@@ -124,7 +124,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
     transition: transform 220ms ease-out, color 250ms ease-out;
 
     z-index: 2;
-`,y=({mode:t})=>e.jsx(w,{mode:t,children:"work"===t?"Work Project":"school"===t?"School Project":"Personal Project"}),$=t(m)`
+`,y=({mode:e})=>t.jsx(w,{mode:e,children:"work"===e?"Work Project":"school"===e?"School Project":"Personal Project"}),$=s(o)`
     position: relative;
     display: flex;
     flex-flow: column nowrap;
@@ -136,7 +136,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
     text-decoration: none;
 
     overflow: hidden;
-    box-shadow: ${o};
+    box-shadow: ${r};
     font-family: "Kumbh Sans Regular", sans-serif;
 
     width: 100%;
@@ -162,7 +162,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
         }
 
         ${w} {
-            color: ${s.foreground};
+            color: ${n.foreground};
             transform: translateY(0);
         }
 
@@ -178,7 +178,7 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
     &:active {
         transform: scale(0.98);
     }
-`,S=t($)`
+`,S=s($)`
     padding: 2rem;
     grid-row: span 2;
 
@@ -196,16 +196,16 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
         min-width: 60%;
         max-width: 60%;
     }
-`,k=t(g)`
+`,k=s(g)`
     font-size: 1.5rem;
     color: ${e=>e.theme.text};
 
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
     z-index: 2;
-`,v=t(b)`
+`,v=s(b)`
     font-size: 1.1rem;
     color: ${e=>e.theme.text};
-`,z=t($)`
+`,z=s($)`
     min-height: 60vh;
     padding: 2rem;
 
@@ -222,4 +222,4 @@ import{j as e,p as t,C as o,l as s,B as r,a as n,P as i,D as a,b as d,S as c}fro
         min-width: 80%;
         max-width: 80%;
     }
-`,A=h(S),P=h(z),W=()=>e.jsxs(e.Fragment,{children:[e.jsxs(r,{children:[e.jsx(n,{children:"My Projects"}),e.jsx(i,{children:"This is a list of projects I have worked on, both professional and personal."}),e.jsx(i,{children:"Here you will find devlogs, showcases, and more."}),e.jsx(i,{children:"I update this page regularly with my latest projects and updates on ongoing ones."}),e.jsx(a,{fade:!1})]}),e.jsxs(p,{children:[e.jsxs(A,{to:"/projects/weather-app",imgSrc:d.weatherapp_home,imgAlt:"YourStats web homepage",children:[e.jsxs(g,{children:["Weather App",e.jsx(j,{$date:"May 2024"})]}),e.jsx(b,{children:"A small and optimized Weather App made in NEXT.js"}),e.jsx(y,{mode:"school"})]}),e.jsxs(P,{to:"/projects/yourstats",imgSrc:d.yourstats_index,imgAlt:"YourStats web homepage",children:[e.jsxs(k,{children:["YourStats",e.jsx(j,{$date:"May 2024"})]}),e.jsx(c,{}),e.jsx(v,{children:"A full-stack web application that allows users to track their stats in a variety of games."}),e.jsx(y,{mode:"school"})]}),e.jsxs(A,{to:"/projects/ocs",imgSrc:d.ocs_index,imgAlt:"OCS Spain website image",children:[e.jsxs(g,{children:["OCS Spain - Website Creation",e.jsx(j,{$date:"March 2024"})]}),e.jsx(b,{children:"A simple vanilla website made for OCS Spain."}),e.jsx(y,{mode:"work"})]}),e.jsxs(A,{to:"/projects/portfolio",imgSrc:d.kxnzen_banner_logo,imgAlt:"A banner of my brand and logo",children:[e.jsxs(g,{children:["My Portfolio (This Page)",e.jsx(j,{$date:"Present"})]}),e.jsx(b,{children:"Some insights on how I built this website."}),e.jsx(y,{mode:"personal"})]}),e.jsxs(P,{to:"/projects/skynet",imgSrc:d.skynet_proj,imgAlt:"SkyNet Worldwide Express ES website image",children:[e.jsxs(k,{children:["SkyNet Worldwide Express - Website Redesign",e.jsx(j,{$date:"Feb 2024"})]}),e.jsx(c,{}),e.jsx(v,{children:"A complete redesign of the SkyNet Worldwide Express ES website that had been last updated back in 2017."}),e.jsx(y,{mode:"work"})]})]}),e.jsxs(i,{style:{textAlign:"center"},children:["Oh, hey, You've reached the end! ",e.jsx("br",{})]})]});export{f as ProjectCardImg,g as ProjectCardTitle,S as StyledProjectCard2,z as StyledProjectCard4,W as default};
+`,A=h(S),P=h(z),W=()=>t.jsxs(t.Fragment,{children:[t.jsxs(i,{children:[t.jsx(a,{children:"My Projects"}),t.jsx(d,{children:"This is a list of projects I have worked on, both professional and personal."}),t.jsx(d,{children:"Here you will find devlogs, showcases, and more."}),t.jsx(d,{children:"I update this page regularly with my latest projects and updates on ongoing ones."}),t.jsx(c,{fade:!1})]}),t.jsxs(p,{children:[t.jsxs(A,{to:"/projects/weather-app",imgSrc:l.weatherapp_home,imgAlt:"YourStats web homepage",children:[t.jsxs(g,{children:["Weather App",t.jsx(j,{$date:"May 2024"})]}),t.jsx(b,{children:"A small and optimized Weather App made in NEXT.js"}),t.jsx(y,{mode:"school"})]}),t.jsxs(P,{to:"/projects/yourstats",imgSrc:l.yourstats_index,imgAlt:"YourStats web homepage",children:[t.jsxs(k,{children:["YourStats",t.jsx(j,{$date:"May 2024"})]}),t.jsx(m,{}),t.jsx(v,{children:"A full-stack web application that allows users to track their stats in a variety of games."}),t.jsx(y,{mode:"school"})]}),t.jsxs(A,{to:"/projects/ocs",imgSrc:l.ocs_index,imgAlt:"OCS Spain website image",children:[t.jsxs(g,{children:["OCS Spain - Website Creation",t.jsx(j,{$date:"March 2024"})]}),t.jsx(b,{children:"A simple vanilla website made for OCS Spain."}),t.jsx(y,{mode:"work"})]}),t.jsxs(A,{to:"/projects/portfolio",imgSrc:l.kxnzen_banner_logo,imgAlt:"A banner of my brand and logo",children:[t.jsxs(g,{children:["My Portfolio (This Page)",t.jsx(j,{$date:"Present"})]}),t.jsx(b,{children:"Some insights on how I built this website."}),t.jsx(y,{mode:"personal"})]}),t.jsxs(P,{to:"/projects/skynet",imgSrc:l.skynet_proj,imgAlt:"SkyNet Worldwide Express ES website image",children:[t.jsxs(k,{children:["SkyNet Worldwide Express - Website Redesign",t.jsx(j,{$date:"Feb 2024"})]}),t.jsx(m,{}),t.jsx(v,{children:"A complete redesign of the SkyNet Worldwide Express ES website that had been last updated back in 2017."}),t.jsx(y,{mode:"work"})]})]}),t.jsxs(d,{style:{textAlign:"center"},children:["Oh, hey, You've reached the end! ",t.jsx("br",{})]})]});export{f as ProjectCardImg,g as ProjectCardTitle,S as StyledProjectCard2,z as StyledProjectCard4,W as default};

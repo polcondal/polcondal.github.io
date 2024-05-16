@@ -1,4 +1,4 @@
-import{p as e,C as i,j as t,P as n,a}from"./index-FIHZQoSJ.js";const l=e.img`
+import{p as e,C as t,P as i,a as n}from"./index-UvDYH2bK.js";import{j as a}from"./react-DNnkrXfw.js";const r=e.img`
     position: relative;
 
     width: 60%;
@@ -6,7 +6,7 @@ import{p as e,C as i,j as t,P as n,a}from"./index-FIHZQoSJ.js";const l=e.img`
     border-radius: 5px;
     z-index: 4;
     transition: transform 0.35s ease-out;
-    box-shadow: ${i};
+    box-shadow: ${t};
 
     &:hover {
         transform: scale(1.01);
@@ -15,7 +15,7 @@ import{p as e,C as i,j as t,P as n,a}from"./index-FIHZQoSJ.js";const l=e.img`
     @media screen and (max-width: 768px) {
         width: 100%;
     }
-`,r=e.div`
+`,l=e.div`
     position: relative;
     display: flex;
     flex-flow: row nowrap;
@@ -27,12 +27,12 @@ import{p as e,C as i,j as t,P as n,a}from"./index-FIHZQoSJ.js";const l=e.img`
         flex-flow: column nowrap;
         gap: 1rem;
     }
-`,s=e(n)`
+`,s=e(i)`
     font-size: 1.5rem;
     height: 100%;
     margin: auto !important;
     font-style: italic;
-`,o=e=>t.jsxs(r,{children:[e.text&&"right"!==e.align?t.jsx(s,{children:e.text}):null,t.jsx(l,{src:e.imgSrc,alt:e.imgAlt,loading:"lazy"}),e.text&&"right"===e.align?t.jsx(s,{children:e.text}):null]}),x=e.div`
+`,o=e=>a.jsxs(l,{children:[e.text&&"right"!==e.align?a.jsx(s,{children:e.text}):null,a.jsx(r,{src:e.imgSrc,alt:e.imgAlt,loading:"lazy"}),e.text&&"right"===e.align?a.jsx(s,{children:e.text}):null]}),x=e.div`
     display: flex;
     position: relative;
     flex-direction: column;
@@ -49,7 +49,7 @@ import{p as e,C as i,j as t,P as n,a}from"./index-FIHZQoSJ.js";const l=e.img`
         width: 90%;
     }
 
-    ${n}, ${a}, ${l} {
+    ${i}, ${n}, ${r} {
     	text-align: ${e=>e.align||"center"};
         align-self: ${e=>"right"===e.align?"flex-end":"left"===e.align?"flex-start":"center"};
         margin: 2rem 0;

@@ -1,4 +1,4 @@
-import{p as e,m as t,j as i,I as n,K as o,T as r}from"./index-FIHZQoSJ.js";import{L as a,H as s}from"./react-BvwDac9z.js";const l=e(t.div)`
+import{m as e,j as t,L as i,H as n}from"./react-DNnkrXfw.js";import{p as o,I as r,K as a,T as s}from"./index-UvDYH2bK.js";const l=o(e.div)`
     position: relative;
     box-sizing: border-box;
 
@@ -25,7 +25,7 @@ import{p as e,m as t,j as i,I as n,K as o,T as r}from"./index-FIHZQoSJ.js";impor
     }
 
     transition: all 0.35s ease-in-out;
-`,c=e.div`
+`,c=o.div`
     width: 100%;
     max-width: 1300px;
 
@@ -48,7 +48,7 @@ import{p as e,m as t,j as i,I as n,K as o,T as r}from"./index-FIHZQoSJ.js";impor
         height: 90%;
         gap: 5vh;
     }
-`,d=e.h1`
+`,d=o.h1`
     position: relative;
     width: 100%;
 
@@ -70,7 +70,7 @@ import{p as e,m as t,j as i,I as n,K as o,T as r}from"./index-FIHZQoSJ.js";impor
         letter-spacing : 1vw;
         font-size: 2rem;
     }
-`;e.img`
+`;o.img`
     width: 100%;
 
     object-fit: cover;
@@ -86,15 +86,15 @@ import{p as e,m as t,j as i,I as n,K as o,T as r}from"./index-FIHZQoSJ.js";impor
     @media (max-width : 768px) {
         top: -17.5vw;
     }
-`;const h=e.p`
+`;const h=o.p`
     font-size: 1.25rem;
     line-height: 1.5;
     text-align: center;
     filter: invert(1);
-`,m=e(l)`
+`,m=o(l)`
     background-color: ${e=>e.theme.invTheme.background};
     font-family: "Kumbh Sans Regular", sans-serif;
-`,x=e(d)`
+`,x=o(d)`
     color: ${e=>e.theme.invTheme.text};
     font-family: "Kumbh Sans Regular", sans-serif;
-`;function p(){return i.jsx(m,{children:i.jsxs(c,{children:[i.jsx(x,{children:"About Me"}),i.jsxs(h,{children:["Read more about what I do, who I am and what I am passionate about.",i.jsx("br",{}),"Or get in touch with me."]}),i.jsx(t.div,{whileHover:{scale:1.1},whileTap:{scale:.9},children:i.jsx(a,{to:"/about",onClick:()=>window.scrollTo(0,0),children:i.jsx(n,{children:"Read"})})})]})})}function f(){return i.jsxs(i.Fragment,{children:[i.jsx(s,{children:i.jsx("meta",{name:"title",content:"kxnzen - Home"})}),i.jsx(o,{}),i.jsx(r,{title:""}),i.jsx(p,{})]})}export{f as default};
+`;function p(){return t.jsx(m,{children:t.jsxs(c,{children:[t.jsx(x,{children:"About Me"}),t.jsxs(h,{children:["Read more about what I do, who I am and what I am passionate about.",t.jsx("br",{}),"Or get in touch with me."]}),t.jsx(e.div,{whileHover:{scale:1.1},whileTap:{scale:.9},children:t.jsx(i,{to:"/about",onClick:()=>window.scrollTo(0,0),children:t.jsx(r,{children:"Read"})})})]})})}function f(){return t.jsxs(t.Fragment,{children:[t.jsx(n,{children:t.jsx("meta",{name:"title",content:"kxnzen - Home"})}),t.jsx(a,{}),t.jsx(s,{title:""}),t.jsx(p,{})]})}export{f as default};
